@@ -5,7 +5,7 @@ import streamlit as st
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
   introduction_text = '''
-    <p class="header_text" style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: ceter;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Supervised Machine Learning Classification</span></p>
+    <p class="header_text" style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 2em; ">Supervised Machine Learning Classification</span></p>
   '''
 
   text_media_query1 = '''
