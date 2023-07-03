@@ -19,6 +19,8 @@ with col2:
   '''
   st.markdown(header_media_query + header_text, unsafe_allow_html=True)
 
+st.sidebar()
+
 hide_st_style = """
                 <style>
                 footer {visibility: hidden;}
