@@ -13,9 +13,6 @@ with col2:
       @media (max-width: 1024px) {
           p.introduction_text {
               font-size: 3.2em;
-              border-width: 0.5em;
-              position: relative;
-              top: 0.5em;
           }
       }
       </style>
