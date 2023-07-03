@@ -1,6 +1,7 @@
 import streamlit as st
 
 
+st.set_page_config(page_title="Paydar", page_icon="", layout="wide", initial_sidebar_state="expanded")
 
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
