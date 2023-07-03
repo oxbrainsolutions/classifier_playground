@@ -4,20 +4,20 @@ import streamlit as st
 
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
-  introduction_text = '''
+  header_text = '''
     <p class="header_text" style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 2em; ">Supervised Machine Learning Classification</span></p>
   '''
 
-  text_media_query1 = '''
+  header_media_query = '''
       <style>
       @media (max-width: 1024px) {
-          p.introduction_text {
+          p.header_text {
               font-size: 0.2em;
           }
       }
       </style>
   '''
-  st.markdown(text_media_query1 + introduction_text, unsafe_allow_html=True)
+  st.markdown(header_media_query + header_text, unsafe_allow_html=True)
 
 hide_st_style = """
                 <style>
