@@ -12,7 +12,7 @@ with col2:
       <style>
       @media (max-width: 1024px) {
           p.introduction_text {
-              font-size: 3.2em;
+              font-size: 2.2em;
           }
       }
       </style>
