@@ -19,7 +19,10 @@ with col2:
   '''
   st.markdown(header_media_query + header_text, unsafe_allow_html=True)
 
-st.sidebar()
+add_selectbox = st.sidebar.selectbox(
+    "How would you like to be contacted?",
+    ("Email", "Home phone", "Mobile phone")
+)
 
 hide_st_style = """
                 <style>
