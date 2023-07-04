@@ -39,7 +39,7 @@ st.markdown("""
   input[type=number] {
   margin-top: 0;
   color: #FAFAFA;
-  background-color: rgba(3, 169, 244, 0.2);
+  background-color: #3C3F41;
   border: 0.1875em solid #002147;
   font-size: 0.8em;
   height: 3em;
@@ -47,7 +47,7 @@ st.markdown("""
   /* Hover effect */
   div[data-baseweb="select"] > div:hover,
   input[type=number]:hover {
-  background-color: rgba(111, 114, 222, 0.4);
+  background-color: #3C3F41;
   }
   span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
   font-size: 0.6em;
