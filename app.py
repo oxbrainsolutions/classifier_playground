@@ -50,7 +50,7 @@ st.markdown("""
   background-color: rgba(111, 114, 222, 0.4);
   }
   span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
-  font-size: 0.8em;
+  font-size: 0.6em;
   }
   @media (max-width: 1024px) {
     span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
