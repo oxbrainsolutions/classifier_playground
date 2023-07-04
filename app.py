@@ -133,10 +133,6 @@ with st.sidebar:
 
 
   
-  st.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
-)
 
 hide_st_style = """
                 <style>
