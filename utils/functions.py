@@ -1,3 +1,4 @@
+import streamlit as st
 from sklearn.datasets import make_moons, make_circles, make_blobs
 
 
