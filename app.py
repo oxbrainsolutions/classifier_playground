@@ -118,7 +118,7 @@ with st.sidebar:
   </style>
   '''
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
-  data_type_options = ["Blobs", "Circles", "Spirals"]
+  data_type_options = ["", "Blobs", "Circles", "Spirals"]
   st.selectbox(label="", label_visibility="collapsed", options=data_type_options,
                format_func=lambda x: "Select Data Type" if x == "" else x, key="user_data_type")
 
