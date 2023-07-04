@@ -38,10 +38,10 @@ st.markdown("""
   div[data-baseweb="select"] > div,
   input[type=number] {
   margin-top: 0;
-  color: #25476A;
+  color: #FAFAFA;
   background-color: rgba(3, 169, 244, 0.2);
-  border: 0.1875em solid #25476A;
-  font-size: 1em;
+  border: 0.1875em solid #002147;
+  font-size: 0.8em;
   font-weight: bold;
   }
   /* Hover effect */
@@ -50,7 +50,7 @@ st.markdown("""
   background-color: rgba(111, 114, 222, 0.4);
   }
   span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: bold;
   }
   @media (max-width: 1024px) {
@@ -93,7 +93,7 @@ with col2:
 
 with st.sidebar:
   subheader_text = '''
-  <p class="subheader_text" style="margin-top: -1.25em; margin-bottom: 1.25em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
+  <p class="subheader_text" style="margin-top: -3em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
   '''
 
   subheader_media_query = '''
@@ -108,7 +108,7 @@ with st.sidebar:
   st.markdown(subheader_media_query + subheader_text, unsafe_allow_html=True)
 
 
-  text = '<p class="text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#25476A; font-size: 0.85em; font-weight: bold;">Data Type</span></p>'
+  text = '<p class="text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.85em; font-weight: bold;">Data Type</span></p>'
   text_media_query1 = '''
   <style>
   @media (max-width: 1024px) {
