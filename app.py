@@ -1,4 +1,5 @@
 import streamlit as st
+from utils.functions import generate_data
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
