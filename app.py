@@ -40,7 +40,7 @@ st.markdown("""
   margin-top: 0;
   color: #FAFAFA;
   background-color: #4F5254;
-  border: 0.1875em solid #002147;
+  border: 0.2em solid #002147;
   font-size: 0.8em;
   height: 3em;
   }
@@ -107,7 +107,7 @@ with st.sidebar:
   st.markdown(subheader_media_query + subheader_text, unsafe_allow_html=True)
 
 
-  text = '<p class="text" style="margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
+  text = '<p class="text" style="margin-top: -3em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
   text_media_query1 = '''
   <style>
   @media (max-width: 1024px) {
