@@ -107,7 +107,7 @@ with st.sidebar:
   st.markdown(subheader_media_query + subheader_text, unsafe_allow_html=True)
 
 
-  text = '<p class="text" style="margin-top: -3em; margin-bottom: -3em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
+  text = '<p class="text" style="margin-top: -3em; margin-bottom: -6em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
   text_media_query1 = '''
   <style>
   @media (max-width: 1024px) {
