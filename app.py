@@ -51,7 +51,6 @@ st.markdown("""
   }
   span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
   font-size: 0.8em;
-  font-weight: bold;
   }
   @media (max-width: 1024px) {
     span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
