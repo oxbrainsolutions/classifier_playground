@@ -39,7 +39,7 @@ st.markdown("""
   input[type=number] {
   margin-top: 0;
   color: #FAFAFA;
-  background-color: #3C3F41;
+  background-color: #76787A;
   border: 0.1875em solid #002147;
   font-size: 0.8em;
   height: 3em;
