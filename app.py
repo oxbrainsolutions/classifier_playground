@@ -42,7 +42,7 @@ st.markdown("""
   background-color: rgba(3, 169, 244, 0.2);
   border: 0.1875em solid #002147;
   font-size: 0.8em;
-  font-weight: bold;
+  height: 3em;
   }
   /* Hover effect */
   div[data-baseweb="select"] > div:hover,
