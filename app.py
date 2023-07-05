@@ -72,7 +72,7 @@ header = """
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 3em;
+            padding: 1em;
        }}
 
         .middle-column {{
@@ -190,7 +190,6 @@ with col2:
       @media (max-width: 1024px) {
           p.header_text {
             font-size: 3em;
-            top: 0.5em;
           }
       }
       </style>
