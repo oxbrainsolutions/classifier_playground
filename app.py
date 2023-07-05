@@ -12,7 +12,7 @@ st.markdown(
     """
     <style>
     body {
-      font-family: Ariel, sans-serif;
+      font-family: Tahoma, sans-serif;
     }
     </style>
     """,
