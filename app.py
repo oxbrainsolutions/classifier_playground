@@ -86,7 +86,7 @@ header = """
             padding: 2em;
         }}
         .middle-column img {{
-            width: 100%;
+            width: 20%;
             display: flex;
             align-items: center;
             justify-content: center;
