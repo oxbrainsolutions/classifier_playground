@@ -76,7 +76,7 @@ header = """
             gap: 2em;  /* Convert 20px to em units */
         }}
         .button {{
-            background-color: #4F5254;
+            background-color: #002147;
             border-color: #FAFAFA;
             border-width: 0.1875em;  /* Convert 3px to em units */
             border-radius: 0.1875em;  /* Convert 3px to em units */
@@ -92,9 +92,9 @@ header = """
             height: 2em;
         }}
         .button:hover {{
-            background-color: #76787A;
-            border-color: #4F5254;
-            color: #4F5254;
+            background-color: #4F5254;
+            border-color: #002147;
+            color: #002147;
         }}
         .clear {{
             clear: both;
@@ -212,7 +212,7 @@ st.markdown(
     """
     <style>
      div.stButton > button:first-child {
-        background-color: #4F5254;
+        background-color: #002147;
         color: #FAFAFA;
         border-color: #FAFAFA;
         border-width: 3px;
@@ -222,8 +222,8 @@ st.markdown(
     }
     div.stButton > button:hover {
         background-color: #76787A;
-        color: #4F5254;
-        border-color: #FAFAFA;
+        color: #002147;
+        border-color: #002147;
     }
     @media (max-width: 1024px) {
     div.stButton > button {
