@@ -149,6 +149,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
   )
+
 st.markdown("""
   <style>
   /* The input itself */
@@ -188,6 +189,22 @@ st.markdown("""
   }
   </style>
   """, unsafe_allow_html=True)
+
+st.markdown(
+    """
+    <style>
+    /* CSS to change the font type and size of st.slider */
+    .css-2trqyj-singleValue,
+    .css-1r8jl09-singleValue {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+
 
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
