@@ -60,34 +60,6 @@ header = """
             display: inline-block;
             vertical-align: middle;
         }}
-        .button-div {{
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 40%;
-            gap: 2em;  /* Convert 20px to em units */
-        }}
-        .button {{
-            background-color: #002147;
-            border-color: #FAFAFA;
-            border-width: 0.1875em;  /* Convert 3px to em units */
-            border-radius: 0.1875em;  /* Convert 3px to em units */
-            color: #FAFAFA;
-            padding: 0em 0em;  /* Adjust padding as per your preference */
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 0.8em;  /* Convert 16px to em units */
-            margin: 0em;  /* Adjust margin as per your preference */
-            cursor: pointer;
-            width: 6.6em;
-            height: 2em;
-        }}
-        .button:hover {{
-            background-color: #76787A;
-            border-color: #FAFAFA;
-            color: #FAFAFA;
-        }}
         .clear {{
             clear: both;
         }}
@@ -119,31 +91,12 @@ header = """
             justify-content: center;
             float: left;
           }}
-        .button-div {{
-            width: 50%;  /* Set width to 100% for full width on smaller screens */
-            justify-content: center;  /* Center align items on smaller screens */
-            gap: 2em;  /* Convert 20px to em units */
-            margin-top: 0em;  /* Add top margin */
-        }}
-        .button {{
-            border-width: 0.1875em;  /* Convert 3px to em units */
-            border-radius: 0.1875em;  /* Convert 3px to em units */
-            font-size: 1.6em;  /* Convert 16px to em units */
-            width: 5em;
-            height: 2em;
-        }}
     }}
     </style>
     <div class="header">
         <div class="middle-column">
             <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="10%">
         </div>
-        <div class="clear"></div>
-            <div class="button-div">
-                <button class="button">Playground</button>
-            </div>
-        </div>
-        <div class="clear"></div>
     </div>
 """
 
