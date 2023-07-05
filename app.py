@@ -187,7 +187,7 @@ header = """
             <div class="button-div">
                 <!--<button class="button">Help</button>
                 <!--<button class="button">Contact</button>-->
-                <button class="button">Logout</button>
+                <button class="button">Playground</button>
             </div>
         </div>
         <div class="clear"></div>
