@@ -205,7 +205,7 @@ with st.sidebar:
     <style>
     @media (max-width: 1024px) {
         p.subheader_text {
-          font-size: 2em;
+          font-size: 3em;
         }
     }
     </style>
