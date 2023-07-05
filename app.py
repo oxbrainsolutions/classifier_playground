@@ -214,7 +214,7 @@ with st.sidebar:
 
 
 
-  text = '<p class="text" style="margin-top: -2.4em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
+  text = '<p class="text" style="margin-top: -1em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
   text_media_query1 = '''
   <style>
   @media (max-width: 1024px) {
