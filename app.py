@@ -8,6 +8,18 @@ from utils.functions import generate_data
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
 
+st.markdown(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 hide_st_style = """
                 <style>
                 footer {visibility: hidden;}
@@ -182,7 +194,7 @@ st.markdown("""
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
   header_text = '''
-    <p class="header_text" style="margin-top: 4em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; font-family: Roboto, sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
+    <p class="header_text" style="margin-top: 4em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
   '''
 
   header_media_query = '''
