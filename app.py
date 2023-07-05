@@ -255,8 +255,8 @@ with st.sidebar:
   '''
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   data_type_options = ["", "Blobs", "Circles", "Spirals"]
-  st.selectbox(label="", label_visibility="collapsed", options=data_type_options,
-               format_func=lambda x: "Select Data Type" if x == "" else x, key="user_data_type")
+  user_data_type = st.selectbox(label="", label_visibility="collapsed", options=data_type_options,
+               format_func=lambda x: "Select Data Type" if x == "" else x, key="key1")
 
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Sample Size</span></p>'
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
@@ -268,6 +268,8 @@ with st.sidebar:
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=train_noise, key="key3")
   submit_button = st.button("Run", key="key4")
+
+  x_train, y_train, x_test, y_test = generate_data(dataset, n_samples, train_noise, test_noise, n_classes)
 
 
 
