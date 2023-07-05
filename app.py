@@ -47,7 +47,7 @@ header = """
             display: flex;
             align-items: center;
         }}
-        .left1-column {{
+        .middle-column {{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -55,15 +55,7 @@ header = """
             width: 15%;
             padding: 0em;  /* Convert 10px to em units */
         }}
-        .right1-column {{
-            font-size: 3.2em;  /* Convert 40px to em units */
-            text-indent: 1em;  /* Convert 40px to em units */
-            float: left;
-            width: 80%;
-            padding: 0em;  /* Convert 10px to em units */
-            margin-right: auto;
-        }}
-        .left1-column img {{
+        .middle-column img {{
             max-width: 200%;
             display: inline-block;
             vertical-align: middle;
@@ -103,20 +95,6 @@ header = """
             margin-top: 1px;
             font-size: var(--base-font-size);  /* Set the base font size */
         }}
-        .welcome-text {{
-            font-size: 1.2em;  /* Adjust font size as per your preference */
-            margin-right: auto;  /* Adjust margin as per your preference */
-            color: #FAFAFA;
-        }}
-        .welcome-container {{
-            display: flex;
-            align-items: center;
-            width: 50%;  /* Adjust width as per your preference */
-            padding: 0em 0em;  /* Convert 10px 30px to em units */
-        }}
-        .welcome-container div {{
-            color: #FAFAFA;
-        }}
         @media screen and (max-width: 1024px) {{
         .header {{
             flex-direction: column;
@@ -125,7 +103,7 @@ header = """
             padding: 0.8em;  /* Adjust padding for smaller screens */
        }}
 
-        .left1-column {{
+        .middle-column {{
             width: 100%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;
             text-align: center;
@@ -134,31 +112,13 @@ header = """
             float: left;
             margin-bottom: -1em;  /* Adjust margin for smaller screens */
         }}
-        .left1-column img {{
+        .middle-column img {{
             width: 30%;
             display: flex;
             align-items: center;
             justify-content: center;
             float: left;
           }}
-        .right1-column {{
-            width: 100%;  /* Set width to 100% for full width on smaller screens */
-            font-size: 7em;
-            display: flex;
-            text-indent: 0em;
-            align-items: center;
-            justify-content: center;
-            text-align: center;  /* Center align text on smaller screens */
-            margin-bottom: 0.2em;  /* Adjust margin for smaller screens */
-        }}
-        .welcome-container {{
-            width: 70%;  /* Set width to 100% for full width on smaller screens */
-            display: flex;
-            text-align: center;
-            font-size: 2.4em;
-            justify-content: center;  /* Center align items on smaller screens */
-            margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
-        }}
         .button-div {{
             width: 50%;  /* Set width to 100% for full width on smaller screens */
             justify-content: center;  /* Center align items on smaller screens */
@@ -175,18 +135,11 @@ header = """
     }}
     </style>
     <div class="header">
-        <div class="left1-column">
+        <div class="middle-column">
             <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="120%">
         </div>
-        <div class="right1-column">
-            WarGame Scenario Analysis
-        </div>
         <div class="clear"></div>
-        <div class="welcome-container">
-            <div class="welcome-text">Welcome John</div>
             <div class="button-div">
-                <!--<button class="button">Help</button>
-                <!--<button class="button">Contact</button>-->
                 <button class="button">Playground</button>
             </div>
         </div>
