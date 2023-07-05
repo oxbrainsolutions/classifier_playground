@@ -215,8 +215,8 @@ with st.sidebar:
 
   n_samples = st.number_input(label="", label_visibility="collapsed", min_value=50, max_value=1000, step=10, format="%.0f", value=300, key="key1")
 
-  train_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, format="%.3f", value=0.2, key="key2")
-  test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, format="%.3f", value=train_noise, key="key3")
+  train_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=0.2, key="key2")
+  test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=train_noise, key="key3")
 
 
   text = '<p class="text" style="margin-top: -3.4em; margin-bottom: -6em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
