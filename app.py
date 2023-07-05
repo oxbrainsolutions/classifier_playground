@@ -136,7 +136,7 @@ header = """
     </style>
     <div class="header">
         <div class="middle-column">
-            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="20%">
+            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="10%">
         </div>
         <div class="clear"></div>
             <div class="button-div">
