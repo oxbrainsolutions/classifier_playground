@@ -189,8 +189,8 @@ with col2:
       <style>
       @media (max-width: 1024px) {
           p.header_text {
-            font-size: 1em;
-            margin-top: 5em;
+            font-size: 3em;
+            margin-top: 1em;
           }
       }
       </style>
