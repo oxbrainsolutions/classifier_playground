@@ -267,7 +267,7 @@ with st.sidebar:
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Testing Data Noise</span></p>'
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
-  submit_button = st.button("Run", key="key4")
+  submit_button = st.button("Run", key="key5")
   if submit_button:
     x_train, y_train, x_test, y_test = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
 
