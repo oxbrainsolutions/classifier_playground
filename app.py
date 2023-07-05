@@ -11,9 +11,8 @@ st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wid
 st.markdown(
     """
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: Ariel, sans-serif;
     }
     </style>
     """,
