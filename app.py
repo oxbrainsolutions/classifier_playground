@@ -93,8 +93,8 @@ header = """
         }}
         .button:hover {{
             background-color: #76787A;
-            border-color: #002147;
-            color: #002147;
+            border-color: #FAFAFA;
+            color: #FAFAFA;
         }}
         .clear {{
             clear: both;
