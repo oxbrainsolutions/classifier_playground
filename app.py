@@ -143,7 +143,6 @@ st.markdown("""
   /* The input itself */
   div[data-baseweb="select"] > div,
   input[type=number] {
-  margin-top: 0;
   color: #FAFAFA;
   background-color: #4F5254;
   border: 0.25em solid #002147;
@@ -215,7 +214,7 @@ with st.sidebar:
 
 
 
-  text = '<p class="text" style="margin-top: -2.4em; margin-bottom: -8em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
+  text = '<p class="text" style="margin-top: -2.4em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
   text_media_query1 = '''
   <style>
   @media (max-width: 1024px) {
