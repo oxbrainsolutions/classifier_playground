@@ -53,7 +53,7 @@ header = """
             justify-content: center;
             float: center;            
             width: 100%;
-            padding: 5em;  /* Convert 10px to em units */
+            padding: 2em;  /* Convert 10px to em units */
         }}
         .middle-column img {{
             max-width: 200%;
