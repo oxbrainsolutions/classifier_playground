@@ -92,7 +92,7 @@ header = """
             height: 2em;
         }}
         .button:hover {{
-            background-color: #4F5254;
+            background-color: #76787A;
             border-color: #002147;
             color: #002147;
         }}
