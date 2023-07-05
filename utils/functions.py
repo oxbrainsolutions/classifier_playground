@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 from sklearn.datasets import make_moons, make_circles, make_blobs
 
 
