@@ -274,7 +274,7 @@ with st.sidebar:
     else:
       x_train, y_train, x_test, y_test = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
 
-    st.write(x_train, y_train, x_test, y_test)
+      st.write(x_train, y_train, x_test, y_test)
 
 
 
