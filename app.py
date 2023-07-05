@@ -1,8 +1,212 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+import pathlib
+import base64
 from utils.functions import generate_data
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
+
+hide_st_style = """
+                <style>
+                footer {visibility: hidden;}
+                header {visibility: hidden;}
+                .viewerBadge_link__1S137 {display: none !important;}
+                </style>
+                """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+def img_to_bytes(img_path):
+    img_bytes = pathlib.Path(img_path).read_bytes()
+    encoded = base64.b64encode(img_bytes).decode()
+    return encoded
+
+header = """
+    <style>
+        :root {{
+            --base-font-size: 1vw;  /* Define your base font size here */
+        }}
+
+        .header {{
+            font-family:sans-serif; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-image: url('data:image/png;base64,{}');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.9) saturate(0.8);
+            opacity: 1;
+            color: #FAFAFA;
+            text-align: left;
+            padding: 0.4em;  /* Convert 10px to em units */
+            z-index: 1;
+            display: flex;
+            align-items: center;
+        }}
+        .left1-column {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;            
+            width: 15%;
+            padding: 0em;  /* Convert 10px to em units */
+        }}
+        .right1-column {{
+            font-size: 3.2em;  /* Convert 40px to em units */
+            text-indent: 1em;  /* Convert 40px to em units */
+            float: left;
+            width: 80%;
+            padding: 0em;  /* Convert 10px to em units */
+            margin-right: auto;
+        }}
+        .left1-column img {{
+            max-width: 200%;
+            display: inline-block;
+            vertical-align: middle;
+        }}
+        .button-div {{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 40%;
+            gap: 2em;  /* Convert 20px to em units */
+        }}
+        .button {{
+            background-color: #25476A;
+            border-color: #FAFAFA;
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            color: #FAFAFA;
+            padding: 0em 0em;  /* Adjust padding as per your preference */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.8em;  /* Convert 16px to em units */
+            margin: 0em;  /* Adjust margin as per your preference */
+            cursor: pointer;
+            width: 6.6em;
+            height: 2em;
+        }}
+        .button:hover {{
+            background-color: #b8d9e8;
+            border-color: #25476A;
+            color: #25476A;
+        }}
+        .clear {{
+            clear: both;
+        }}
+        body {{
+            margin-top: 1px;
+            font-size: var(--base-font-size);  /* Set the base font size */
+        }}
+        .welcome-text {{
+            font-size: 1.2em;  /* Adjust font size as per your preference */
+            margin-right: auto;  /* Adjust margin as per your preference */
+            color: #FAFAFA;
+        }}
+        .welcome-container {{
+            display: flex;
+            align-items: center;
+            width: 50%;  /* Adjust width as per your preference */
+            padding: 0em 0em;  /* Convert 10px 30px to em units */
+        }}
+        .welcome-container div {{
+            color: #FAFAFA;
+        }}
+        @media screen and (max-width: 1024px) {{
+        .header {{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8em;  /* Adjust padding for smaller screens */
+       }}
+
+        .left1-column {{
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            float: left;
+            margin-bottom: -1em;  /* Adjust margin for smaller screens */
+        }}
+        .left1-column img {{
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            float: left;
+          }}
+        .right1-column {{
+            width: 100%;  /* Set width to 100% for full width on smaller screens */
+            font-size: 7em;
+            display: flex;
+            text-indent: 0em;
+            align-items: center;
+            justify-content: center;
+            text-align: center;  /* Center align text on smaller screens */
+            margin-bottom: 0.2em;  /* Adjust margin for smaller screens */
+        }}
+        .welcome-container {{
+            width: 70%;  /* Set width to 100% for full width on smaller screens */
+            display: flex;
+            text-align: center;
+            font-size: 2.4em;
+            justify-content: center;  /* Center align items on smaller screens */
+            margin-bottom: 0.5em;  /* Adjust margin for smaller screens */
+        }}
+        .button-div {{
+            width: 50%;  /* Set width to 100% for full width on smaller screens */
+            justify-content: center;  /* Center align items on smaller screens */
+            gap: 2em;  /* Convert 20px to em units */
+            margin-top: 0em;  /* Add top margin */
+        }}
+        .button {{
+            border-width: 0.1875em;  /* Convert 3px to em units */
+            border-radius: 0.1875em;  /* Convert 3px to em units */
+            font-size: 1.6em;  /* Convert 16px to em units */
+            width: 5em;
+            height: 2em;
+        }}
+    }}
+    </style>
+    <div class="header">
+        <div class="left1-column">
+            <img src="data:image/png;base64,{}" class="img-fluid" alt="comrate_logo" width="120%">
+        </div>
+        <div class="right1-column">
+            WarGame Scenario Analysis
+        </div>
+        <div class="clear"></div>
+        <div class="welcome-container">
+            <div class="welcome-text">Welcome John</div>
+            <div class="button-div">
+                <!--<button class="button">Help</button>
+                <!--<button class="button">Contact</button>-->
+                <button class="button">Logout</button>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+"""
+
+# Replace `image_file_path` with the actual path to your image file
+image_file_path = "images/digital_background_update2.jpg"
+with open(image_file_path, "rb") as image_file:
+    encoded_string = base64.b64encode(image_file.read()).decode()
+
+st.markdown(header3.format(encoded_string, img_to_bytes("images/Paydar-logo-white-transparent.png")),
+            unsafe_allow_html=True)
+
+
+
+
+
+
 
 st.markdown(
     """
@@ -134,11 +338,4 @@ with st.sidebar:
 
   
 
-hide_st_style = """
-                <style>
-                footer {visibility: hidden;}
-                header {visibility: hidden;}
-                .viewerBadge_link__1S137 {display: none !important;}
-                </style>
-                """
-st.markdown(hide_st_style, unsafe_allow_html=True)
+
