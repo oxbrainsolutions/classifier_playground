@@ -193,9 +193,14 @@ st.markdown("""
 st.markdown("""
     <style>
         div.css-1inwz65.ektn3o0 {
-            font-size: 2em;
+            font-size: 0.8em;
             font-family: sans-serif;
         }
+        @media (max-width: 1024px) {
+          div.css-1inwz65.ektn3o0 {
+            font-size: 3.5em;
+          }
+      }
     </style>
     """, unsafe_allow_html=True)
 
