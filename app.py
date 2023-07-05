@@ -86,11 +86,11 @@ header = """
             padding: 2em;
         }}
         .middle-column img {{
-            width: 20%;
+            width: 30%;
             display: flex;
             align-items: center;
             justify-content: center;
-            float: left;
+            float: center;
           }}
     }}
     </style>
