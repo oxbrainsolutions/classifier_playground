@@ -269,7 +269,12 @@ with st.sidebar:
   user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
   submit_button = st.button("Run", key="key5")
   if submit_button:
-    x_train, y_train, x_test, y_test = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
+    if user_data_type == "":
+      st.error("**Error**: please complete selection.")
+    else:
+      x_train, y_train, x_test, y_test = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
+
+    st.write(x_train, y_train, x_test, y_test)
 
 
 
