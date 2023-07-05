@@ -128,9 +128,9 @@ st.markdown(
         background-color: #002147;
         color: #FAFAFA;
         border-color: #FAFAFA;
-        border-width: 3px;
-        width: 5.4em;
-        height: 1.8em;
+        border-width: 0.25em;
+        width: 100%;
+        height: 1em;
         margin-top: 1.5em;
     }
     div.stButton > button:hover {
