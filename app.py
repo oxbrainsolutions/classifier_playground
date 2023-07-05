@@ -82,10 +82,10 @@ header = """
             display: flex;
             align-items: center;
             float: left;
-            margin-bottom: -1em;  /* Adjust margin for smaller screens */
+            margin-bottom: 0em;  /* Adjust margin for smaller screens */
         }}
         .middle-column img {{
-            width: 30%;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
