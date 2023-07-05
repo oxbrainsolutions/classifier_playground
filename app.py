@@ -128,10 +128,10 @@ st.markdown(
         background-color: #002147;
         color: #FAFAFA;
         border-color: #FAFAFA;
-        border-width: 0.2em;
+        border-width: 0.1em;
         width: 100%;
         height: 1em;
-        margin-top: 1em;
+        margin-top: 0em;
     }
     div.stButton > button:hover {
         background-color: #76787A;
