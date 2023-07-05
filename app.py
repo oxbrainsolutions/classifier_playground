@@ -135,7 +135,7 @@ st.markdown(
     }
     div.stButton > button:hover {
         background-color: #76787A;
-        color: #002147;
+        color: #FAFAFA;
         border-color: #002147;
     }
     @media (max-width: 1024px) {
@@ -143,7 +143,7 @@ st.markdown(
         width: 100% !important;
         height: 8em !important;
         margin-top: -3em;
-        border-width: 0.5em;
+        border-width: 1em; !important;
         }
     }
     </style>
