@@ -143,7 +143,7 @@ st.markdown("""
   /* The input itself */
   div[data-baseweb="select"] > div,
   input[type=number] {
-  margin-top: -3em;
+  margin-top: 0;
   color: #FAFAFA;
   background-color: #4F5254;
   border: 0.25em solid #002147;
