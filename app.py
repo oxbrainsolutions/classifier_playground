@@ -190,7 +190,7 @@ with col2:
       @media (max-width: 1024px) {
           p.header_text {
             font-size: 5em;
-            margin-top: 0em;
+            margin-top: -2em;
           }
       }
       </style>
