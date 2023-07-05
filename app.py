@@ -128,7 +128,7 @@ st.markdown(
         background-color: #002147;
         color: #FAFAFA;
         border-color: #FAFAFA;
-        border-width: 0.2em;
+        border-width: 0.15em;
         width: 100%;
         height: 0.6em;
         margin-top: 0em;
@@ -139,10 +139,11 @@ st.markdown(
         border-color: #002147;
     }
     @media (max-width: 1024px) {
-    div.stButton > button {
+    div.stButton > button:first-child {
         width: 100% !important;
         height: 20em !important;
         margin-top: -3em;
+        border-width: 1em;
         }
     }
     </style>
