@@ -72,7 +72,6 @@ header = """
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 1em;  /* Adjust padding for smaller screens */
        }}
 
         .middle-column {{
