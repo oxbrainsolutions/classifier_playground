@@ -190,19 +190,14 @@ st.markdown("""
   </style>
   """, unsafe_allow_html=True)
 
-st.markdown(
-    """
+st.markdown("""
     <style>
-    /* CSS to change the font type and size of st.slider */
-    .css-2trqyj-singleValue,
-    .css-1r8jl09-singleValue {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-    }
+        div.css-1inwz65.ektn3o0 {
+            font-size: 0.8em;
+            font-family: sans-serif;
+        }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+    """, unsafe_allow_html=True)
 
 
 
