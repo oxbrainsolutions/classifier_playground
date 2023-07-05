@@ -72,7 +72,7 @@ header = """
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2em;
+            padding: 3em;
        }}
 
         .middle-column {{
