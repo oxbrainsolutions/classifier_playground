@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pathlib
 import base64
-from utils.functions import generate_data
+from utils.functions import generate_data, plot_scatter
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
