@@ -51,8 +51,8 @@ header = """
             display: flex;
             align-items: center;
             justify-content: center;
-            float: left;            
-            width: 15%;
+            float: center;            
+            width: 100%;
             padding: 0em;  /* Convert 10px to em units */
         }}
         .middle-column img {{
