@@ -198,14 +198,14 @@ with col2:
 
 with st.sidebar:
   subheader_text = '''
-  <p class="subheader_text" style="margin-top: -2em; margin-bottom: -4em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
+  <p class="subheader_text" style="margin-top: -3em; margin-bottom: -4em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
   '''
 
   subheader_media_query = '''
     <style>
     @media (max-width: 1024px) {
         p.subheader_text {
-          font-size: 3em;
+          font-size: 4em;
         }
     }
     </style>
