@@ -219,7 +219,7 @@ with st.sidebar:
   st.text("")
   st.text("")
   st.text("")
-  n_samples = st.number_input(label="", label_visibility="collapsed", min_value=50, max_value=1000, step=10, value=300, key="key1")
+  n_samples = st.number_input(label="hello", label_visibility="collapsed", min_value=50, max_value=1000, step=10, value=300, key="key1")
 
   train_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=0.2, key="key2")
   test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=train_noise, key="key3")
