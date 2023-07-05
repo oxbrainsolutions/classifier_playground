@@ -189,6 +189,7 @@ with col2:
       <style>
       @media (max-width: 1024px) {
           p.header_text {
+            color: #008080; 
             font-size: 3em;
           }
       }
