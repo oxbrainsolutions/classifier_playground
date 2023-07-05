@@ -196,7 +196,6 @@ with col2:
   '''
   st.markdown(header_media_query + header_text, unsafe_allow_html=True)
 
-  n_samples = st.number_input(label="hello", label_visibility="collapsed", min_value=50, max_value=1000, step=10, value=300, key="key1")
 with st.sidebar:
   subheader_text = '''
   <p class="subheader_text" style="margin-top: -4em; margin-bottom: -4em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
@@ -213,17 +212,12 @@ with st.sidebar:
   '''
   st.markdown(subheader_media_query + subheader_text, unsafe_allow_html=True)
 
-  st.text("")
-  st.text("")
-  st.text("")
-  st.text("")
-  st.text("")
-  st.text("")
-  st.text("")
+  n_samples = st.number_input(label="", label_visibility="collapsed", min_value=50, max_value=1000, step=10, value=300, key="key1")
+
  
 
-  #train_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=0.2, key="key2")
-  #test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=train_noise, key="key3")
+  train_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=0.2, key="key2")
+  test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=train_noise, key="key3")
 
 
   text = '<p class="text" style="margin-top: -3.4em; margin-bottom: -6em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
