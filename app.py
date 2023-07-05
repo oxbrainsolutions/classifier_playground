@@ -17,6 +17,18 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+line = '<hr class="line1" style="height:0.1875em; border:0em; background-color: #FCBC24; margin-top: 0.2em;">'
+line_media_query = '''
+    <style>
+    @media (max-width: 1024px) {
+        .line1 {
+            padding: 0.3em;
+            margin-bottom: 8em;
+        }
+    }
+    </style>
+'''
+
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
     encoded = base64.b64encode(img_bytes).decode()
@@ -210,7 +222,7 @@ with st.sidebar:
     </style>
   '''
   st.markdown(subheader_media_query + subheader_text, unsafe_allow_html=True)
-
+  st.markdown(line_media_query + line, unsafe_allow_html=True)
 
 
 
