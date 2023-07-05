@@ -22,7 +22,7 @@ line_media_query = '''
     <style>
     @media (max-width: 1024px) {
         .line1 {
-            padding: 0.3em;
+            padding: -2em;
             margin-top: -2em; 
             margin-bottom: 8em;
         }
