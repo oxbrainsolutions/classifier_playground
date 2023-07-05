@@ -274,7 +274,8 @@ with st.sidebar:
     else:
       x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
 
-      plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
+      scatter = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
+      st.plotly_chart(manual_scenario_rating_fig, config={'displayModeBar': False}, use_container_width=True)
 
 
 
