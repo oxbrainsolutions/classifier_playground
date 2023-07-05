@@ -23,7 +23,6 @@ line_media_query = '''
     @media (max-width: 1024px) {
         .line1 {
             padding: 0.3em;
-            padding-bottom: 2em;
         }
     }
     </style>
@@ -217,6 +216,7 @@ with st.sidebar:
     @media (max-width: 1024px) {
         p.subheader_text {
           font-size: 4em;
+          margin-bottom: -8em;
         }
     }
     </style>
