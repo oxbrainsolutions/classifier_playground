@@ -101,7 +101,13 @@ header = """
     </div>
 """
 
+# Replace `image_file_path` with the actual path to your image file
+image_file_path = "images/oxbrain_header_background.jpg"
+with open(image_file_path, "rb") as image_file:
+    encoded_string = base64.b64encode(image_file.read()).decode()
 
+st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_trans.png")),
+            unsafe_allow_html=True)
 
 
 st.markdown(
