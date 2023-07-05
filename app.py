@@ -23,7 +23,6 @@ line_media_query = '''
     @media (max-width: 1024px) {
         .line1 {
             padding: 0.3em;
-            margin-top: -2em; 
             margin-bottom: 8em;
         }
     }
@@ -210,7 +209,7 @@ with col2:
 
 with st.sidebar:
   subheader_text = '''
-  <p class="subheader_text" style="margin-top: -4em; margin-bottom: -4em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
+  <p class="subheader_text" style="margin-top: -3em; margin-bottom: -4em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
   '''
 
   subheader_media_query = '''
