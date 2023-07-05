@@ -182,7 +182,7 @@ st.markdown("""
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
   header_text = '''
-    <p class="header_text" style="margin-top: 3em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; border-width: 30em; font-family: sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
+    <p class="header_text" style="margin-top: 3em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; background-color: rgba(3, 169, 244, 0.2); border-radius: 0.375em; font-family: sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
   '''
 
   header_media_query = '''
