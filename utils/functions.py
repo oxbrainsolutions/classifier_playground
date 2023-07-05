@@ -4,13 +4,13 @@ from sklearn.datasets import make_moons, make_circles, make_blobs
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=False)
 def generate_data(dataset, n_samples, train_noise, test_noise, n_classes):
-    if dataset == "spirals":
+    if dataset == "Spirals":
         x_train, y_train = make_moons(n_samples=n_samples, noise=train_noise)
         x_test, y_test = make_moons(n_samples=n_samples, noise=test_noise)
-    elif dataset == "circles":
+    elif dataset == "Circles":
         x_train, y_train = make_circles(n_samples=n_samples, noise=train_noise)
         x_test, y_test = make_circles(n_samples=n_samples, noise=test_noise)
-    elif dataset == "blobs":
+    elif dataset == "Blobs":
         x_train, y_train = make_blobs(
             n_features=2,
             n_samples=n_samples,
