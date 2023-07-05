@@ -143,7 +143,7 @@ st.markdown(
         width: 100% !important;
         height: 8em !important;
         margin-top: -3em;
-        border-width: 0.8em;
+        border-width: 4em; !important;
         }
     }
     </style>
