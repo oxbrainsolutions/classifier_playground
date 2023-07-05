@@ -128,7 +128,7 @@ st.markdown(
         background-color: #002147;
         color: #FAFAFA;
         border-color: #FAFAFA;
-        border-width: 0.1em;
+        border-width: 0.15em;
         width: 100%;
         height: 1em;
         margin-top: 0em;
