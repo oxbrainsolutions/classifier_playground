@@ -141,8 +141,9 @@ st.markdown(
     @media (max-width: 1024px) {
     div.stButton > button {
         width: 100% !important;
-        height: 10em !important;
+        height: 8em !important;
         margin-top: -3em;
+        border-width: 0.2em;
         }
     }
     </style>
