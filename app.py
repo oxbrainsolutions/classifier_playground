@@ -72,7 +72,7 @@ header = """
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 1em;
+            padding: 3em;
        }}
 
         .middle-column {{
@@ -83,7 +83,7 @@ header = """
             align-items: center;
             float: center;
             margin-bottom: 0em;  /* Adjust margin for smaller screens */
-            padding: 2em;
+            padding: 0em;
         }}
         .middle-column img {{
             width: 30%;
