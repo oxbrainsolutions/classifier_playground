@@ -73,7 +73,7 @@ header = """
             justify-content: center;
             align-items: center;
             padding: 3em;
-            margin-bottom: -5em;
+            padding-bottom: -5em;
        }}
 
         .middle-column {{
