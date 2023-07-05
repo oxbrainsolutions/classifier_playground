@@ -32,3 +32,60 @@ def generate_data(dataset, n_samples, train_noise, test_noise, n_classes):
         x_test = scaler.transform(x_test)
 
     return x_train, y_train, x_test, y_test
+
+def plot_scatter(x_train, y_train, x_test, y_test):
+    d = x_train.shape[1]
+    x_min, x_max = x_train[:, 0].min() - 1, x_train[:, 0].max() + 1
+    y_min, y_max = x_train[:, 1].min() - 1, x_train[:, 1].max() + 1
+
+    h = 0.02
+
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
+    y_ = np.arange(y_min, y_max, h)
+
+    fig = make_subplots(
+        rows=1,
+        cols=2,
+        specs=[[{"colspan": 2}, None], [{"type": "indicator"}, {"type": "indicator"}]],
+        row_heights=[0.7, 0.30],
+    )
+    train_data = go.Scatter(
+        x=x_train[:, 0],
+        y=x_train[:, 1],
+        name="Train Data",
+        mode="markers",
+        showlegend=True,
+        marker=dict(
+            size=10,
+            color=y_train,
+            colorscale=["tomato", "green"],
+            line=dict(color="black", width=2),
+        ),
+    )
+
+    test_data = go.Scatter(
+        x=x_test[:, 0],
+        y=x_test[:, 1],
+        name="Test Data",
+        mode="markers",
+        showlegend=True,
+        marker_symbol="cross",
+        visible="legendonly",
+        marker=dict(
+            size=10,
+            color=y_test,
+            colorscale=["tomato", "green"],
+            line=dict(color="black", width=2),
+        ),
+    )
+
+    fig.add_trace(train_data).add_trace(
+        test_data).update_xaxes(range=[x_min, x_max], title="x1").update_yaxes(
+        range=[y_min, y_max], title="x2")
+
+    fig.update_layout(
+        height=700,
+    )
+
+    return fig
+
