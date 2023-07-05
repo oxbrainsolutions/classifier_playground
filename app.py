@@ -274,7 +274,7 @@ with st.sidebar:
     else:
       x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
 
-      st.write(x_train_out, y_train_out, x_test_out, y_test_out)
+      plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
 
 
 
