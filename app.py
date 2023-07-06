@@ -196,7 +196,7 @@ st.markdown("""
             font-size: 0.8em;
             font-family: sans-serif;
         }
-        div.css-12gsf70.ektn3o2{
+        div.StyledThumbValue.css-12gsf70.ektn3o2{
             font-size: 0.8em;
             font-family: sans-serif;
         }
