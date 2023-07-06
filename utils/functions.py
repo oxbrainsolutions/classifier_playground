@@ -88,7 +88,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
         range=[y_min, y_max], title="x2")
 
     fig.update_layout(
-        height=700,
+        height=400,
     )
 
     return fig
