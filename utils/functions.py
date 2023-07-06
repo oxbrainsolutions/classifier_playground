@@ -93,20 +93,19 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     return fig
 
 def lr_param_selector():
-
     solver == "saga"
     
     penalty_options = ["None", "Lasso", "Ridge", "Elatsic Net"]
     user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Regularization" if x == "" else x, key="key7")
     penalty_options_update = ["none", "l1", "l2", "elasticnet"][penalty_options.index(user_penalty)]
-    
-    C = st.number_input("C", 0.1, 2.0, 1.0, 0.1)
-    C = np.round(C, 3)
-    
-    max_iter = st.number_input("max_iter", 100, 2000, step=50, value=100)
 
-    params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": max_iter}
+    user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key8")
+    C = np.round(user_constraint, 3)
 
+    user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key8")
+    user_max_iter = st.number_input(label="", label_visibility="collapsed", min_value=100, max_value=2000 step=50, value=100, key="key9")
+
+    params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": user_max_iter}
     model = LogisticRegression(**params)
     return model
 
