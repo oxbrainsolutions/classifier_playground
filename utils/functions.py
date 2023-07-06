@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 from plotly.subplots import make_subplots
+import plotly.graph_objects as go
 from sklearn.datasets import make_moons, make_circles, make_blobs
 
 
