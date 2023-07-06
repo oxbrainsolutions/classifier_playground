@@ -49,7 +49,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
         rows=1,
         cols=2,
         specs=[[{"colspan": 2}, None]],
-        row_heights=[0.7, 0.30],
+        row_heights=[0.7],
     )
     train_data = go.Scatter(
         x=x_train[:, 0],
