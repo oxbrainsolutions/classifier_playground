@@ -298,9 +298,10 @@ with col2:
         subheader_text_field1.error("**Error**: incomplete selection.")
       else:
         x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
-  
+        subheader_text_field2.empty()
         scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
-        subheader_text_field2.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
+        scatter_fig_field = st.empty()
+        scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
 
 
 
