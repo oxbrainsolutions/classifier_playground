@@ -130,7 +130,7 @@ st.markdown(
         border-color: #FAFAFA;
         border-width: 0.15em;
         width: 100%;
-        height: 0.6em;
+        height: 0.5em;
         margin-top: 0em;
     }
     div.stButton > button:hover {
