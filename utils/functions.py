@@ -94,14 +94,18 @@ def plot_scatter(x_train, y_train, x_test, y_test):
 
 def lr_param_selector():
 
-    solver == "saga":
-    penalties = ["l1", "l2", "none", "elasticnet"]
-    penalty = st.selectbox("penalty", options=penalties)
+    solver == "saga"
+    
+    penalty_options = ["None", "Lasso", "Ridge", "Elatsic Net"]
+    user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Regularization" if x == "" else x, key="key7")
+    penalty_options_update = ["none", "l1", "l2", "elasticnet"][penalty_options.index(user_penalty)]
+    
     C = st.number_input("C", 0.1, 2.0, 1.0, 0.1)
     C = np.round(C, 3)
+    
     max_iter = st.number_input("max_iter", 100, 2000, step=50, value=100)
 
-    params = {"solver": solver, "penalty": penalty, "C": C, "max_iter": max_iter}
+    params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": max_iter}
 
     model = LogisticRegression(**params)
     return model
