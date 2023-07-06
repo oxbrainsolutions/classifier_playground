@@ -260,8 +260,8 @@ with st.sidebar:
   submit_button = st.button("Generate Dataset", key="key5")
   subheader_text_field1 = st.empty()
   line_field = st.empty()
-
-  user_test_noise
+  model_text_field = st.empty()
+  user_model_field = st.empty()
 
 
 col1, col2, col3 = st.columns([1, 4, 1])
@@ -311,6 +311,8 @@ with col2:
         subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
         subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
         line_field.markdown(line_media_query + line, unsafe_allow_html=True)
+
+        model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
 
 
 
