@@ -131,6 +131,8 @@ st.markdown(
         width: 100%;
         height: 0.2em !important;
         margin-top: 0em;
+        font-size: 0.8em;
+        font-family: sans-serif;
     }
     div.stButton > button:hover {
         background-color: #76787A;
@@ -159,6 +161,7 @@ st.markdown("""
   background-color: #4F5254;
   border: 0.25em solid #002147;
   font-size: 0.8em;
+  font-family: sans-serif;
   height: 3em;
   }
   /* Hover effect */
