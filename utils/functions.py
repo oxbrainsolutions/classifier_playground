@@ -48,7 +48,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     fig = make_subplots(
         rows=1,
         cols=2,
-        specs=[[{"colspan": 2}, None], [{"type": "indicator"}, {"type": "indicator"}]],
+        specs=[[{"colspan": 2}, None]],
         row_heights=[0.7, 0.30],
     )
     train_data = go.Scatter(
