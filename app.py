@@ -215,7 +215,6 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 with st.sidebar:
-  st.text("")
   subheader_text = '''
   <p class="subheader_text" style="margin-top: -2.2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
   '''
