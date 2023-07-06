@@ -298,9 +298,7 @@ with col2:
         subheader_text_field1.error("**Error**: incomplete selection.")
       else:
         x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
-        information_text2 = '''
-          <p class="information_text" style="margin-top: 2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes.</span></p>.format(user_n_samples)
-        '''
+        information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes.</span></p>'''.format(user_n_samples)
          
         subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
         scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
