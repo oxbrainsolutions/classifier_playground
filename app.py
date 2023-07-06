@@ -249,6 +249,7 @@ with st.sidebar:
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
   submit_button = st.button("Run", key="key5")
+  subheader_text_field = st.empty()
 
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
@@ -271,7 +272,7 @@ with col2:
   with col2:
     if submit_button:
       if user_data_type == "":
-        st.error("**Error**: please complete selection.")
+        subheader_text_field.error("**Error**: incomplete selection.")
       else:
         x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
   
