@@ -270,7 +270,7 @@ with col2:
       <style>
       @media (max-width: 1024px) {
           p.header_text {
-            font-size: 3em;
+            font-size: 3.2em;
           }
       }
       </style>
@@ -283,7 +283,7 @@ with col2:
       <style>
       @media (max-width: 1024px) {
           p.information_text {
-            font-size: 2.8em;
+            font-size: 3em;
           }
       }
       </style>
