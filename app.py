@@ -120,6 +120,17 @@ with open(image_file_path, "rb") as image_file:
 st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_trans.png")),
             unsafe_allow_html=True)
 
+st.markdown(
+    """
+    <style>
+     div.stSlider > {
+        color: #FAFAFA;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+  )
+
 
 st.markdown(
     """
