@@ -260,7 +260,7 @@ with st.sidebar:
   submit_button = st.button("Generate Dataset", key="key5")
   subheader_text_field = st.empty()
 
-col1, col2, col3 = st.columns([0.2, 4, 0.2])
+col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
   header_text = '''
     <p class="header_text" style="margin-top: 3em; margin-bottom: 0em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
