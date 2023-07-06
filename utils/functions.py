@@ -87,6 +87,8 @@ def plot_scatter(x_train, y_train, x_test, y_test):
         test_data).update_xaxes(range=[x_min, x_max], title="x1").update_yaxes(
         range=[y_min, y_max], title="x2")
 
+    fig.update_xaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
+    fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(
         height=500, width = 500
     )
