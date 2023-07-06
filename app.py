@@ -277,9 +277,9 @@ with col2:
   '''
   st.markdown(header_media_query + header_text, unsafe_allow_html=True)
   information_text = '''
-    <p class="information_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 0.8em; ">Supervised machine learning classification software is a technology that can detect and recognize patterns in labeled data. In this playground tool, you can explore the capabilities of multiple AI and ML models for classifying data. To begin, create your own dataset using the options provided. Define the characteristics that represent your data and input the corresponding values. Once your dataset is ready, you can select a ML model to train and test on the data. The model will learn from the patterns and relationships within the dataset to make predictions and classify new instances. By analyzing the features, the software determines the appropriate label for each data point, categorizing it into one of the two classes. Explore the various models, tweak the parameters and see how different algorithms perform on your dataset.</span></p>
+    <p class="information_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 0.8em; ">Supervised machine learning classification software is a technology that can detect and recognize patterns in labeled data. In this playground tool, you can explore the capabilities of multiple AI and ML models for classifying data. To begin, create your own dataset using the options provided in the side menu. Define the characteristics that represent your data and input the corresponding values. Once your dataset is ready, you can select a ML model to train and test on the data. The model will learn from the patterns and relationships within the dataset to make predictions and classify new instances. By analyzing the features, the software determines the appropriate label for each data point, categorizing it into one of the two classes. Explore the various models, tweak the parameters and see how different algorithms perform on your dataset.</span></p>
   '''
-   information_media_query = '''
+  information_media_query = '''
       <style>
       @media (max-width: 1024px) {
           p.information_text {
