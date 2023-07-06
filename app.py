@@ -15,10 +15,14 @@ if "user_data_type" not in st.session_state or "user_n_samples" not in st.sessio
     st.session_state["user_test_noise"] = ""
     st.session_state["user_model"] = ""
 
+if "x_train_out" not in st.session_state or "y_train_out" not in st.session_state or "x_test_out" not in st.session_state or "y_test_out" not in st.session_state:
+    st.session_state["x_train_out"] = []
+    st.session_state["y_train_out"] = []
+    st.session_state["x_test_out"] = []
+    st.session_state["y_test_out"] = []
+
 if "submit_confirm1" not in st.session_state:
     st.session_state["submit_confirm1"] = False
-
-
 
 hide_st_style = """
                 <style>
@@ -317,11 +321,11 @@ with col2:
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
   if st.session_state.submit_confirm1 == True:
-    x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
+    st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out = generate_data(st.session_state.user_data_type, st.session_state.user_n_samples, st.session_state.user_train_noise, st.session_state.user_test_noise, n_classes=2)
     information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(user_n_samples)
      
     subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
-    scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
+    scatter_fig = plot_scatter(st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
     scatter_fig_field = st.empty()
     scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
     subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
