@@ -3,6 +3,7 @@ import numpy as np
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from sklearn.datasets import make_moons, make_circles, make_blobs
+from sklearn.preprocessing import StandardScaler
 
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=False)
