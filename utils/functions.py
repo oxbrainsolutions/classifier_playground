@@ -62,7 +62,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
         marker=dict(
             size=10,
             color=y_train,
-            colorscale=["tomato", "green"],
+            colorscale=["#FCBC24", "#008080"],
             line=dict(color="black", width=2),
         ),
     )
