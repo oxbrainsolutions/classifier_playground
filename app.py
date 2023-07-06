@@ -205,25 +205,6 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-
-
-col1, col2, col3 = st.columns([0.2, 5, 0.2])
-with col2:
-  header_text = '''
-    <p class="header_text" style="margin-top: 3em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
-  '''
-
-  header_media_query = '''
-      <style>
-      @media (max-width: 1024px) {
-          p.header_text {
-            font-size: 3em;
-          }
-      }
-      </style>
-  '''
-  st.markdown(header_media_query + header_text, unsafe_allow_html=True)
-
 with st.sidebar:
   subheader_text = '''
   <p class="subheader_text" style="margin-top: -2.2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
@@ -268,6 +249,24 @@ with st.sidebar:
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
   submit_button = st.button("Run", key="key5")
+
+col1, col2, col3 = st.columns([0.2, 5, 0.2])
+with col2:
+  header_text = '''
+    <p class="header_text" style="margin-top: 3em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
+  '''
+
+  header_media_query = '''
+      <style>
+      @media (max-width: 1024px) {
+          p.header_text {
+            font-size: 3em;
+          }
+      }
+      </style>
+  '''
+  st.markdown(header_media_query + header_text, unsafe_allow_html=True)
+  
   if submit_button:
     if user_data_type == "":
       st.error("**Error**: please complete selection.")
