@@ -302,7 +302,7 @@ with col2:
           <p class="information_text" style="margin-top: 2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes.</span></p>.format(user_n_samples)
         '''
          
-        subheader_text_field2.empty()
+        subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
         scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
         scatter_fig_field = st.empty()
         scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
