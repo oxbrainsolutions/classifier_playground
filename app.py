@@ -123,18 +123,6 @@ st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_tran
 st.markdown(
     """
     <style>
-     div.stSlider > slider:first-child {
-        color: #FAFAFA;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-  )
-
-
-st.markdown(
-    """
-    <style>
      div.stButton > button:first-child {
         background-color: #002147;
         color: #FAFAFA;
@@ -205,6 +193,10 @@ st.markdown("""
 st.markdown("""
     <style>
         div.css-1inwz65.ektn3o0 {
+            font-size: 0.8em;
+            font-family: sans-serif;
+        }
+        div.css-12gsf70.ektn3o2{
             font-size: 0.8em;
             font-family: sans-serif;
         }
