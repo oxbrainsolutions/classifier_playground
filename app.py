@@ -215,7 +215,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 with st.sidebar:
-  subheader_text = '''
+  subheader_text1 = '''
   <p class="subheader_text" style="margin-top: -2.2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
   '''
 
@@ -228,7 +228,7 @@ with st.sidebar:
     }
     </style>
   '''
-  st.markdown(subheader_media_query + subheader_text, unsafe_allow_html=True)
+  st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
   st.markdown(line_media_query + line, unsafe_allow_html=True)
 
 
@@ -259,6 +259,12 @@ with st.sidebar:
   user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
   submit_button = st.button("Generate Dataset", key="key5")
   subheader_text_field1 = st.empty()
+  line_field = st.empty()
+  subheader_text2 = '''
+  <p class="subheader_text" style="margin-top: -2.2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>
+  '''
+
+
 
 col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
@@ -304,6 +310,8 @@ with col2:
         scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
         scatter_fig_field = st.empty()
         scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
+        subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
+        line_field.markdown(line_media_query + line, unsafe_allow_html=True)
 
 
 
