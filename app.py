@@ -238,7 +238,7 @@ with st.sidebar:
   <style>
   @media (max-width: 1024px) {
       p.text {
-          font-size: 3.5em;
+          font-size: 4em;
       }
   }
   </style>
