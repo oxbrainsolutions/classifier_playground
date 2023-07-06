@@ -277,7 +277,7 @@ with col2:
   '''
   st.markdown(header_media_query + header_text, unsafe_allow_html=True)
   information_text1 = '''
-    <p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">In this playground tool, you can explore the capabilities of multiple AI and ML models for classifying data. To begin, create your own dataset using the options provided in the side menu. Once your dataset is ready, you can select a ML model to train and test on the data. The model will learn from the patterns and relationships within the dataset to make predictions and classify new instances. Explore the various models, tweak the parameters and see how different algorithms perform on your dataset.</span></p>
+    <p class="information_text" style="margin-top: 2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">In this playground tool, you can explore the capabilities of multiple AI and ML models for classifying data. To begin, create your own dataset using the options provided in the side menu. Once your dataset is ready, you can select a ML model to train and test on the data. The model will learn from the patterns and relationships within the dataset to make predictions and classify new instances. Explore the various models, tweak the parameters and see how different algorithms perform on your dataset.</span></p>
   '''
   information_media_query = '''
       <style>
@@ -298,7 +298,7 @@ with col2:
         subheader_text_field1.error("**Error**: incomplete selection.")
       else:
         x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
-        information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(user_n_samples)
+        information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(user_n_samples)
          
         subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
         scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
