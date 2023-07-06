@@ -258,7 +258,7 @@ with st.sidebar:
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
   submit_button = st.button("Generate Dataset", key="key5")
-  subheader_text_field = st.empty()
+  subheader_text_field1 = st.empty()
 
 col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
@@ -288,20 +288,19 @@ with col2:
       }
       </style>
   '''
-  st.markdown(information_media_query + information_text, unsafe_allow_html=True)
-
-
-  
+  subheader_text_field2 = st.empty()
+  subheader_text_field2.markdown(information_media_query + information_text, unsafe_allow_html=True)
+ 
   col1, col2, col3 = st.columns([1, 3, 1])
   with col2:
     if submit_button:
       if user_data_type == "":
-        subheader_text_field.error("**Error**: incomplete selection.")
+        subheader_text_field1.error("**Error**: incomplete selection.")
       else:
         x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
   
         scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
-        st.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
+        subheader_text_field2.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
 
 
 
