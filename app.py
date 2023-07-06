@@ -131,7 +131,7 @@ st.markdown(
         width: 100%;
         height: 0.2em !important;
         margin-top: 0em;
-        font-size: 0.8em;
+        font-size: 0.5em;
         font-family: sans-serif;
     }
     div.stButton > button:hover {
