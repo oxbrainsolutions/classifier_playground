@@ -8,6 +8,26 @@ from utils.functions import generate_data, plot_scatter
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
 
+user_data_type
+user_n_samples
+
+
+
+submit_confirm1
+
+
+if "user_data_type" not in st.session_state or "user_n_samples" not in st.session_state or "user_train_noise" not in st.session_state or "user_test_noise" not in st.session_state or "user_model" not in st.session_state:
+    st.session_state["user_data_type"] = ""
+    st.session_state["user_n_samples"] = ""
+    st.session_state["user_train_noise"] = ""
+    st.session_state["user_test_noise"] = ""
+    st.session_state["user_model"] = ""
+
+if "submit_confirm1" not in st.session_state:
+    st.session_state["submit_confirm1"] = False
+
+
+
 hide_st_style = """
                 <style>
                 footer {visibility: hidden;}
@@ -245,19 +265,19 @@ with st.sidebar:
   '''
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   data_type_options = ["", "Blobs", "Circles", "Spirals"]
-  user_data_type = st.selectbox(label="", label_visibility="collapsed", options=data_type_options,
+  st.session_state.user_data_type = st.selectbox(label="", label_visibility="collapsed", options=data_type_options,
                format_func=lambda x: "Select Data Type" if x == "" else x, key="key1")
 
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Sample Size</span></p>'
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
-  user_n_samples = st.number_input(label="", label_visibility="collapsed", min_value=50, max_value=1000, step=10, value=300, key="key2")
+  st.session_state.user_n_samples = st.number_input(label="", label_visibility="collapsed", min_value=50, max_value=1000, step=10, value=300, key="key2")
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Training Data Noise</span></p>'
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
-  user_train_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=0.2, key="key3")
+  st.session_state.user_train_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=0.2, key="key3")
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Testing Data Noise</span></p>'
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
-  user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
-  submit_button = st.button("Generate Dataset", key="key5")
+  st.session_state.user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=user_train_noise, key="key4")
+  submit_button1 = st.button("Generate Dataset", key="key5")
   subheader_text_field1 = st.empty()
   line_field = st.empty()
   model_text_field = st.empty()
@@ -295,28 +315,32 @@ with col2:
   subheader_text_field2 = st.empty()
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
  
-  col1, col2, col3 = st.columns([1, 2, 1])
-  with col2:
-    if submit_button:
-      if user_data_type == "":
-        subheader_text_field1.error("**Error**: incomplete selection.")
-      else:
-        x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
-        information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(user_n_samples)
-         
-        subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
-        scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
-        scatter_fig_field = st.empty()
-        scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
-        subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
-        subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
-        line_field.markdown(line_media_query + line, unsafe_allow_html=True)
+  if submit_button1:
+    if user_data_type == "":
+      subheader_text_field1.error("**Error**: incomplete selection.")
+      st.session_state.submit_confirm1 = False
+    else:
+      st.session_state.submit_confirm1 = True
 
-        text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
-        model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
-        model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
-        user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options,
-               format_func=lambda x: "Select Model" if x == "" else x, key="key6")
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+  if st.session_state.submit_confirm1 == True
+    x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
+    information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(user_n_samples)
+     
+    subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
+    scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
+    scatter_fig_field = st.empty()
+    scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
+    subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
+    subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
+    line_field.markdown(line_media_query + line, unsafe_allow_html=True)
+    
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
+    model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
+    model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
+    st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options,
+           format_func=lambda x: "Select Model" if x == "" else x, key="key6")
 
 
   
