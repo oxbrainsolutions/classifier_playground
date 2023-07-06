@@ -79,7 +79,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
             size=10,
             color=y_test,
             colorscale=["#FCBC24", "#705780"],
-            line=dict(color="#FAFAFA", width=2),
+            line=dict(color="black", width=2),
         ),
     )
 
