@@ -324,7 +324,7 @@ with col2:
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-  if st.session_state.submit_confirm1 == True
+  if st.session_state.submit_confirm1 == True:
     x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
     information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(user_n_samples)
      
