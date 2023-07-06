@@ -17,7 +17,7 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: -1.2em; margin-bottom: -2em;">'
+line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
 line2 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
 line_media_query = '''
     <style>
