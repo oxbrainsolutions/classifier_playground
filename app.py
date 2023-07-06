@@ -316,7 +316,7 @@ with col2:
         model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
         model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
         user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options,
-               format_func=lambda x: "Select Model" if x == "" else x, key="key1")
+               format_func=lambda x: "Select Model" if x == "" else x, key="key6")
 
 
   
