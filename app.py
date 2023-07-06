@@ -123,7 +123,7 @@ st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_tran
 st.markdown(
     """
     <style>
-     div.stSlider > {
+     div.stSlider > slider:first-child {
         color: #FAFAFA;
     }
     </style>
