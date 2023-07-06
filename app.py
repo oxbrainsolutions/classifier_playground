@@ -308,8 +308,8 @@ with col2:
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
  
   if submit_button1:
-    if user_data_type == "":
-      st.session_state.subheader_text_field1.error("**Error**: incomplete selection.")
+    if st.session_state.user_data_type == "":
+      subheader_text_field1.error("**Error**: incomplete selection.")
       st.session_state.submit_confirm1 = False
     else:
       st.session_state.submit_confirm1 = True
