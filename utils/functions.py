@@ -78,8 +78,8 @@ def plot_scatter(x_train, y_train, x_test, y_test):
         marker=dict(
             size=10,
             color=y_test,
-            colorscale=["tomato", "green"],
-            line=dict(color="black", width=2),
+            colorscale=["#FCBC24", "#008080"],
+            line=dict(color="#FAFAFA", width=2),
         ),
     )
 
@@ -88,7 +88,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
         range=[y_min, y_max], title="x2")
 
     fig.update_layout(
-        height=400,
+        height=500, width = 500
     )
 
     return fig
