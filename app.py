@@ -283,7 +283,7 @@ with col2:
       <style>
       @media (max-width: 1024px) {
           p.information_text {
-            font-size: 1em;
+            font-size: 2em;
           }
       }
       </style>
