@@ -261,7 +261,7 @@ with st.sidebar:
   subheader_text_field1 = st.empty()
   line_field = st.empty()
   subheader_text2 = '''
-  <p class="subheader_text" style="margin-top: -2.2em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>
+  <p class="subheader_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>
   '''
 
 
