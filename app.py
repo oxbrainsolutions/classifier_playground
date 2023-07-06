@@ -199,6 +199,7 @@ st.markdown("""
         div.StyledThumbValue.css-12gsf70.ektn3o2{
             font-size: 0.8em;
             font-family: sans-serif;
+            color: #FCBC24;
         }
         @media (max-width: 1024px) {
           div.css-1inwz65.ektn3o0 {
