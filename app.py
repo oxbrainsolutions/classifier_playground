@@ -159,7 +159,6 @@ st.markdown("""
   color: #FAFAFA;
   background-color: #4F5254;
   border: 0.25em solid #002147;
-  font-size: 0.8em;
   font-family: sans-serif;
   height: 3em;
   }
