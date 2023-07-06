@@ -312,8 +312,14 @@ with col2:
         subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
         line_field.markdown(line_media_query + line, unsafe_allow_html=True)
 
+        text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
         model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
+        model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
+        user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options,
+               format_func=lambda x: "Select Model" if x == "" else x, key="key1")
 
+
+  
 
 
 
