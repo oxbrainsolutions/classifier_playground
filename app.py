@@ -253,7 +253,7 @@ with st.sidebar:
 col1, col2, col3 = st.columns([0.2, 5, 0.2])
 with col2:
   header_text = '''
-    <p class="header_text" style="margin-top: 3em; margin-bottom: 1.25em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
+    <p class="header_text" style="margin-top: 3em; margin-bottom: 0em; text-align: center;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1.8em; ">Supervised Machine Learning Classification</span></p>
   '''
 
   header_media_query = '''
@@ -267,14 +267,16 @@ with col2:
   '''
   st.markdown(header_media_query + header_text, unsafe_allow_html=True)
   
-  if submit_button:
-    if user_data_type == "":
-      st.error("**Error**: please complete selection.")
-    else:
-      x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
-
-      scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
-      st.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
+  col1, col2, col3 = st.columns(3)
+  with col2:
+    if submit_button:
+      if user_data_type == "":
+        st.error("**Error**: please complete selection.")
+      else:
+        x_train_out, y_train_out, x_test_out, y_test_out = generate_data(user_data_type, user_n_samples, user_train_noise, user_test_noise, n_classes=2)
+  
+        scatter_fig = plot_scatter(x_train_out, y_train_out, x_test_out, y_test_out)
+        st.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
 
 
 
