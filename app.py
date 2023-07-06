@@ -8,14 +8,6 @@ from utils.functions import generate_data, plot_scatter
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
 
-user_data_type
-user_n_samples
-
-
-
-submit_confirm1
-
-
 if "user_data_type" not in st.session_state or "user_n_samples" not in st.session_state or "user_train_noise" not in st.session_state or "user_test_noise" not in st.session_state or "user_model" not in st.session_state:
     st.session_state["user_data_type"] = ""
     st.session_state["user_n_samples"] = ""
