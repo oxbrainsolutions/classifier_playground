@@ -4,7 +4,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from sklearn.datasets import make_moons, make_circles, make_blobs
 from sklearn.preprocessing import StandardScaler
-
+from sklearn.linear_model import LogisticRegression
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=False)
 def generate_data(dataset, n_samples, train_noise, test_noise, n_classes):
@@ -91,4 +91,18 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=0, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
     return fig
+
+def lr_param_selector():
+
+    solver == "saga":
+    penalties = ["l1", "l2", "none", "elasticnet"]
+    penalty = st.selectbox("penalty", options=penalties)
+    C = st.number_input("C", 0.1, 2.0, 1.0, 0.1)
+    C = np.round(C, 3)
+    max_iter = st.number_input("max_iter", 100, 2000, step=50, value=100)
+
+    params = {"solver": solver, "penalty": penalty, "C": C, "max_iter": max_iter}
+
+    model = LogisticRegression(**params)
+    return model
 
