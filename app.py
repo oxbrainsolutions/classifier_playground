@@ -309,7 +309,7 @@ with col2:
  
   if submit_button1:
     if user_data_type == "":
-      subheader_text_field1.error("**Error**: incomplete selection.")
+      st.session_state.subheader_text_field1.error("**Error**: incomplete selection.")
       st.session_state.submit_confirm1 = False
     else:
       st.session_state.submit_confirm1 = True
