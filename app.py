@@ -17,8 +17,7 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
-line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
-line2 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
+line = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
 line_media_query = '''
     <style>
     @media (max-width: 1024px) {
@@ -230,7 +229,7 @@ with st.sidebar:
     </style>
   '''
   st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
-  st.markdown(line_media_query + line1, unsafe_allow_html=True)
+  st.markdown(line_media_query + line, unsafe_allow_html=True)
 
 
 
@@ -312,7 +311,7 @@ with col2:
         scatter_fig_field = st.empty()
         scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
         subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
-        line_field.markdown(line_media_query + line2, unsafe_allow_html=True)
+        line_field.markdown(line_media_query + line, unsafe_allow_html=True)
 
 
 
