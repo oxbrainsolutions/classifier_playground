@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pathlib
 import base64
-from utils.functions import generate_data, plot_scatter
+from utils.functions import generate_data, plot_scatter, lr_param_selector
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
@@ -340,6 +340,8 @@ with col2:
     model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
     st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options,
            format_func=lambda x: "Select Model" if x == "" else x, key="key6")
+    if st.session_state.user_model == "Logistic Regression":
+        model = lr_param_selector()
 
 
   
