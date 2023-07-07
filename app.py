@@ -224,10 +224,10 @@ st.markdown("""
         }
         @media (max-width: 1024px) {
           div.css-1inwz65.ektn3o0 {
-            font-size: 1em;
+            font-size: 0.8em;
           }
           div.StyledThumbValue.css-12gsf70.ektn3o2{
-            font-size: 1em;
+            font-size: 0.8em;
         }
       }
     </style>
