@@ -359,6 +359,10 @@ if st.session_state.submit_confirm1 == True:
               st.session_state.x_train_out, st.session_state.x_test_out = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
               try:
                   model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
+
+                  create_gauge(num_value=train_accuracy, label="Train Accuracy", key="key_gauge1")
+
+              
               except:
                   with st.sidebar:
                       st.error("**Error**: complete selection.")
