@@ -366,7 +366,7 @@ if st.session_state.submit_confirm1 == True:
                   
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
-    if st.session_state.submit_confirm2 = True:
+    if st.session_state.submit_confirm2 == True:
         create_gauge(num_value=train_accuracy, label="Train Accuracy", key="key_gauge1")
 with col2:
   if st.session_state.submit_confirm1 == True:
