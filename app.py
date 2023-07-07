@@ -233,7 +233,8 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-with st.sidebar:
+dataset_container = st.sidebar.expander("", expanded = True)
+with dataset_container:
   subheader_text1 = '''
   <p class="subheader_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
   '''
