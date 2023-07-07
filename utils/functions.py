@@ -171,8 +171,7 @@ def plot_scatter_decision_boundary(model, x_train, y_train, x_test, y_test):
             x=xx[0],
             y=y_,
             z=Z,
-            colorscale=["#5007E3", "#03A9F4"],
-            opacity=0.2,
+            colorscale=["rgba(80, 7, 227, 0.2)", "#03A9F4"],
             showscale=False,
         )
   
@@ -182,9 +181,6 @@ def plot_scatter_decision_boundary(model, x_train, y_train, x_test, y_test):
     fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(font=dict(size=14, family="sans-serif", color="#FAFAFA"), bgcolor="rgba(0, 0, 0, 0)", orientation="h", yanchor="top", y=1, xanchor="right", x=1))
     return fig
-
-
-
 
 color1 = "#5007E3"
 color2 = "#03A9F4"
