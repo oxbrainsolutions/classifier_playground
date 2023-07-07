@@ -380,10 +380,16 @@ with col1:
           '''
         st.markdown(text_media_query2 + text, unsafe_allow_html=True)
         create_gauge(num_value=np.round(train_f1, 2), label="Train\nF1 Score", key="key_gauge2")
+        text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_f1))
+        st.markdown(text_media_query2 + text, unsafe_allow_html=True)
 with col3:
     if st.session_state.submit_confirm2 == True:
         create_gauge(num_value=np.round(test_accuracy, 2), label="Test\nAccuracy", key="key_gauge3")
+        text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_accuracy))
+        st.markdown(text_media_query2 + text, unsafe_allow_html=True)
         create_gauge(num_value=np.round(test_f1, 2), label="Test\nF1 Score", key="key_gauge4")
+        text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_f1))
+        st.markdown(text_media_query2 + text, unsafe_allow_html=True)
 with col2:
   if st.session_state.submit_confirm1 == True:
     st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out = generate_data(st.session_state.user_data_type, st.session_state.user_n_samples, st.session_state.user_train_noise, st.session_state.user_test_noise, n_classes=2)
