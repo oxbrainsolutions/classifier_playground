@@ -12,6 +12,7 @@ from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
 
 
 text_media_query_functions1 = '''
@@ -335,5 +336,17 @@ def lr_param_selector():
 
 def nb_param_selector():
     model = GaussianNB()
+    return model
+
+
+def knn_param_selector():
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Number of Neighbors</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    usern_neighbors = st.number_input(label="", label_visibility="collapsed", min_value=3, max_value=20, step=1, value=5, key="key_knn1", on_change=change_callback3)
+    
+    metric = "euclidean"
+    params = {"n_neighbors": n_neighbors, "metric": metric}
+
+    model = KNeighborsClassifier(**params)
     return model
   
