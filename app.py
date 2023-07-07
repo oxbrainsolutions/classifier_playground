@@ -44,6 +44,9 @@ line_media_query = '''
     </style>
 '''
 
+def change_callback1():
+    st.session_state.submit_confirm1 = False
+
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
     encoded = base64.b64encode(img_bytes).decode()
