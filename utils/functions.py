@@ -17,6 +17,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 
 
 text_media_query_functions1 = '''
@@ -439,4 +440,28 @@ def rf_param_selector():
     }
 
     model = RandomForestClassifier(**params)
+    return model
+
+def gb_param_selector():
+
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Learning Rate</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+  
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Number of Estimators</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    user_n_estimators = st.number_input(label="", label_visibility="collapsed", min_value=50, max_value=300, step=10, value=100, key="key_gb2", on_change=change_callback3)
+
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Maximum Depth</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    user_max_depth = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=50, step=1, value=5, key="key_gb3", on_change=change_callback3)
+  
+    learning_rate = st.slider("learning_rate", 0.001, 0.5, 0.1, 0.005)
+
+    params = {
+        "learning_rate": user_learning_rate,
+        "n_estimators": user_n_estimators,
+        "max_depth": user_max_depth,
+    }
+
+    model = GradientBoostingClassifier(**params)
     return model
