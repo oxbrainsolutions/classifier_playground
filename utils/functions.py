@@ -1,9 +1,11 @@
 import streamlit as st
 import numpy as np
+import time
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from sklearn.datasets import make_moons, make_circles, make_blobs
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, f1_score
 from sklearn.linear_model import LogisticRegression
 
 
@@ -122,6 +124,21 @@ def add_polynomial_features(x_train, x_test, degree):
             axis=1,
         )
     return x_train, x_test
+
+def train_model(model, x_train, y_train, x_test, y_test):
+    t0 = time.time()
+    model.fit(x_train, y_train)
+    duration = time.time() - t0
+    y_train_pred = model.predict(x_train)
+    y_test_pred = model.predict(x_test)
+
+    train_accuracy = np.round(accuracy_score(y_train, y_train_pred), 4)
+    train_f1 = np.round(f1_score(y_train, y_train_pred, average="weighted"), 4)
+
+    test_accuracy = np.round(accuracy_score(y_test, y_test_pred), 4)
+    test_f1 = np.round(f1_score(y_test, y_test_pred, average="weighted"), 4)
+
+    return model, train_accuracy, train_f1, test_accuracy, test_f1, duration
 
 
 def lr_param_selector():
