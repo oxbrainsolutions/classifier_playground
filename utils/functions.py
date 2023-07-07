@@ -105,6 +105,79 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
     return fig
 
+
+def create_gauge_main(num_value, label, key):
+        option = {
+        "series": [
+            {
+            "type": 'gauge',
+            "min": 0,
+            "max": 1,
+            "center": ['50%', '50%'],
+            "radius": '87%',
+            "splitNumber": 1,
+            "progress": {
+                "show": False,
+              },
+             "anchor": {},
+            "axisLine": {
+              "lineStyle": {
+                "width": 20,
+                "color": [[step_values[i], step_colors[i]] for i in range(num_steps - 1)]
+                }
+              },
+            "axisTick": {
+                "splitNumber": 1,
+                "length": 25,
+                "distance": -25,
+                "lineStyle": {
+                "color": 'auto', "width": 3
+                }
+            },
+            "splitLine": {
+                "show": False
+            },
+            "axisLabel": {
+                "distance": -51,
+                "textStyle": {
+                    "fontFamily": 'sans-serif',
+                    "color": '#25476A', "fontSize": 12
+                },
+                  },
+            "title": {
+            "offsetCenter": [0, '-15%'],
+            "fontSize": 20,
+            "color": '#25476A',
+            "fontFamily": 'sans-serif',
+              },
+            "detail": {
+              "valueAnimation": True,
+              "formatter": '{}'.format(num_value),
+              "color": 'auto',
+              "offsetCenter": [0, '30%'],
+              "fontSize": 35,
+              "fontFamily": 'sans-serif',
+              },
+            "pointer": {
+                "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                "width": 20,
+                "itemStyle": {"color": "#25476A"},
+                "offsetCenter": [0, '-60%'],
+                "length": '15%',
+            },
+            "data": [
+              {
+                "value": num_value,
+                "name": '{}'.format(label),
+                },
+              ]
+            }
+          ]
+        }
+        st_echarts(option, height="230px", key=key)
+
+
+
 def add_polynomial_features(x_train, x_test, degree):
     for d in range(2, degree + 1):
         x_train = np.concatenate(
