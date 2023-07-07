@@ -117,7 +117,7 @@ colors = col_cmap(values)
 step_colors = [clr.rgb2hex(color) for color in colors]
 
 
-def create_gauge(num_value, rat_value, label, key):
+def create_gauge(num_value, label, key):
         option = {
         "series": [
             {
@@ -163,9 +163,9 @@ def create_gauge(num_value, rat_value, label, key):
               },
             "detail": {
               "valueAnimation": True,
-              "formatter": '{}\n\n{}'.format(num_value, rat_value),
+              "formatter": '{}\n{}'.format(num_value),
               "color": 'auto',
-              "offsetCenter": [0, '60%'],
+              "offsetCenter": [0, '30%'],
               "fontSize": 35,
               "fontFamily": 'sans-serif',
               },
