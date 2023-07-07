@@ -446,7 +446,7 @@ def gb_param_selector():
 
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Learning Rate</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
-    user_learning_ratee = st.slider(label="", label_visibility="collapsed", min_value=0.001, max_value=0.5, step=0.005, value=0.1, key="key_gb1", on_change=change_callback1)
+    user_learning_ratee = st.slider(label="", label_visibility="collapsed", min_value=0.001, max_value=0.5, step=0.005, value=0.1, key="key_gb1", on_change=change_callback3)
   
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Number of Estimators</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
