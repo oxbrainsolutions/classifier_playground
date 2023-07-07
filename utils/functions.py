@@ -21,6 +21,10 @@ text_media_query_functions1 = '''
 </style>
 '''
 
+def change_callback3():
+    st.session_state.submit_confirm2 = False
+
+
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=False)
 def generate_data(dataset, n_samples, train_noise, test_noise, n_classes):
     if dataset == "Spirals":
@@ -239,12 +243,12 @@ def lr_param_selector():
     penalty_options = ["", "None", "Lasso", "Ridge", "Elastic Net"]
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Regularization Method</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
-    user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Method" if x == "" else x, key="key_lr1")
+    user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Method" if x == "" else x, key="key_lr1", on_change=change_callback3)
     penalty_options_update = ["", "none", "l1", "l2", "elasticnet"][penalty_options.index(user_penalty)]
 
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Complexity Constraint</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
-    user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key_lr2")
+    user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key_lr2", on_change=change_callback3)
     C = np.round(user_constraint, 3)
 
     if user_penalty == "Elastic Net":
