@@ -214,11 +214,11 @@ st.markdown("""
 st.markdown("""
     <style>
         div.css-1inwz65.ektn3o0 {
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-family: sans-serif;
         }
         div.StyledThumbValue.css-12gsf70.ektn3o2{
-            font-size: 0.7em;
+            font-size: 0.8em;
             font-family: sans-serif;
             color: #FAFAFA;
         }
