@@ -38,6 +38,11 @@ st.markdown("""
     div.block-container.css-ysnqb2.e1g8pov64 {
         margin-top: -3em;
     }
+    @media (max-width: 1024px) {
+        div.block-container.css-ysnqb2.e1g8pov64 {
+            margin-top: -3em;
+        }
+    }
   </style>
 """, unsafe_allow_html=True)
 
