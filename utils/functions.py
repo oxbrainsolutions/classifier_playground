@@ -15,6 +15,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 
 
@@ -383,6 +384,30 @@ def svm_param_selector():
 
     params = {"C": user_C, "kernel": kernel_options_update}
     model = SVC(**params)
+    return model
+
+def ct_param_selector():
+
+    criterion = "gini"
+
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Maximum Depth</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    user_max_depth = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=50, step=1, value=5, key="key_ct1", on_change=change_callback3)
+
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Minimum Sample Split</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    user_min_samples_split = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=20, step=1, value=2, key="key_ct2", on_change=change_callback3)
+
+    max_features = "sqrt"
+
+    params = {
+        "criterion": criterion,
+        "max_depth": user_max_depth,
+        "min_samples_split": user_min_samples_split,
+        "max_features": max_features,
+    }
+
+    model = DecisionTreeClassifier(**params)
     return model
 
 
