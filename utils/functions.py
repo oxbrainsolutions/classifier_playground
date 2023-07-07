@@ -105,6 +105,12 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
     return fig
 
+num_steps = 1000
+values = np.linspace(0, 1, num_steps)
+step_values = np.linspace(0, 1, num_steps)
+colors = col_cmap(values)
+step_colors = [clr.rgb2hex(color) for color in colors]
+
 
 def create_gauge_main(num_value, label, key):
         option = {
