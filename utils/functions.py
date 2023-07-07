@@ -125,8 +125,8 @@ def create_gauge(num_value, label, key):
             "min": 0,
             "max": 1,
             "center": ['50%', '50%'],
-            "radius": '87%',
-            "splitNumber": 20,
+            "radius": '100%',
+            "splitNumber": 5,
             "progress": {
                 "show": False,
               },
