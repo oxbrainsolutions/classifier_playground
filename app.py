@@ -394,10 +394,10 @@ with col3:
         create_gauge(num_value=np.round(test_f1, 2), label="Test\nF1 Score", key="key_gauge4")
         text_rating4 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_f1))
         rating_4 = st.empty()
-        rating_1.markdown(text_media_query2 + text_rating_1, unsafe_allow_html=True)
-        rating_2.markdown(text_media_query2 + text_rating_2, unsafe_allow_html=True)
-        rating_3.markdown(text_media_query2 + text_rating_3, unsafe_allow_html=True)
-        rating_4.markdown(text_media_query2 + text_rating_4, unsafe_allow_html=True)
+        rating_1.markdown(text_media_query2 + text_rating1, unsafe_allow_html=True)
+        rating_2.markdown(text_media_query2 + text_rating2, unsafe_allow_html=True)
+        rating_3.markdown(text_media_query2 + text_rating3, unsafe_allow_html=True)
+        rating_4.markdown(text_media_query2 + text_rating4, unsafe_allow_html=True)
 with col2:
   if st.session_state.submit_confirm1 == True:
     st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out = generate_data(st.session_state.user_data_type, st.session_state.user_n_samples, st.session_state.user_train_noise, st.session_state.user_test_noise, n_classes=2)
