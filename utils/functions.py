@@ -163,12 +163,15 @@ def plot_scatter_decision_boundary(model, x_train, y_train, x_test, y_test):
         test_data).update_xaxes(range=[x_min, x_max], title="x1").update_yaxes(
         range=[y_min, y_max], title="x2")
 
-    DecisionBoundaryDisplay.from_estimator(estimator=model, X=x_train, cmap=plt.cm.RdYlBu, ax=fig, alpha=0.8)
+    disp = DecisionBoundaryDisplay.from_estimator(estimator=model, X=x_train, cmap=plt.cm.coolwarm, alpha=0.8)
+    disp.ax_.scatter(x_train[:, 0], x_train[:, 1], 
+                 c=y_train, edgecolor="k",
+                 cmap=plt.cm.coolwarm)
   
     fig.update_xaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
-    return fig
+    return disp
 
 
 
