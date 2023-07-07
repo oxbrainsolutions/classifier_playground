@@ -149,7 +149,7 @@ def create_gauge(num_value, label, key):
                 "show": False
             },
             "axisLabel": {
-                "distance": 0,
+                "distance": 5,
                 "textStyle": {
                     "fontFamily": 'sans-serif',
                     "color": '#FAFAFA', "fontSize": 12
@@ -173,7 +173,7 @@ def create_gauge(num_value, label, key):
                 "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
                 "width": 20,
                 "itemStyle": {"color": "#FAFAFA"},
-                "offsetCenter": [0, '-60%'],
+                "offsetCenter": [0, '-50%'],
                 "length": '15%',
             },
             "data": [
