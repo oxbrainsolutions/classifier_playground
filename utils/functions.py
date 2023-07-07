@@ -387,7 +387,7 @@ def rf_param_selector():
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
     user_min_samples_split = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=20, step=1, value=2, key="key_rf3", on_change=change_callback3)
 
-    max_features = "auto"
+    max_features = "sqrt"
   
     params = {
         "criterion": criterion,
