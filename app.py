@@ -359,7 +359,7 @@ if st.session_state.submit_confirm1 == True:
     
 
       if st.session_state.user_model == "K Nearest Neighbor":
-          model = knn_param_selector
+          model = knn_param_selector()
       
       if st.session_state.user_model != "":
           text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Polynomial Features Degree</span></p>'
