@@ -378,8 +378,8 @@ def svm_param_selector():
     user_C = st.number_input(label="", label_visibility="collapsed", min_value=0.01, max_value=2.00, step=1.0, value=0.01, key="key_svm1", on_change=change_callback3)
 
     kernel_options = ["", "Linear", "Polynomial", "Radial", "Sigmoid"]
-    user_kernel = st.selectbox(label="", label_visibility="collapsed", options=kernel_options, format_func=lambda x: "Select Kernel" if x == "" else x, key="key_svm2", on_change=change_callback3)
-    kernel_options_update = ["", "linear", "poly", "rbf", "sigmoid"][kernel_options.index(user_kernel)]
+    hello = st.selectbox(label="", label_visibility="collapsed", options=kernel_options, format_func=lambda x: "Select Kernel" if x == "" else x, key="key_svm2", on_change=change_callback3)
+    kernel_options_update = ["", "linear", "poly", "rbf", "sigmoid"][kernel_options.index(hello)]
 
     params = {"C": user_C, "kernel": kernel_options_update}
     model = SVC(**params)
