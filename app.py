@@ -357,8 +357,13 @@ if st.session_state.submit_confirm1 == True:
           if submit_button2:
               st.session_state.submit_confirm2 = True
               st.session_state.x_train_out, st.session_state.x_test_out = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
-              model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
-              st.write(train_accuracy, test_accuracy)
+              try:
+                  model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
+                  st.write(train_accuracy, test_accuracy)
+              except:
+                  with st.sidebar:
+                      st.error("**Error**: select data type.")
+                  
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
   if st.session_state.submit_confirm1 == True:
