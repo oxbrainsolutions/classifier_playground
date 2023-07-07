@@ -369,7 +369,16 @@ with col1:
     if st.session_state.submit_confirm2 == True:
         create_gauge(num_value=np.round(train_accuracy, 2), label="Train\nAccuracy", key="key_gauge1")
         text = '<p class="text" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_accuracy))
-        st.markdown(text_media_query1 + text, unsafe_allow_html=True)
+          text_media_query2 = '''
+          <style>
+          @media (max-width: 1024px) {
+              p.text {
+                  font-size: 3em;
+              }
+          }
+          </style>
+          '''
+        st.markdown(text_media_query2 + text, unsafe_allow_html=True)
         create_gauge(num_value=np.round(train_f1, 2), label="Train\nF1 Score", key="key_gauge2")
 with col3:
     if st.session_state.submit_confirm2 == True:
