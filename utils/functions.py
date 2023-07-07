@@ -171,7 +171,8 @@ def plot_scatter_decision_boundary(model, x_train, y_train, x_test, y_test):
             x=xx[0],
             y=y_,
             z=Z,
-            colorscale=["rgba(80, 7, 227, 0.2)", "#03A9F4"],
+            colorscale=["#5007E3", "#03A9F4"],
+            opacity=0.8,
             showscale=False,
         )
   
