@@ -382,18 +382,21 @@ with col1:
           }
           </style>
           '''
-        time.sleep(1)
+        time.sleep(0.2)
         st.markdown(text_media_query2 + text, unsafe_allow_html=True)
         create_gauge(num_value=np.round(train_f1, 2), label="Train\nF1 Score", key="key_gauge2")
         text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_f1))
+        time.sleep(0.2)
         st.markdown(text_media_query2 + text, unsafe_allow_html=True)
 with col3:
     if st.session_state.submit_confirm2 == True:
         create_gauge(num_value=np.round(test_accuracy, 2), label="Test\nAccuracy", key="key_gauge3")
         text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_accuracy))
+        time.sleep(0.2)
         st.markdown(text_media_query2 + text, unsafe_allow_html=True)
         create_gauge(num_value=np.round(test_f1, 2), label="Test\nF1 Score", key="key_gauge4")
         text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_f1))
+        time.sleep(0.2)
         st.markdown(text_media_query2 + text, unsafe_allow_html=True)
 with col2:
   if st.session_state.submit_confirm1 == True:
