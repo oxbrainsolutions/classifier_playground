@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pathlib
 import base64
+import time
 from utils.functions import generate_data, plot_scatter, create_gauge, convert_rating, add_polynomial_features, train_model, lr_param_selector
 
 
@@ -382,6 +383,7 @@ with col1:
           }
           </style>
           '''
+        time.sleep(1)
         st.markdown(text_media_query2 + text, unsafe_allow_html=True)
         create_gauge(num_value=np.round(train_f1, 2), label="Train\nF1 Score", key="key_gauge2")
         text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_f1))
