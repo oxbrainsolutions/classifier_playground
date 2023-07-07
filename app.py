@@ -382,22 +382,22 @@ with col1:
           }
           </style>
           '''
-        rating_1 = st.empty()
+        rating1 = st.empty()
         create_gauge(num_value=np.round(train_f1, 2), label="Train\nF1 Score", key="key_gauge2")
         text_rating2 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_f1))
-        rating_2 = st.empty()
+        rating2 = st.empty()
 with col3:
     if st.session_state.submit_confirm2 == True:
         create_gauge(num_value=np.round(test_accuracy, 2), label="Test\nAccuracy", key="key_gauge3")
         text_rating3 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_accuracy))
-        rating_3 = st.empty()
+        rating3 = st.empty()
         create_gauge(num_value=np.round(test_f1, 2), label="Test\nF1 Score", key="key_gauge4")
         text_rating4 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_f1))
-        rating_4 = st.empty()
-        rating_1.markdown(text_media_query2 + text_rating1, unsafe_allow_html=True)
-        rating_2.markdown(text_media_query2 + text_rating2, unsafe_allow_html=True)
-        rating_3.markdown(text_media_query2 + text_rating3, unsafe_allow_html=True)
-        rating_4.markdown(text_media_query2 + text_rating4, unsafe_allow_html=True)
+        rating4 = st.empty()
+        rating1.markdown(text_media_query2 + text_rating1, unsafe_allow_html=True)
+        rating2.markdown(text_media_query2 + text_rating2, unsafe_allow_html=True)
+        rating3.markdown(text_media_query2 + text_rating3, unsafe_allow_html=True)
+        rating4.markdown(text_media_query2 + text_rating4, unsafe_allow_html=True)
 with col2:
   if st.session_state.submit_confirm1 == True:
     st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out = generate_data(st.session_state.user_data_type, st.session_state.user_n_samples, st.session_state.user_train_noise, st.session_state.user_test_noise, n_classes=2)
