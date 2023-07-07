@@ -408,13 +408,9 @@ with col2:
     scatter_fig = plot_scatter(st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
     scatter_fig_field = st.empty()
     scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
-
-
-
-
-  
-
-
+    if st.session_state.submit_confirm2 == True:
+        duration_text = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">Model training completed in {} seconds</span></p>'.format('{:,.2f}'.format(duration))
+        st.markdown(text_media_query2 + duration_text, unsafe_allow_html=True)
 
 
 
