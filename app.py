@@ -409,7 +409,7 @@ with col2:
     scatter_fig_field = st.empty()
     scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
     if st.session_state.submit_confirm2 == True:
-        duration_text = '<p class="text2" style="margin-top: -2em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
+        duration_text = '<p class="information_text" style="margin-top: -2em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
         st.markdown(information_media_query + duration_text, unsafe_allow_html=True)
 
 
