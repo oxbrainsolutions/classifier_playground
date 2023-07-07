@@ -362,7 +362,7 @@ if st.session_state.submit_confirm1 == True:
                   st.write(train_accuracy, test_accuracy)
               except:
                   with st.sidebar:
-                      st.error("**Error**: select data type.")
+                      st.error("**Error**: complete selection.")
                   
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
