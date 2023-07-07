@@ -354,12 +354,11 @@ if st.session_state.submit_confirm1 == True:
           st.markdown(text_media_query1 + text, unsafe_allow_html=True)
           user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7")
           submit_button2 = st.button("Train Model", key="key8")
-
-if submit_button2:
-    st.session_state.submit_confirm2 = True
-    x_train, x_test = add_polynomial_features(x_train, x_test, degree)
-    model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, x_train, y_train, x_test, y_test)
-    
+          if submit_button2:
+              st.session_state.submit_confirm2 = True
+              x_train, x_test = add_polynomial_features(x_train, x_test, degree)
+              model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, x_train, y_train, x_test, y_test)
+            
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
   if st.session_state.submit_confirm1 == True:
