@@ -117,7 +117,7 @@ colors = col_cmap(values)
 step_colors = [clr.rgb2hex(color) for color in colors]
 
 
-def create_gauge_main(num_value, label, key):
+def create_gauge(num_value, label, key):
         option = {
         "series": [
             {
