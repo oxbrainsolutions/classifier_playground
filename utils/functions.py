@@ -93,7 +93,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     return fig
 
 def lr_param_selector():
-    solver == "saga"
+    solver = "saga"
     
     penalty_options = ["None", "Lasso", "Ridge", "Elatsic Net"]
     user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Regularization" if x == "" else x, key="key7")
