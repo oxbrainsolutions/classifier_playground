@@ -118,7 +118,7 @@ def lr_param_selector():
     user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key8")
     C = np.round(user_constraint, 3)
 
-    params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": user_max_iter}
+    params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": max_iter}
     model = LogisticRegression(**params)
     return model
 
