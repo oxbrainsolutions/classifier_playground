@@ -40,7 +40,7 @@ st.markdown("""
     }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
-            margin-top: -10em;
+            margin-top: -15em;
         }
     }
   </style>
