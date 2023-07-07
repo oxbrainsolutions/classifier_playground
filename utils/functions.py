@@ -6,6 +6,17 @@ from sklearn.datasets import make_moons, make_circles, make_blobs
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 
+
+text_media_query_functions1 = '''
+<style>
+@media (max-width: 1024px) {
+  p.text {
+      font-size: 4em;
+  }
+}
+</style>
+'''
+
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=False)
 def generate_data(dataset, n_samples, train_noise, test_noise, n_classes):
     if dataset == "Spirals":
@@ -94,16 +105,18 @@ def plot_scatter(x_train, y_train, x_test, y_test):
 
 def lr_param_selector():
     solver = "saga"
+    max_iter = 1000
     
-    penalty_options = ["None", "Lasso", "Ridge", "Elatsic Net"]
-    user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Regularization" if x == "" else x, key="key7")
+    penalty_options = ["", "None", "Lasso", "Ridge", "Elatsic Net"]
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Regularization Method</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Method" if x == "" else x, key="key7")
     penalty_options_update = ["none", "l1", "l2", "elasticnet"][penalty_options.index(user_penalty)]
 
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Complexity Constraint</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
     user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key8")
     C = np.round(user_constraint, 3)
-
-    user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key8")
-    user_max_iter = st.number_input(label="", label_visibility="collapsed", min_value=100, max_value=2000, step=50, value=100, key="key9")
 
     params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": user_max_iter}
     model = LogisticRegression(**params)
