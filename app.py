@@ -337,7 +337,7 @@ if st.session_state.submit_confirm1 == True:
       if st.session_state.user_model != "":
           text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Polynomial Features Degree</span></p>'
           st.markdown(text_media_query1 + text, unsafe_allow_html=True)
-          st.session_state.user_n_samples = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7")
+          user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7")
           submit_button2 = st.button("Train Model", key="key8")
 
     
