@@ -126,7 +126,7 @@ def create_gauge(num_value, label, key):
             "max": 1,
             "center": ['50%', '50%'],
             "radius": '87%',
-            "splitNumber": 10,
+            "splitNumber": 20,
             "progress": {
                 "show": False,
               },
@@ -149,7 +149,7 @@ def create_gauge(num_value, label, key):
                 "show": False
             },
             "axisLabel": {
-                "distance": -51,
+                "distance": 0,
                 "textStyle": {
                     "fontFamily": 'sans-serif',
                     "color": '#FAFAFA', "fontSize": 12
