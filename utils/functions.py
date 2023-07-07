@@ -107,6 +107,9 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
     return fig
 
+color1 = "#5007E3"
+color2 = "#03A9F4"
+col_cmap = clr.LinearSegmentedColormap.from_list(name="", colors=[color1, color2])
 num_steps = 1000
 values = np.linspace(0, 1, num_steps)
 step_values = np.linspace(0, 1, num_steps)
