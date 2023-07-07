@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pathlib
 import base64
-from utils.functions import generate_data, plot_scatter, add_polynomial_features, train_model, lr_param_selector
+from utils.functions import generate_data, plot_scatter, create_gauge, add_polynomial_features, train_model, lr_param_selector
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
