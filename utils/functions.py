@@ -165,7 +165,7 @@ def create_gauge(num_value, rat_value, label, key):
               "valueAnimation": True,
               "formatter": '{}\n\n{}'.format(num_value, rat_value),
               "color": 'auto',
-              "offsetCenter": [0, '0%'],
+              "offsetCenter": [0, '50%'],
               "fontSize": 35,
               "fontFamily": 'sans-serif',
               },
