@@ -4,7 +4,7 @@ import numpy as np
 import pathlib
 import base64
 import time
-from utils.functions import generate_data, plot_scatter, plot_scatter_decision_boundary, create_gauge, convert_rating, add_polynomial_features, train_model, lr_param_selector, nb_param_selector, knn_param_selector, nn_param_selector, svm_param_selector, rf_param_selector
+from utils.functions import generate_data, plot_scatter, plot_scatter_decision_boundary, create_gauge, convert_rating, add_polynomial_features, train_model, lr_param_selector, nb_param_selector, knn_param_selector, nn_param_selector, svm_param_selector, ct_param_selector, rf_param_selector
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
@@ -364,6 +364,8 @@ if st.session_state.submit_confirm1 == True:
           model = nn_param_selector()
       if st.session_state.user_model == "Support Vector Machine":
           model = svm_param_selector()
+      if st.session_state.user_model == "Classification Tree":
+          model = ct_param_selector()
       if st.session_state.user_model == "Random Forest":
           model = rf_param_selector()
 
