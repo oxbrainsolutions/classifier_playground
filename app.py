@@ -367,12 +367,12 @@ if st.session_state.submit_confirm1 == True:
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
-        create_gauge(num_value=np.round(train_accuracy, 2), label="Train\nAccuracy", key="key_gauge1")
-        create_gauge(num_value=np.round(train_f1, 2), label="Train\nF1 Score", key="key_gauge2")
+        create_gauge(num_value=np.round(train_accuracy, 2), rat_value="Moderate", label="Train\nAccuracy", key="key_gauge1")
+        create_gauge(num_value=np.round(train_f1, 2), rat_value="Moderate", label="Train\nF1 Score", key="key_gauge2")
 with col3:
     if st.session_state.submit_confirm2 == True:
-        create_gauge(num_value=np.round(test_accuracy, 2), label="Test\nAccuracy", key="key_gauge3")
-        create_gauge(num_value=np.round(test_f1, 2), label="Test\nF1 Score", key="key_gauge4")
+        create_gauge(num_value=np.round(test_accuracy, 2), rat_value="Moderate", label="Test\nAccuracy", key="key_gauge3")
+        create_gauge(num_value=np.round(test_f1, 2), rat_value="Moderate", label="Test\nF1 Score", key="key_gauge4")
 with col2:
   if st.session_state.submit_confirm1 == True:
     st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out = generate_data(st.session_state.user_data_type, st.session_state.user_n_samples, st.session_state.user_train_noise, st.session_state.user_test_noise, n_classes=2)
