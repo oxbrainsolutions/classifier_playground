@@ -145,7 +145,7 @@ def lr_param_selector():
     solver = "saga"
     max_iter = 1000
     
-    penalty_options = ["", "None", "Lasso", "Ridge", "Elatsic Net"]
+    penalty_options = ["", "None", "Lasso", "Ridge", "Elastic Net"]
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Regularization Method</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
     user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Method" if x == "" else x, key="key_lr1")
