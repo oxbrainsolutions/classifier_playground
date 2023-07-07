@@ -307,30 +307,32 @@ with col2:
   subheader_text_field2 = st.empty()
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
  
-  if submit_button1:
+if submit_button1:
     if st.session_state.user_data_type == "":
         with st.sidebar:
             st.error("**Error**: select data type.")
             st.session_state.submit_confirm1 = False
     else:
       st.session_state.submit_confirm1 = True
-      with st.sidebar:
-          subheader_text_field1 = st.empty()
-          line_field = st.empty()
-          subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
-          subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
-          line_field.markdown(line_media_query + line, unsafe_allow_html=True)
-        
-      model_container = st.sidebar.expander("", expanded = True)        
-      with model_container:
-          model_text_field = st.empty()
-          user_model_field = st.empty()
-          text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
-          model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
-          model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
-          st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6")
-          if st.session_state.user_model == "Logistic Regression":
-              model = lr_param_selector()
+
+if st.session_state.submit_confirm1 == True:
+    with st.sidebar:
+      subheader_text_field1 = st.empty()
+      line_field = st.empty()
+      subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
+      subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
+      line_field.markdown(line_media_query + line, unsafe_allow_html=True)
+    
+    model_container = st.sidebar.expander("", expanded = True)        
+    with model_container:
+      model_text_field = st.empty()
+      user_model_field = st.empty()
+      text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
+      model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
+      model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
+      st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6")
+      if st.session_state.user_model == "Logistic Regression":
+          model = lr_param_selector()
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
