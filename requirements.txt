@@ -1,4 +1,5 @@
 streamlit
+streamlit-echarts
 scikit_learn
 plotly
 numpy
