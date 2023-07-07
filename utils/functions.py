@@ -172,7 +172,7 @@ def create_gauge(num_value, label, key):
             "pointer": {
                 "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
                 "width": 20,
-                "itemStyle": {"color": "#FAFAFA"},
+                "itemStyle": {"color": "#FCBC24"},
                 "offsetCenter": [0, '-84%'],
                 "length": '15%',
             },
