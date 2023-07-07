@@ -110,12 +110,12 @@ def lr_param_selector():
     penalty_options = ["", "None", "Lasso", "Ridge", "Elatsic Net"]
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Regularization Method</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
-    user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Method" if x == "" else x, key="key7")
+    user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Method" if x == "" else x, key="key_lr1")
     penalty_options_update = ["none", "l1", "l2", "elasticnet"][penalty_options.index(user_penalty)]
 
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Complexity Constraint</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
-    user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key8")
+    user_constraint = st.number_input(label="", label_visibility="collapsed", min_value=0.1, max_value=2.0, step=0.1, value=1.0, key="key_lr2")
     C = np.round(user_constraint, 3)
 
     params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": max_iter}
