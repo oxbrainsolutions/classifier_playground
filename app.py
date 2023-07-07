@@ -375,7 +375,7 @@ if st.session_state.submit_confirm1 == True:
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
-        create_gauge(num_value=np.round(train_accuracy, 2), label="Train\nAccuracy", key="key_gauge1")
+        create_gauge(num_value='{:.2f}'.format(np.round(train_accuracy, 2)), label="Train\nAccuracy", key="key_gauge1")
         text_rating1 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_accuracy))
         text_media_query2 = '''
           <style>
@@ -387,15 +387,15 @@ with col1:
           </style>
           '''
         rating1 = st.empty()
-        create_gauge(num_value=np.round(train_f1, 2), label="Train\nF1 Score", key="key_gauge2")
+        create_gauge(num_value='{:.2f}'.format(np.round(train_f1, 2)), label="Train\nF1 Score", key="key_gauge2")
         text_rating2 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_f1))
         rating2 = st.empty()
 with col3:
     if st.session_state.submit_confirm2 == True:
-        create_gauge(num_value=np.round(test_accuracy, 2), label="Test\nAccuracy", key="key_gauge3")
+        create_gauge(num_value='{:.2f}'.format(np.round(test_accuracy, 2)), label="Test\nAccuracy", key="key_gauge3")
         text_rating3 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_accuracy))
         rating3 = st.empty()
-        create_gauge(num_value=np.round(test_f1, 2), label="Test\nF1 Score", key="key_gauge4")
+        create_gauge(num_value='{:.2f}'.format(np.round(test_f1, 2)), label="Test\nF1 Score", key="key_gauge4")
         text_rating4 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_f1))
         rating4 = st.empty()
         time.sleep(1)
