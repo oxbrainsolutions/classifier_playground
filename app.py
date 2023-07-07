@@ -333,6 +333,12 @@ if st.session_state.submit_confirm1 == True:
       st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6")
       if st.session_state.user_model == "Logistic Regression":
           model = lr_param_selector()
+      
+      if st.session_state.user_model != "":
+          submit_button2 = st.button("Train Model", key="key7")
+
+    
+
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
