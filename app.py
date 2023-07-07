@@ -235,9 +235,7 @@ st.markdown("""
 
 
 with st.sidebar:
-      subheader_text1 = '''
-  <p class="subheader_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
-  '''
+      subheader_text1 = '''<p class="subheader_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>'''
 
   subheader_media_query = '''
     <style>
