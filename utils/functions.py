@@ -11,6 +11,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
 
 
 text_media_query_functions1 = '''
@@ -332,3 +333,7 @@ def lr_param_selector():
     model = LogisticRegression(**params)
     return model
 
+def nb_param_selector():
+    model = GaussianNB()
+    return model
+  
