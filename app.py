@@ -36,7 +36,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 st.markdown("""
   <style>
     .css-o18uir.e16nr0p33 {
-      margin-top: -75px;
+      margin-top: -75em;
     }
   </style>
 """, unsafe_allow_html=True)
