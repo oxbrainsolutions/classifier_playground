@@ -275,11 +275,6 @@ with dataset_container:
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   st.session_state.user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=st.session_state.user_train_noise, key="key4", on_change=change_callback1)
   submit_button1 = st.button("Generate Dataset", key="key5")
-  subheader_text_field1 = st.empty()
-  line_field = st.empty()
-  model_text_field = st.empty()
-  user_model_field = st.empty()
-
 
 col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
@@ -318,6 +313,18 @@ with col2:
       st.session_state.submit_confirm1 = False
     else:
       st.session_state.submit_confirm1 = True
+      model_container = st.sidebar.expander("", expanded = True)
+      with model_container:
+          subheader_text_field1 = st.empty()
+          line_field = st.empty()
+          model_text_field = st.empty()
+          user_model_field = st.empty()
+          text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
+          model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
+          model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
+          st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6")
+          if st.session_state.user_model == "Logistic Regression":
+              model = lr_param_selector()
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
@@ -333,13 +340,7 @@ with col2:
     subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
     line_field.markdown(line_media_query + line, unsafe_allow_html=True)
     
-    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
-    model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
-    model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
-    st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options,
-           format_func=lambda x: "Select Model" if x == "" else x, key="key6")
-    if st.session_state.user_model == "Logistic Regression":
-        model = lr_param_selector()
+
 
 
   
