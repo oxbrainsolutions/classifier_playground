@@ -233,9 +233,9 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-dataset_container = st.sidebar.expander("Create a Dataset", expanded = True)
-with dataset_container:
-  subheader_text1 = '''
+
+with st.sidebar:
+      subheader_text1 = '''
   <p class="subheader_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>
   '''
 
@@ -251,8 +251,8 @@ with dataset_container:
   st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
   st.markdown(line_media_query + line, unsafe_allow_html=True)
 
-
-
+dataset_container = st.sidebar.expander("", expanded = True)
+with dataset_container:
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
   text_media_query1 = '''
   <style>
