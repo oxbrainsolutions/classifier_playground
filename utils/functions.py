@@ -149,7 +149,7 @@ def lr_param_selector():
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Regularization Method</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
     user_penalty = st.selectbox(label="", label_visibility="collapsed", options=penalty_options, format_func=lambda x: "Select Method" if x == "" else x, key="key_lr1")
-    penalty_options_update = ["none", "l1", "l2", "elasticnet"][penalty_options.index(user_penalty)]
+    penalty_options_update = ["", "none", "l1", "l2", "elasticnet"][penalty_options.index(user_penalty)]
 
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Complexity Constraint</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
