@@ -16,11 +16,13 @@ if "user_data_type" not in st.session_state or "user_n_samples" not in st.sessio
     st.session_state["user_test_noise"] = ""
     st.session_state["user_model"] = ""
 
-if "x_train_out" not in st.session_state or "y_train_out" not in st.session_state or "x_test_out" not in st.session_state or "y_test_out" not in st.session_state:
+if "x_train_out" not in st.session_state or "y_train_out" not in st.session_state or "x_test_out" not in st.session_state or "y_test_out" not in st.session_state or "x_train_out_update" not in st.session_state or "x_test_out_update" not in st.session_state:
     st.session_state["x_train_out"] = []
     st.session_state["y_train_out"] = []
     st.session_state["x_test_out"] = []
     st.session_state["y_test_out"] = []
+    st.session_state["x_train_out_update"] = []
+    st.session_state["x_test_out_update"] = []
 
 if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state:
     st.session_state["submit_confirm1"] = False
@@ -359,9 +361,9 @@ if st.session_state.submit_confirm1 == True:
           user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7", on_change=change_callback2)
           submit_button2 = st.button("Train Model", key="key8")
           if submit_button2:
-              st.session_state.x_train_out, st.session_state.x_test_out = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
+              st.session_state.x_train_out_update, st.session_state.x_test_out_update = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
               try:
-                  model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
+                  model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out_update, st.session_state.x_test_out, st.session_state.y_test_out)
                   st.session_state.submit_confirm2 = True
               except:
                   with st.sidebar:
@@ -411,7 +413,7 @@ with col2:
     if st.session_state.submit_confirm2 == True:
         duration_text = '<p class="information_text" style="margin-top: -2em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
         st.markdown(information_media_query + duration_text, unsafe_allow_html=True)
-        scatter_boundary_fig = plot_scatter_decision_boundary(model, st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
+        scatter_boundary_fig = plot_scatter_decision_boundary(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
         st.plotly_chart(scatter_boundary_fig, config={'displayModeBar': False}, use_container_width=True)
 
 
