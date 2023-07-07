@@ -123,6 +123,16 @@ def plot_scatter_decision_boundary(model, x_train, y_train, x_test, y_test):
     xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
     y_ = np.arange(y_min, y_max, h)
 
+    model_input = [(xx.ravel() ** p, yy.ravel() ** p) for p in range(1, d // 2 + 1)]
+    aux = []
+    for c in model_input:
+        aux.append(c[0])
+        aux.append(c[1])
+
+    Z = model.predict(np.concatenate([v.reshape(-1, 1) for v in aux], axis=1))
+
+    Z = Z.reshape(xx.shape)
+  
     fig = make_subplots(
         rows=1,
         cols=2,
@@ -159,19 +169,22 @@ def plot_scatter_decision_boundary(model, x_train, y_train, x_test, y_test):
         ),
     )
 
-    fig.add_trace(train_data).add_trace(
-        test_data).update_xaxes(range=[x_min, x_max], title="x1").update_yaxes(
-        range=[y_min, y_max], title="x2")
+    heatmap = go.Heatmap(
+            x=xx[0],
+            y=y_,
+            z=Z,
+            colorscale=["#5007E3", "#03A9F4"],
+            showscale=False,
+        )
 
-    disp = DecisionBoundaryDisplay.from_estimator(estimator=model, X=x_train, cmap=plt.cm.coolwarm, alpha=0.8)
-    disp.ax_.scatter(x_train[:, 0], x_train[:, 1], 
-                 c=y_train, edgecolor="k",
-                 cmap=plt.cm.coolwarm)
+    fig.add_trace(heatmap, row=1, col=1).add_trace(train_data).add_trace(
+      test_data).update_xaxes(range=[x_min, x_max], title="x1").update_yaxes(
+      range=[y_min, y_max], title="x2")
   
     fig.update_xaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
-    return disp
+    return fig
 
 
 
