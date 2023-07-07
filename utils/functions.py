@@ -152,13 +152,13 @@ def create_gauge(num_value, label, key):
                 "distance": -51,
                 "textStyle": {
                     "fontFamily": 'sans-serif',
-                    "color": '#25476A', "fontSize": 12
+                    "color": '#FAFAFA', "fontSize": 12
                 },
                   },
             "title": {
             "offsetCenter": [0, '-15%'],
             "fontSize": 20,
-            "color": '#25476A',
+            "color": '#FAFAFA',
             "fontFamily": 'sans-serif',
               },
             "detail": {
@@ -172,7 +172,7 @@ def create_gauge(num_value, label, key):
             "pointer": {
                 "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
                 "width": 20,
-                "itemStyle": {"color": "#25476A"},
+                "itemStyle": {"color": "#FAFAFA"},
                 "offsetCenter": [0, '-60%'],
                 "length": '15%',
             },
