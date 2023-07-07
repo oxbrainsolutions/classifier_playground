@@ -362,7 +362,7 @@ if st.session_state.submit_confirm1 == True:
           model = knn_param_selector()
       if st.session_state.user_model == "Neural Network":
           model = nn_param_selector()
-      if st.session_state.user_model == "Neural Network":
+      if st.session_state.user_model == "Support Vector Machine":
           model = svm_param_selector()
       if st.session_state.user_model == "Random Forest":
           model = rf_param_selector()
