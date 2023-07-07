@@ -255,7 +255,7 @@ with dataset_container:
   <style>
   @media (max-width: 1024px) {
       p.text {
-          font-size: 0.8em;
+          font-size: 1em;
       }
   }
   </style>
