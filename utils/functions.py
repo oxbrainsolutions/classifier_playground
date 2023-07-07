@@ -187,7 +187,14 @@ def create_gauge(num_value, label, key):
         }
         st_echarts(option, height="230px", key=key)
 
-
+def convert_rating(value):
+  if value < 0.33:
+    rating = "Weak"
+  elif value < 0.66:
+    rating = "Moderate"
+  else:
+    rating = "Strong"
+  return rating
 
 def add_polynomial_features(x_train, x_test, degree):
     for d in range(2, degree + 1):
