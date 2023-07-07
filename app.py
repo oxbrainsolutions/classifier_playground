@@ -62,6 +62,9 @@ def change_callback1():
     st.session_state.submit_confirm1 = False
     st.session_state.submit_confirm2 = False
 
+def change_callback2():
+    st.session_state.submit_confirm2 = False
+
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
     encoded = base64.b64encode(img_bytes).decode()
@@ -345,14 +348,14 @@ if st.session_state.submit_confirm1 == True:
       text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
       model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
       model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
-      st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6")
+      st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6", on_change=change_callback2)
       if st.session_state.user_model == "Logistic Regression":
           model = lr_param_selector()
       
       if st.session_state.user_model != "":
           text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Polynomial Features Degree</span></p>'
           st.markdown(text_media_query1 + text, unsafe_allow_html=True)
-          user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7")
+          user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7", on_change=change_callback2)
           submit_button2 = st.button("Train Model", key="key8")
           if submit_button2:
               st.session_state.x_train_out, st.session_state.x_test_out = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
