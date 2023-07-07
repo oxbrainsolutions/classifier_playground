@@ -158,7 +158,7 @@ def create_gauge(num_value, label, key):
             "title": {
             "offsetCenter": [0, '-15%'],
             "fontSize": 20,
-            "color": '#FAFAFA',
+            "color": '#FCBC24',
             "fontFamily": 'sans-serif',
               },
             "detail": {
