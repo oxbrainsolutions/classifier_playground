@@ -103,6 +103,27 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
     return fig
 
+def add_polynomial_features(x_train, x_test, degree):
+    for d in range(2, degree + 1):
+        x_train = np.concatenate(
+            (
+                x_train,
+                x_train[:, 0].reshape(-1, 1) ** d,
+                x_train[:, 1].reshape(-1, 1) ** d,
+            ),
+            axis=1,
+        )
+        x_test = np.concatenate(
+            (
+                x_test,
+                x_test[:, 0].reshape(-1, 1) ** d,
+                x_test[:, 1].reshape(-1, 1) ** d,
+            ),
+            axis=1,
+        )
+    return x_train, x_test
+
+
 def lr_param_selector():
     solver = "saga"
     max_iter = 1000
