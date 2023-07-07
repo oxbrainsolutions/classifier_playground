@@ -41,12 +41,6 @@ st.markdown("""
   </style>
 """, unsafe_allow_html=True)
 
-    <style>
-        div.css-1inwz65.ektn3o0 {
-            font-size: 0.8em;
-            font-family: sans-serif;
-        }
-
 line = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
 line_media_query = '''
     <style>
