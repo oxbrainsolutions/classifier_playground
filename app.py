@@ -356,8 +356,8 @@ if st.session_state.submit_confirm1 == True:
           submit_button2 = st.button("Train Model", key="key8")
           if submit_button2:
               st.session_state.submit_confirm2 = True
-              x_train, x_test = add_polynomial_features(x_train, x_test, degree)
-              model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, x_train, y_train, x_test, y_test)
+              st.session_state.x_train, st.session_state.x_test = add_polynomial_features(st.session_state.x_train, st.session_state.x_test, user_poly_degree)
+              model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train, st.session_state.y_train, st.session_state.x_test, st.session_state.y_test)
             
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
