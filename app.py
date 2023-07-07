@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import pathlib
 import base64
-from utils.functions import generate_data, plot_scatter, lr_param_selector
+from utils.functions import generate_data, plot_scatter, add_polynomial_features, lr_param_selector
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
@@ -21,8 +21,9 @@ if "x_train_out" not in st.session_state or "y_train_out" not in st.session_stat
     st.session_state["x_test_out"] = []
     st.session_state["y_test_out"] = []
 
-if "submit_confirm1" not in st.session_state:
+if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state:
     st.session_state["submit_confirm1"] = False
+    st.session_state["submit_confirm2"] = False
 
 hide_st_style = """
                 <style>
@@ -59,6 +60,7 @@ line_media_query = '''
 
 def change_callback1():
     st.session_state.submit_confirm1 = False
+    st.session_state.submit_confirm2 = False
 
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
@@ -353,8 +355,16 @@ if st.session_state.submit_confirm1 == True:
           user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7")
           submit_button2 = st.button("Train Model", key="key8")
 
+if submit_button2:
+    x_train, x_test = add_polynomial_features(x_train, x_test, degree)
+    model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, x_train, y_train, x_test, y_test)
     
-
+        with st.sidebar:
+            st.error("**Error**: select data type.")
+            st.session_state.submit_confirm1 = False
+    else:
+      st.session_state.submit_confirm1 = True
+x_train, x_test = add_polynomial_features(x_train, x_test, degree)
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
