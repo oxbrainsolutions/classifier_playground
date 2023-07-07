@@ -446,6 +446,7 @@ def gb_param_selector():
 
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Learning Rate</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    user_learning_ratee = st.slider(label="", label_visibility="collapsed", min_value=0.001, max_value=0.5, step=0.005, value=0.1, key="key_gb1", on_change=change_callback1)
   
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Number of Estimators</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
@@ -454,8 +455,6 @@ def gb_param_selector():
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Maximum Depth</span></p>'
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
     user_max_depth = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=50, step=1, value=5, key="key_gb3", on_change=change_callback3)
-  
-    learning_rate = st.slider("learning_rate", 0.001, 0.5, 0.1, 0.005)
 
     params = {
         "learning_rate": user_learning_rate,
