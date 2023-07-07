@@ -3,10 +3,12 @@ from streamlit_echarts import st_echarts
 import numpy as np
 import time
 from plotly.subplots import make_subplots
+import matplotlib.pyplot as plt
 import matplotlib.colors as clr
 import plotly.graph_objects as go
 from sklearn.datasets import make_moons, make_circles, make_blobs
 from sklearn.preprocessing import StandardScaler
+from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.linear_model import LogisticRegression
 
@@ -110,6 +112,66 @@ def plot_scatter(x_train, y_train, x_test, y_test):
     fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
     return fig
+
+def plot_scatter_decision_boundary(model, x_train, y_train, x_test, y_test):
+    d = x_train.shape[1]
+    x_min, x_max = x_train[:, 0].min() - 1, x_train[:, 0].max() + 1
+    y_min, y_max = x_train[:, 1].min() - 1, x_train[:, 1].max() + 1
+
+    h = 0.02
+
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
+    y_ = np.arange(y_min, y_max, h)
+
+    fig = make_subplots(
+        rows=1,
+        cols=2,
+        specs=[[{"colspan": 2}, None]],
+        row_heights=[0.7],
+    )
+    train_data = go.Scatter(
+        x=x_train[:, 0],
+        y=x_train[:, 1],
+        name="Train Data",
+        mode="markers",
+        showlegend=True,
+        marker=dict(
+            size=10,
+            color=y_train,
+            colorscale=["#5007E3", "#03A9F4"],
+            line=dict(color="black", width=2),
+        ),
+    )
+
+    test_data = go.Scatter(
+        x=x_test[:, 0],
+        y=x_test[:, 1],
+        name="Test Data",
+        mode="markers",
+        showlegend=True,
+        marker_symbol="cross",
+        visible="legendonly",
+        marker=dict(
+            size=10,
+            color=y_test,
+            colorscale=["#5007E3", "#03A9F4"],
+            line=dict(color="black", width=2),
+        ),
+    )
+
+    fig.add_trace(train_data).add_trace(
+        test_data).update_xaxes(range=[x_min, x_max], title="x1").update_yaxes(
+        range=[y_min, y_max], title="x2")
+
+    fig.add_trace(DecisionBoundaryDisplay.from_estimator(estimator=model, X=[xx, yy], cmap=plt.cm.RdYlBu, alpha=0.8)
+  
+    fig.update_xaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
+    fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
+    fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(orientation="h", yanchor="top", y=1, xanchor="right", x=1))
+    return fig
+
+
+
 
 color1 = "#5007E3"
 color2 = "#03A9F4"
