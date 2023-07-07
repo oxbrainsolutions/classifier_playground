@@ -361,8 +361,8 @@ def nn_param_selector():
     for i in range(user_hidden_layers):
         text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Number of Neurons in Layer {}</span></p>'.format(i+1)
         st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
-        user_n_neurons = st.number_input(label="", label_visibility="collapsed", min_value=5, max_value=200, step=5, value=5, key="key_nn1", on_change=change_callback3)
-       hidden_layer_sizes.append(user_n_neurons)
+        user_n_neurons = st.number_input(label="", label_visibility="collapsed", min_value=5, max_value=200, step=5, value=5, key="key_nn{}".format(i+2), on_change=change_callback3)
+        hidden_layer_sizes.append(user_n_neurons)
 
     hidden_layer_sizes = tuple(hidden_layer_sizes)
     params = {"hidden_layer_sizes": hidden_layer_sizes}
