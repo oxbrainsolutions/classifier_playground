@@ -394,7 +394,7 @@ with col3:
         create_gauge(num_value=np.round(test_f1, 2), label="Test\nF1 Score", key="key_gauge4")
         text_rating4 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_f1))
         rating4 = st.empty()
-        time.sleep(2)
+        time.sleep(1)
         rating1.markdown(text_media_query2 + text_rating1, unsafe_allow_html=True)
         rating2.markdown(text_media_query2 + text_rating2, unsafe_allow_html=True)
         rating3.markdown(text_media_query2 + text_rating3, unsafe_allow_html=True)
