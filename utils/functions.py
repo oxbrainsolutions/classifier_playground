@@ -1,7 +1,9 @@
 import streamlit as st
+from streamlit_echarts import st_echarts
 import numpy as np
 import time
 from plotly.subplots import make_subplots
+import matplotlib.colors as clr
 import plotly.graph_objects as go
 from sklearn.datasets import make_moons, make_circles, make_blobs
 from sklearn.preprocessing import StandardScaler
