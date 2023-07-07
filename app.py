@@ -319,6 +319,9 @@ with col2:
           line_field = st.empty()
           model_text_field = st.empty()
           user_model_field = st.empty()
+          subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
+          subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
+          line_field.markdown(line_media_query + line, unsafe_allow_html=True)
           text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
           model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
           model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
@@ -336,10 +339,7 @@ with col2:
     scatter_fig = plot_scatter(st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
     scatter_fig_field = st.empty()
     scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
-    subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
-    subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
-    line_field.markdown(line_media_query + line, unsafe_allow_html=True)
-    
+
 
 
 
