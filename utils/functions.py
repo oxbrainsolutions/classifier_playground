@@ -140,7 +140,7 @@ def create_gauge(num_value, label, key):
             "axisTick": {
                 "splitNumber": 1,
                 "length": 25,
-                "distance": -25,
+                "distance": 0,
                 "lineStyle": {
                 "color": 'auto', "width": 3
                 }
@@ -173,7 +173,7 @@ def create_gauge(num_value, label, key):
                 "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
                 "width": 20,
                 "itemStyle": {"color": "#FAFAFA"},
-                "offsetCenter": [0, '-50%'],
+                "offsetCenter": [0, '-80%'],
                 "length": '15%',
             },
             "data": [
