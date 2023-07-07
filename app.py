@@ -355,19 +355,21 @@ if st.session_state.submit_confirm1 == True:
           user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7")
           submit_button2 = st.button("Train Model", key="key8")
           if submit_button2:
-              st.session_state.submit_confirm2 = True
               st.session_state.x_train_out, st.session_state.x_test_out = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
               try:
-                  model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
-
-                  create_gauge(num_value=train_accuracy, label="Train Accuracy", key="key_gauge1")
+                  model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out
+                  st.session_state.submit_confirm2 = True
 
               
               except:
                   with st.sidebar:
                       st.error("**Error**: complete selection.")
+                      st.session_state.submit_confirm2 = False
                   
 col1, col2, col3 = st.columns([1, 2, 1])
+with col1:
+    if st.session_state.submit_confirm2 = True:
+        create_gauge(num_value=train_accuracy, label="Train Accuracy", key="key_gauge1")
 with col2:
   if st.session_state.submit_confirm1 == True:
     st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out = generate_data(st.session_state.user_data_type, st.session_state.user_n_samples, st.session_state.user_train_noise, st.session_state.user_test_noise, n_classes=2)
