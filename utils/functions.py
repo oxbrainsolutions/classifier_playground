@@ -14,6 +14,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
+from sklearn.svm import SVC
 from sklearn.ensemble import RandomForestClassifier
 
 
@@ -370,6 +371,20 @@ def nn_param_selector():
 
     model = MLPClassifier(**params)
     return model
+
+def svm_param_selector():
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Cost Value</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
+    user_C = st.number_input(label="", label_visibility="collapsed", min_value=0.01, max_value=2.00, step=1.0, value=0.01, key="key_svm1", on_change=change_callback3)
+
+    kernel_options = ["", "Linear", "Polynomial", "Radial", "Sigmoid"]
+    user_kernel = st.selectbox(label="", label_visibility="collapsed", kernel=penalty_options, format_func=lambda x: "Select Kernel" if x == "" else x, key="key_svm2", on_change=change_callback3)
+    kernel_options_update = ["", "linear", "poly", "rbf", "sigmoid"][kernel_options.index(user_kernel)]
+
+    params = {"C": user_C, "kernel": kernel_options_update}
+    model = SVC(**params)
+    return model
+
 
 def rf_param_selector():
 
