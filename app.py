@@ -162,7 +162,7 @@ st.markdown(
         width: 100% !important;
         height: 0.8em !important;
         margin-top: 0em;
-        border-width: 0.2em; !important;
+        border-width: 0.15em; !important;
         }
     }
     </style>
@@ -224,10 +224,10 @@ st.markdown("""
         }
         @media (max-width: 1024px) {
           div.css-1inwz65.ektn3o0 {
-            font-size: 3.5em;
+            font-size: 1em;
           }
           div.StyledThumbValue.css-12gsf70.ektn3o2{
-            font-size: 3.5em;
+            font-size: 1em;
         }
       }
     </style>
