@@ -155,13 +155,6 @@ def create_gauge(num_value, label, key):
                     "color": '#FAFAFA', "fontSize": 12
                 },
             },
-              "axisLabel": {
-                "distance": -50,
-                "textStyle": {
-                    "fontFamily": 'sans-serif',
-                    "color": '#FAFAFA', "fontSize": 12
-                },
-            },
             "title": {
             "offsetCenter": [0, '-15%'],
             "fontSize": 20,
