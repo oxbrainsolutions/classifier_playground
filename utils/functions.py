@@ -111,8 +111,8 @@ def plot_scatter(x_train, y_train, x_test, y_test):
         ),
     )
 
-    fig.add_trace(train_data).add_trace(test_data).update_xaxes(range=[x_min, x_max]).update_yaxes(range=[y_min, y_max]).update_layout(xaxis_title=dict(text="X1", font=dict(size=16, family="sans-serif", color="#FAFAFA")), xaxis=dict(tickfont=dict(size=14, family="sans-serif", color="#FAFAFA")), yaxis_title=dict(text="X2", font=dict(size=16, family="sans-serif", color="#FAFAFA")), yaxis=dict(tickfont=dict(size=14, family="sans-serif", color="#FAFAFA")))
-
+    fig.add_trace(train_data).add_trace(test_data).update_xaxes(range=[x_min, x_max]).update_yaxes(range=[y_min, y_max]).update_layout(xaxis={'side': 'bottom'}, yaxis={'side': 'right'}, xaxis_title=dict(text="X1", font=dict(size=16, family="sans-serif", color="#FAFAFA")), xaxis=dict(tickfont=dict(size=14, family="sans-serif", color="#FAFAFA")), yaxis_title=dict(text="X2", font=dict(size=16, family="sans-serif", color="#FAFAFA")), yaxis=dict(tickfont=dict(size=14, family="sans-serif", color="#FAFAFA")))
+  
     fig.update_xaxes(showticklabels=False, showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_yaxes(showticklabels=False, showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(font=dict(size=14, family="sans-serif", color="#FAFAFA"), bgcolor="rgba(0, 0, 0, 0)", orientation="h", yref="paper", yanchor="bottom", y=0, xref="paper", xanchor="right", x=1))
