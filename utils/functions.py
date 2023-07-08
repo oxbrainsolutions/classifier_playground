@@ -459,14 +459,9 @@ def ad_param_selector():
     st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
     user_n_estimators = st.number_input(label="", label_visibility="collapsed", min_value=50, max_value=300, step=10, value=100, key="key_ab2", on_change=change_callback3)
 
-    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Maximum Depth</span></p>'
-    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
-    user_max_depth = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=50, step=1, value=5, key="key_ab3", on_change=change_callback3)
-
     params = {
         "learning_rate": user_learning_rate,
         "n_estimators": user_n_estimators,
-        "max_depth": user_max_depth,
     }
 
     model = AdaBoostClassifier(**params)
