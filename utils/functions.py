@@ -12,6 +12,7 @@ from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
@@ -343,6 +344,10 @@ def nb_param_selector():
     model = GaussianNB()
     return model
 
+def lda_param_selector():
+    model = LinearDiscriminantAnalysis()
+    return model
+  
 
 def knn_param_selector():
     text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Number of Neighbors</span></p>'
