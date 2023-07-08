@@ -4,7 +4,7 @@ import numpy as np
 import pathlib
 import base64
 import time
-from utils.functions import generate_data, plot_scatter, plot_scatter_decision_boundary, create_gauge, convert_rating, add_polynomial_features, train_model, lr_param_selector, nb_param_selector, lda_param_selector, qda_param_selector, knn_param_selector, nn_param_selector, svm_param_selector, ct_param_selector, rf_param_selector, gb_param_selector
+from utils.functions import generate_data, plot_scatter, plot_scatter_decision_boundary, create_gauge, convert_rating, add_polynomial_features, train_model, lr_param_selector, nb_param_selector, lda_param_selector, qda_param_selector, knn_param_selector, nn_param_selector, svm_param_selector, ct_param_selector, rf_param_selector, ad_param_selector, gb_param_selector
 
 
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
@@ -354,23 +354,25 @@ if st.session_state.submit_confirm1 == True:
       st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6", on_change=change_callback2)
       if st.session_state.user_model == "Logistic Regression":
           model = lr_param_selector()
-      if st.session_state.user_model == "Naive Bayes":
+      elif st.session_state.user_model == "Naive Bayes":
         model = nb_param_selector()
-      if st.session_state.user_model == "Linear Discriminant Analysis":
+      elif st.session_state.user_model == "Linear Discriminant Analysis":
         model = lda_param_selector()
-      if st.session_state.user_model == "Quadratic Discriminant Analysis":
+      elif st.session_state.user_model == "Quadratic Discriminant Analysis":
         model = qda_param_selector()
-      if st.session_state.user_model == "K Nearest Neighbor":
+      elif st.session_state.user_model == "K Nearest Neighbor":
           model = knn_param_selector()
-      if st.session_state.user_model == "Neural Network":
+      elif st.session_state.user_model == "Neural Network":
           model = nn_param_selector()
-      if st.session_state.user_model == "Support Vector Machine":
+      elif st.session_state.user_model == "Support Vector Machine":
           model = svm_param_selector()
-      if st.session_state.user_model == "Classification Tree":
+      elif st.session_state.user_model == "Classification Tree":
           model = ct_param_selector()
-      if st.session_state.user_model == "Random Forest":
+      elif st.session_state.user_model == "Random Forest":
           model = rf_param_selector()
-      if st.session_state.user_model == "Gradient Boosting Machine":
+      elif st.session_state.user_model == "Adaptive Boosting Machine":
+          model = ad_param_selector()
+      elif st.session_state.user_model == "Gradient Boosting Machine":
           model = gb_param_selector()
         
       if st.session_state.user_model != "":
