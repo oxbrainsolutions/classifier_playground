@@ -115,7 +115,7 @@ def plot_scatter(x_train, y_train, x_test, y_test):
 
     fig.update_xaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
-    fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(font=dict(size=14, family="sans-serif", color="#FAFAFA"), bgcolor="rgba(0, 0, 0, 0)", orientation="h", yanchor="top", y=1, xanchor="right", x=1))
+    fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(font=dict(size=14, family="sans-serif", color="#FAFAFA"), bgcolor="rgba(0, 0, 0, 0)", orientation="h", yref="paper", yanchor="bottom", y=0, xref="paper", xanchor="right", x=1))
     return fig
 
 def plot_scatter_decision_boundary(label, model, x_train, y_train, x_test, y_test):
@@ -188,7 +188,7 @@ def plot_scatter_decision_boundary(label, model, x_train, y_train, x_test, y_tes
     fig.update_xaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_yaxes(showline=True, showgrid=False, zeroline=False, linecolor = '#FAFAFA', linewidth = 2.5, mirror = True)
     fig.update_layout(autosize=True, height=500, width = 500, margin=dict(l=5, r=10, b=0, t=10), legend=dict(font=dict(size=14, family="sans-serif", color="#FAFAFA"), bgcolor="rgba(0, 0, 0, 0)", orientation="h", yref="paper", yanchor="bottom", y=0, xref="paper", xanchor="right", x=1))
-    fig.add_annotation(dict(font=dict(color="#FAFAFA", size=20, family="sans-serif"), yref="paper", yanchor="top", y=0.95, xref="paper", xanchor="left", x=0.05, showarrow=False, text="{}".format(label)))
+    fig.add_annotation(dict(font=dict(color="#FAFAFA", size=20, family="sans-serif"), yref="paper", yanchor="top", y=0.98, xref="paper", xanchor="left", x=0.02, showarrow=False, text="{}".format(label)))
     return fig
 
 color1 = "#5007E3"
