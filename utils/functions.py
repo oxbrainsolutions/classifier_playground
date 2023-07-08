@@ -470,8 +470,7 @@ def ad_param_selector():
     }
 
     model = AdaBoostClassifier(**params)
-  
-  return model
+    return model
 
 def gb_param_selector():
 
