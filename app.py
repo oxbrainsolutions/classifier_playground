@@ -392,7 +392,6 @@ if st.session_state.submit_confirm1 == True:
 
 
 
-          st.text("")
           info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Polynomial feature terms: Logistic regression can also incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
           st.markdown(text_media_query1 + info_text_poly1, unsafe_allow_html=True)
           info_text_poly2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Pros: Allows for modeling complex relationships and interactions between features.</li></ul></p>'
