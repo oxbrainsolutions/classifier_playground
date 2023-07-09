@@ -383,7 +383,7 @@ if st.session_state.submit_confirm1 == True:
           if st.session_state.user_model == "Logistic Regression":
               info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Logistic regression is a statistical model used for binary classification, predicting the probability of an instance belonging to a particular class based on input features.</span></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
-              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; "><li>Regularization and complexity constraints: Logistic regression can use regularization techniques like L1 or L2 regularization to prevent overfitting and control model complexity.</li></span></p>'
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; "><ul><li>Regularization and complexity constraints: Logistic regression can use regularization techniques like L1 or L2 regularization to prevent overfitting and control model complexity.</li></ul></span></p>'
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
 
 
