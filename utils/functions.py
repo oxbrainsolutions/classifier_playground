@@ -340,20 +340,7 @@ def lr_param_selector():
       params = {"solver": solver, "penalty": penalty_options_update, "C": C, "max_iter": max_iter}
     
     model = LogisticRegression(**params)
-
-    info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Logistic regression is a statistical model used for binary classification, predicting the probability of an instance belonging to a particular class based on input features.</span></p>'
-    st.markdown(text_media_query_functions1 + info_text1, unsafe_allow_html=True)
-    info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; "><li>Regularization and complexity constraints: Logistic regression can use regularization techniques like L1 or L2 regularization to prevent overfitting and control model complexity.</li></span></p>'
-    st.markdown(text_media_query_functions1 + info_text2, unsafe_allow_html=True)
-
-
-
-
-
-
-
-
-  
+ 
     return model
 
 def nb_param_selector():
