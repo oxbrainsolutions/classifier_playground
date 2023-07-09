@@ -381,14 +381,24 @@ if st.session_state.submit_confirm1 == True:
           user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7", on_change=change_callback2)
           submit_button2 = st.button("Train Model", key="key8")
           if st.session_state.user_model == "Logistic Regression":
-              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Logistic regression is a statistical model used for binary classification, predicting the probability of an instance belonging to a particular class based on input features.</li></p>'
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Logistic regression is a statistical model used for binary classification, predicting the probability of an instance belonging to a particular class based on input features.</li></ul></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
               info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Regularization and complexity constraints: Logistic regression can use regularization techniques like L1 or L2 regularization to prevent overfitting and control model complexity.</li></ul></p>'
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+              info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Pros: Interpretable results as it provides coefficients indicating the impact of each feature on the classification. Efficient and computationally inexpensive.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
+              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Cons: Assumes a linear relationship between features and the logarithm of odds. May not perform well with complex data patterns.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
 
 
 
-
+          st.text("")
+          info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Polynomial feature terms: Logistic regression can also incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
+          st.markdown(text_media_query1 + info_text_poly1, unsafe_allow_html=True)
+          info_text_poly2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Pros: Allows for modeling complex relationships and interactions between features.</li></ul></p>'
+          st.markdown(text_media_query1 + info_text_poly2, unsafe_allow_html=True)
+          info_text_poly3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Cons: Increases the dimensionality of the feature space, which can lead to overfitting if not properly regularized.</li></ul></p>'
+          st.markdown(text_media_query1 + info_text_poly3, unsafe_allow_html=True)
           
           if submit_button2:
               st.session_state.x_train_out_update, st.session_state.x_test_out_update = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
