@@ -50,11 +50,22 @@ st.markdown("""
   </style>
 """, unsafe_allow_html=True)
 
-line = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
-line_media_query = '''
+line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
+line_media_query1 = '''
     <style>
     @media (max-width: 1024px) {
         .line1 {
+            padding: 0.3em;
+        }
+    }
+    </style>
+'''
+
+line2 = '<hr class="line2" style="height:0.1em; border:0em; background-color: #FAFAFA; margin-top: 0em; margin-bottom: -2em;">'
+line_media_query2 = '''
+    <style>
+    @media (max-width: 1024px) {
+        .line2 {
             padding: 0.3em;
         }
     }
@@ -267,7 +278,7 @@ with st.sidebar:
     </style>
     '''
     st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
-    st.markdown(line_media_query + line, unsafe_allow_html=True)
+    st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
 dataset_container = st.sidebar.expander("", expanded = True)
 with dataset_container:
@@ -342,7 +353,7 @@ if st.session_state.submit_confirm1 == True:
       line_field = st.empty()
       subheader_text2 = '''<p class="subheader_text" style="margin-top: 1em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Select a ML Model</span></p>'''
       subheader_text_field1.markdown(subheader_media_query + subheader_text2, unsafe_allow_html=True)
-      line_field.markdown(line_media_query + line, unsafe_allow_html=True)
+      line_field.markdown(line_media_query1 + line1, unsafe_allow_html=True)
     
     model_container = st.sidebar.expander("", expanded = True)        
     with model_container:
@@ -380,6 +391,7 @@ if st.session_state.submit_confirm1 == True:
           st.markdown(text_media_query1 + text, unsafe_allow_html=True)
           user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7", on_change=change_callback2)
           submit_button2 = st.button("Train Model", key="key8")
+          st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
           if st.session_state.user_model == "Logistic Regression":
               info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Logistic regression is a statistical model used for binary classification, predicting the probability of an instance belonging to a particular class based on input features.</li></ul></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
@@ -391,7 +403,7 @@ if st.session_state.submit_confirm1 == True:
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
 
 
-
+          st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
           info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Polynomial feature terms: ML models can incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
           st.markdown(text_media_query1 + info_text_poly1, unsafe_allow_html=True)
           info_text_poly2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Allows for modeling complex relationships and interactions between features.</li></ul></p>'
