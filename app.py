@@ -380,6 +380,16 @@ if st.session_state.submit_confirm1 == True:
           st.markdown(text_media_query1 + text, unsafe_allow_html=True)
           user_poly_degree = st.number_input(label="", label_visibility="collapsed", min_value=1, max_value=10, step=1, value=1, key="key7", on_change=change_callback2)
           submit_button2 = st.button("Train Model", key="key8")
+          if st.session_state.user_model == "Logistic Regression":
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Logistic regression is a statistical model used for binary classification, predicting the probability of an instance belonging to a particular class based on input features.</span></p>'
+              st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; "><li>Regularization and complexity constraints: Logistic regression can use regularization techniques like L1 or L2 regularization to prevent overfitting and control model complexity.</li></span></p>'
+              st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+
+
+
+
+          
           if submit_button2:
               st.session_state.x_train_out_update, st.session_state.x_test_out_update = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
               try:
