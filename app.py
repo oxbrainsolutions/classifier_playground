@@ -387,16 +387,16 @@ if st.session_state.submit_confirm1 == True:
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Interpretable results as it provides coefficients indicating the impact of each feature on the classification. Efficient and computationally inexpensive.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
-              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Assumes a linear relationship between features and the logarithm of odds. May not perform well with complex data patterns.</li></ul></p>'
+              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Assumes a linear relationship. May not perform well with complex data patterns.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
 
 
 
-          info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Polynomial feature terms: Logistic regression can also incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
+          info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Polynomial feature terms: ML models can incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
           st.markdown(text_media_query1 + info_text_poly1, unsafe_allow_html=True)
           info_text_poly2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Allows for modeling complex relationships and interactions between features.</li></ul></p>'
           st.markdown(text_media_query1 + info_text_poly2, unsafe_allow_html=True)
-          info_text_poly3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Increases the dimensionality of the feature space, which can lead to overfitting if not properly regularized.</li></ul></p>'
+          info_text_poly3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Increases the dimensionality of the feature space, which can lead to overfitting if not properly controlled.</li></ul></p>'
           st.markdown(text_media_query1 + info_text_poly3, unsafe_allow_html=True)
           
           if submit_button2:
