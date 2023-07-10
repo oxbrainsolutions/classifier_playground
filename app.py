@@ -52,8 +52,8 @@ st.markdown("""
 
 st.markdown("""
   <style>
-    div.button.css-1l7fe1m.e1ewe7hr3 {
-        color: red;
+    div.button.css-1l7fe1m {
+        color: orange;
     }
     }
   </style>
