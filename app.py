@@ -53,7 +53,7 @@ st.markdown("""
 st.markdown("""
   <style>
     div.button.css-1l7fe1m.e1ewe7hr3 > button:first-child {
-        color: orange;
+        background-color: orange;
     }
     }
   </style>
