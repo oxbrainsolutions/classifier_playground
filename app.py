@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import pathlib
@@ -314,7 +315,8 @@ if st.button("Show Popup"):
     """
 
     # Display the popup HTML and JavaScript
-    st.markdown(close_button_script, unsafe_allow_html=True)
+    #st.markdown(close_button_script, unsafe_allow_html=True)
+    components.html(close_button_script)
     st.markdown(popup_html, unsafe_allow_html=True)
 
 
