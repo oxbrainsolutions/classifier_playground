@@ -309,7 +309,7 @@ if st.button("Show Popup"):
     <div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: green; border: 1px solid black; padding: 20px;">
             <p>{warning_message}</p>
-            <button onclick="closePopup()">Close</button>
+            <button onclick="document.getElementById("popup").style.display = "none">Close</button>
         </div>
     </div>
     """
