@@ -1,5 +1,4 @@
 import streamlit as st
-from js import document
 import pandas as pd
 import numpy as np
 import pathlib
@@ -299,7 +298,7 @@ if st.button("Show Popup"):
     close_button_script = """
     <script>
     function closePopup() {
-        var document.getElementById("popup").style.display = "none";
+        var window.parent.document.getElementById("popup").style.display = "none";
     }
     </script>
     """
