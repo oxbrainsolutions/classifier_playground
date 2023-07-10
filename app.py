@@ -1,5 +1,5 @@
 import streamlit as st
-import streamlit.components.v1 as components
+import html
 import pandas as pd
 import numpy as np
 import pathlib
@@ -318,6 +318,35 @@ if st.button("Show Popup"):
     #st.markdown(close_button_script, unsafe_allow_html=True)
     components.html(close_button_script)
     st.markdown(popup_html, unsafe_allow_html=True)
+
+if st.button("Show Popup2"):
+    error = rf'''
+            <div class="container loader-block" id="loader-block">
+                <h1>
+                    {title}
+                </h1>
+                <h2>
+                    {subtitle}
+                </h2>
+                <img src="data:image/png;base64, {image_as_base64.decode("utf-8")}"/>
+                <div class="error-box">
+                   {utl.generate_download(error_content,"error.txt","Error log")}
+                </div>
+                <button id="close_error" type="button" class="close-error-btn">
+                    X
+                </button>
+            </div>
+            '''
+    st.markdown(error,unsafe_allow_html=True)
+    js = '''<script>
+    close_btn = window.parent.document.getElementById("close_error").addEventListener("click", () => {
+        error_box = window.parent.document.getElementById("loader-block"); 
+        error_box.style.display = "none";
+        });
+    </script>
+    '''
+    html(js)
+    
 
 
 
