@@ -52,7 +52,7 @@ st.markdown("""
 
 st.markdown("""
   <style>
-    div.css-fblp2m.ex0cdmw0 {
+    div.e1ugi8lo1.css-fblp2m.ex0cdmw0 {
         color: orange;
     }
     }
