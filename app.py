@@ -330,10 +330,6 @@ if st.button("Show Popup2"):
                 <h2>
                     {subtitle}
                 </h2>
-                <img src="data:image/png;base64, {img_to_bytes.decode("utf-8")}"/>
-                <div class="error-box">
-                   {utl.generate_download(error_content,"error.txt","Error log")}
-                </div>
                 <button id="close_error" type="button" class="close-error-btn">
                     X
                 </button>
