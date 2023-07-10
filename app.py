@@ -299,7 +299,7 @@ if st.button("Show Popup"):
     <script>
     function closePopup() {
         var popup = document.getElementById('popup');
-        popup.style.background-color = 'rgba(230, 0, 0, 0.5)';
+        popup.style.display = 'none';
     }
     </script>
     """
