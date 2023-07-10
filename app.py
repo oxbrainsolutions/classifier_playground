@@ -50,6 +50,15 @@ st.markdown("""
   </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+  <style>
+    div.button.css-1l7fe1m.e1ewe7hr3 {
+        color: red;
+    }
+    }
+  </style>
+""", unsafe_allow_html=True)
+
 line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
 line_media_query1 = '''
     <style>
