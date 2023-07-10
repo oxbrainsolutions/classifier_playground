@@ -1,4 +1,5 @@
 import streamlit as st
+from js import document
 import pandas as pd
 import numpy as np
 import pathlib
