@@ -52,7 +52,7 @@ st.markdown("""
 
 st.markdown("""
   <style>
-    css-1l7fe1m {
+    .css-1l7fe1m {
         background-color: orange;
     }
     }
