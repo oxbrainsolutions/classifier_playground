@@ -320,6 +320,8 @@ if st.button("Show Popup"):
     st.markdown(popup_html, unsafe_allow_html=True)
 
 if st.button("Show Popup2"):
+    title = "WARNING"
+    subtitle = "Please complete selection"
     error = rf'''
             <div class="container loader-block" id="loader-block">
                 <h1>
