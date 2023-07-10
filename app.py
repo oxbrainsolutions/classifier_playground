@@ -298,8 +298,8 @@ if st.button("Show Popup"):
     close_button_script = """
     <script>
     function closePopup() {
-        var popup = document.getElementById('popup');
-        popup.style.display = 'none';
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
     }
     </script>
     """
