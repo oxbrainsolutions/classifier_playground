@@ -52,7 +52,7 @@ st.markdown("""
 
 st.markdown("""
   <style>
-    div.css-1l7fe1m.e1ewe7hr3 {
+    div.css-1l7fe1m.e1ewe7hr3 > first-child {
         color: orange;
     }
     }
