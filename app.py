@@ -279,6 +279,38 @@ with st.sidebar:
     st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
     st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
+
+# Create a button to show the popup
+if st.button("Show Popup"):
+    # Define the warning message
+    warning_message = "This is a warning message."
+
+    # Create JavaScript code for closing the popup
+    close_button_script = """
+    <script>
+    function closePopup() {
+        var popup = document.getElementById('popup');
+        popup.style.background-color = 'rgba(230, 0, 0, 0.5)';
+    }
+    </script>
+    """
+
+    # Create HTML code for the popup window
+    popup_html = f"""
+    <div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: green; border: 1px solid black; padding: 20px;">
+            <p>{warning_message}</p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    """
+
+    # Display the popup HTML and JavaScript
+    st.markdown(close_button_script, unsafe_allow_html=True)
+    st.markdown(popup_html, unsafe_allow_html=True)
+
+
+
 dataset_container = st.sidebar.expander("", expanded = True)
 with dataset_container:
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
