@@ -330,7 +330,7 @@ if st.button("Show Popup2"):
                 <h2>
                     {subtitle}
                 </h2>
-                <img src="data:image/png;base64, {image_as_base64.decode("utf-8")}"/>
+                <img src="data:image/png;base64, {image_to_bytes.decode("utf-8")}"/>
                 <div class="error-box">
                    {utl.generate_download(error_content,"error.txt","Error log")}
                 </div>
