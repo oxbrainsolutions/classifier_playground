@@ -197,8 +197,8 @@ st.markdown(
         height: 0.2em !important;
         margin-top: 0em;
         font-family: sans-serif;
-        display: flex;
-        justofy-content: center;
+        display: flex !important;
+        justofy-content: center !important;
     }
     div.stButton > button:hover {
         background-color: #76787A;
