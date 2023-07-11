@@ -317,8 +317,8 @@ if st.button("Show Popup"):
     
     # Display the popup HTML and JavaScript
     #st.markdown(close_button_script, unsafe_allow_html=True)
-    #components.html(close_button_script)
-    st.markdown(close_button_script + popup_html, unsafe_allow_html=True)
+    components.html(close_button_script + popup_html)
+    #st.markdown(close_button_script + popup_html, unsafe_allow_html=True)
 
 import streamlit.components.v1 as components
 modal = Modal("Demo Modal", key="Modal1")
