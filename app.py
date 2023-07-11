@@ -389,10 +389,8 @@ if modal1.is_open():
         st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
 
 if st.session_state.submit_confirm1 == True:
-    try:
+    if modal1.is_open():
         modal1.close()
-    except:
-        pass
     
     with st.sidebar:
       subheader_text_field1 = st.empty()
