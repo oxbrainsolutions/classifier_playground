@@ -289,7 +289,7 @@ with st.sidebar:
     st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
     st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
-
+from js import document
 # Create a button to show the popup
 if st.button("Show Popup"):
     # Define the warning message
@@ -319,7 +319,9 @@ if st.button("Show Popup"):
     components.html(close_button_script)
     st.markdown(popup_html, unsafe_allow_html=True)
 
+
 if st.button("Show Popup2"):
+    
     title = "WARNING"
     subtitle = "Please complete selection"
     error = rf'''
