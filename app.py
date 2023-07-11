@@ -48,7 +48,6 @@ st.markdown("""
     background-color: rgb(203, 175, 175) !important;
     }
     div[data-modal-container='true'][key='Modal1'] > div > div:nth-child(2) > div {
-
         max-width: 2em !important;
     }
     @media (max-width: 1024px) {
