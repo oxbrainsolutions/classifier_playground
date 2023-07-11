@@ -313,9 +313,9 @@ if st.button("Show Popup"):
     """
 
     # Display the popup HTML and JavaScript
-    st.markdown(close_button_script, unsafe_allow_html=True)
-    st.components.v1.html(close_button_script)
-    st.markdown(popup_html, unsafe_allow_html=True)
+    #st.markdown(close_button_script, unsafe_allow_html=True)
+    st.components.v1.html(popup_html)
+    #st.markdown(popup_html, unsafe_allow_html=True)
 
 
 
