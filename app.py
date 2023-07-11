@@ -46,6 +46,7 @@ st.markdown("""
     }
     div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
     background-color: #FADADD !important;
+    z-index: 9999 !important;
     }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
