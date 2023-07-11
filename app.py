@@ -295,6 +295,27 @@ with st.sidebar:
     st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
     st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
+
+modal = Modal("", key="Modal1", padding=20, max_width=200)
+open_modal = st.button("Open")
+if open_modal:
+    modal.open()
+
+if modal.is_open():
+    with modal.container():
+        subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
+        subheader_media_query = '''
+        <style>
+        @media (max-width: 1024px) {
+            p.subheader_text {
+              font-size: 4em;
+            }
+        }
+        </style>
+        '''
+        st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
+
+
 dataset_container = st.sidebar.expander("", expanded = True)
 with dataset_container:
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
@@ -360,24 +381,7 @@ if submit_button1:
         #with st.sidebar:
             #st.error("**Error**: select data type.")
 
-        modal = Modal("", key="Modal1", padding=20, max_width=200)
-        open_modal = st.button("Open")
-        if open_modal:
-            modal.open()
-        
-        if modal.is_open():
-            with modal.container():
-                subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
-                subheader_media_query = '''
-                <style>
-                @media (max-width: 1024px) {
-                    p.subheader_text {
-                      font-size: 4em;
-                    }
-                }
-                </style>
-                '''
-                st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
+
         
         st.session_state.submit_confirm1 = False
     else:
