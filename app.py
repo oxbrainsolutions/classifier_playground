@@ -203,9 +203,7 @@ st.markdown(
         height: 0.2em !important;
         margin-top: 0em;
         font-family: sans-serif;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        align-items: center;
     }
     div.stButton > button:hover {
         background-color: #76787A;
