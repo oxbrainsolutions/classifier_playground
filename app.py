@@ -49,7 +49,7 @@ st.markdown("""
     }
     div[data-modal-container='true'][key='Modal1'] > div > div:nth-child(2) > div {
         margin-left: 48em !important;
-        max-width: 10em !important;
+        max-width: 2em !important;
     }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
