@@ -295,55 +295,7 @@ with st.sidebar:
     st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
 import streamlit.components.v1 as components
-# Create a button to show the popup
-if st.button("Show Popup"):
-    # Define the warning message
-    warning_message = "This is a warning message."
 
-    # Create JavaScript code for closing the popup
-    close_button_script = """
-    <script language="javascript">
-    function closePopup() {
-        var document.getElementById("popup").style.display = "none";
-    }
-    </script>
-    """
-
-    # Create HTML code for the popup window
-    popup_html = f"""
-    <div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
-        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: green; border: 1px solid black; padding: 20px;">
-            <p>{warning_message}</p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-    </div>
-    """
-
-    
-    # Display the popup HTML and JavaScript
-    #st.markdown(close_button_script, unsafe_allow_html=True)
-    #components.html(close_button_script + popup_html)
-    st.markdown(close_button_script + popup_html, unsafe_allow_html=True)
-
-import streamlit.components.v1 as components
-modal = Modal("", key="Modal1", padding=20, max_width=200)
-open_modal = st.button("Open")
-if open_modal:
-    modal.open()
-
-if modal.is_open():
-    with modal.container():
-        subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
-        subheader_media_query = '''
-        <style>
-        @media (max-width: 1024px) {
-            p.subheader_text {
-              font-size: 4em;
-            }
-        }
-        </style>
-        '''
-        st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
 
 
     
@@ -412,7 +364,27 @@ with col2:
 if submit_button1:
     if st.session_state.user_data_type == "":
         with st.sidebar:
-            st.error("**Error**: select data type.")
+            #st.error("**Error**: select data type.")
+
+            modal = Modal("", key="Modal1", padding=20, max_width=200)
+            open_modal = st.button("Open")
+            if open_modal:
+                modal.open()
+            
+            if modal.is_open():
+                with modal.container():
+                    subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
+                    subheader_media_query = '''
+                    <style>
+                    @media (max-width: 1024px) {
+                        p.subheader_text {
+                          font-size: 4em;
+                        }
+                    }
+                    </style>
+                    '''
+                    st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
+            
             st.session_state.submit_confirm1 = False
     else:
       st.session_state.submit_confirm1 = True
