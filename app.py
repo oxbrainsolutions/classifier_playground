@@ -325,8 +325,8 @@ if open_modal:
     modal.open()
 
 if modal.is_open():
-    gr = st.columns(3)
-    with gr[2]:
+    gr = st.columns(7)
+    with gr[3]:
         with modal.container():
             st.write("Text goes here")
     
