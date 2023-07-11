@@ -188,6 +188,11 @@ st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_tran
 st.markdown(
     """
     <style>
+    div.stButton {
+        display: flex !important;
+        justofy-content: center !important;
+    }
+    
      div.stButton > button:first-child {
         background-color: #002147;
         color: #FAFAFA;
@@ -197,8 +202,6 @@ st.markdown(
         height: 0.2em !important;
         margin-top: 0em;
         font-family: sans-serif;
-        display: flex !important;
-        justofy-content: center !important;
     }
     div.stButton > button:hover {
         background-color: #76787A;
