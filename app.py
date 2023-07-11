@@ -44,7 +44,7 @@ st.markdown("""
         margin-top: -3em;
     }
   <style>
-    div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
+    div[data-modal-container='true'] > div:first-child > div:first-child {
         background-color: pink;
     }
 
@@ -212,17 +212,6 @@ st.markdown(
         margin-top: 0em;
         border-width: 0.15em; !important;
         }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-  )
-
-st.markdown(
-    """
-    <style>
-    div.data-modal-container > div:first-child {
-    background-color: #002147;
     }
     </style>
     """,
