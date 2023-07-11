@@ -362,7 +362,7 @@ with col2:
   subheader_text_field2 = st.empty()
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
 
-modal = Modal("", key="Modal1", padding=20, max_width=300)
+modal = Modal("", key="Modal1", padding=20, max_width=240)
 if submit_button1:
     if st.session_state.user_data_type == "":
         #with st.sidebar:
