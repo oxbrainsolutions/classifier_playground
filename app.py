@@ -339,7 +339,7 @@ if modal.is_open():
               document.querySelector("h1").style.color = "red";
             </script>
             '''
-            components.html(html_string)
+            components.html(html_string, width=500, height=500)
     
             st.write("Some fancy text")
             value = st.checkbox("Check me")
