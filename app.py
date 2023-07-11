@@ -378,6 +378,9 @@ if submit_button1:
 if st.session_state.submit_error1 == True:
     modal1.open()
 
+if st.session_state.submit_error1 == False:
+    modal1.close()
+
 if modal1.is_open():
     with modal1.container():
         error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
