@@ -374,10 +374,7 @@ if submit_button1:
     else:
       st.session_state.submit_confirm1 = True
       st.session_state.submit_error1 = False
-      try:
-          modal1.close()
-      except:
-          pass
+
 
 if st.session_state.submit_error1 == True:
     modal1.open()
