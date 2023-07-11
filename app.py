@@ -359,7 +359,10 @@ if submit_button1:
     if st.session_state.user_data_type == "":
         #with st.sidebar:
             #st.error("**Error**: select data type.")
-        modal.open()
+        modal.open()        
+        st.session_state.submit_confirm1 = False
+    else:
+      st.session_state.submit_confirm1 = True
 
 if modal.is_open():
     with modal.container():
@@ -374,12 +377,6 @@ if modal.is_open():
         </style>
         '''
         st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
-
-
-        
-        st.session_state.submit_confirm1 = False
-    else:
-      st.session_state.submit_confirm1 = True
 
 if st.session_state.submit_confirm1 == True:
     with st.sidebar:
