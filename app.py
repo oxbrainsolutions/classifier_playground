@@ -374,7 +374,7 @@ if submit_button1:
 
 if modal.is_open():
     with modal.container():
-        error_text1 = '''<p class="error_text1" style="margin-top: 4em; margin-bottom: 2em; text-align: justify;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
+        error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 2em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
         error_media_query1 = '''
         <style>
         @media (max-width: 1024px) {
