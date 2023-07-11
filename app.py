@@ -43,6 +43,9 @@ st.markdown("""
     div.block-container.css-ysnqb2.e1g8pov64 {
         margin-top: -3em;
     }
+    div.element-container.css-pvp5gr.esravye2 {
+        background-color: pink;
+    }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
             margin-top: -15em;
