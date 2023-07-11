@@ -1,5 +1,6 @@
 streamlit
 streamlit-echarts
+streamlit-model
 scikit_learn
 plotly
 matplotlib
