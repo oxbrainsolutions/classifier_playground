@@ -47,6 +47,10 @@ st.markdown("""
     div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
     background-color: rgb(203, 175, 175) !important;
     }
+    div[data-modal-container='true'][key='Modal1'] > div:nth-child(2) > div {
+        margin-left: 48% !important;
+        max-width: 10% !important;
+    }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
             margin-top: -15em;
