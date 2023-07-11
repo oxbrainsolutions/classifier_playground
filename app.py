@@ -319,7 +319,7 @@ if st.button("Show Popup"):
     st.markdown(popup_html, unsafe_allow_html=True)
 
 model = Modal("Demo Modal", "TryModela")
-moel.open()
+modal.open()
 
     
 
