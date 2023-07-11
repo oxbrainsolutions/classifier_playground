@@ -43,11 +43,6 @@ st.markdown("""
     div.block-container.css-ysnqb2.e1g8pov64 {
         margin-top: -3em;
     }
-    div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child{
-        background-color: pink;
-    }
-
-
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
             margin-top: -15em;
@@ -55,6 +50,15 @@ st.markdown("""
     }
   </style>
 """, unsafe_allow_html=True)
+
+st.markdown("""
+  <style>
+      div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child{
+        background-color: pink;
+    }
+  </style>
+""", unsafe_allow_html=True)
+
 
 st.markdown("""
   <style>
