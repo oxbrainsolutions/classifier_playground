@@ -299,7 +299,7 @@ if st.button("Show Popup"):
     close_button_script = """
     <script language="javascript">
     function closePopup() {
-        var document.getElementById("popup").style.display = "none";
+        document.getElementById("popup").style.display = "none";
     }
     </script>
     """
@@ -316,8 +316,8 @@ if st.button("Show Popup"):
 
     
     # Display the popup HTML and JavaScript
-    #st.markdown(close_button_script, unsafe_allow_html=True)
-    components.html(close_button_script)
+    st.markdown(close_button_script, unsafe_allow_html=True)
+    #components.html(close_button_script)
     st.markdown(popup_html, unsafe_allow_html=True)
 
 import streamlit.components.v1 as components
