@@ -60,16 +60,6 @@ st.markdown("""
   </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-  <style>
-    .css-hyxdo6.e1ewe7hr10 {
-        background-color: #FCBC24;
-    }
-    }
-  </style>
-""", unsafe_allow_html=True)
-
-
 line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
 line_media_query1 = '''
     <style>
@@ -221,6 +211,19 @@ st.markdown(
     """,
     unsafe_allow_html=True
   )
+
+st.markdown(
+    """
+    <style>
+    div[data-modal-container='true'][key='{self.key}'] > div:first-child > div:first-child {{
+    background-color: #002147;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+  )
+    
+
 
 st.markdown("""
   <style>
