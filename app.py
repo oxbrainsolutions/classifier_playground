@@ -45,11 +45,7 @@ st.markdown("""
         margin-top: -3em;
     }
     div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
-    background-color: rgb(203, 175, 175) !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    height: 100hv !important;
+        background-color: rgb(203, 175, 175) !important;
     }
     div[data-modal-container='true'][key='Modal1'] > div > div:nth-child(2) > div {
         max-width: 2em !important;
