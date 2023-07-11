@@ -338,14 +338,7 @@ if modal.is_open():
         with modal.container():
             st.write("Text goes here")
     
-            html_string = '''
-            <h1>HTML string in RED</h1>
-    
-            <script language="javascript">
-              document.querySelector("h1").style.color = "red";
-            </script>
-            '''
-            components.html(html_string, width=50, height=50)
+
     
             st.write("Some fancy text")
             value = st.checkbox("Check me")
