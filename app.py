@@ -362,18 +362,18 @@ with col2:
   subheader_text_field2 = st.empty()
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
 
-modal = Modal("", key="Modal1", padding=20, max_width=240)
+modal1 = Modal("", key="Modal1", padding=20, max_width=240)
 if submit_button1:
     if st.session_state.user_data_type == "":
         #with st.sidebar:
             #st.error("**Error**: select data type.")
-        modal.open()        
+        modal1.open()        
         st.session_state.submit_confirm1 = False
     else:
       st.session_state.submit_confirm1 = True
 
-if modal.is_open():
-    with modal.container():
+if modal1.is_open():
+    with modal1.container():
         error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
         error_media_query1 = '''
         <style>
@@ -457,7 +457,7 @@ if st.session_state.submit_confirm1 == True:
                   st.session_state.submit_confirm2 = True
               except:
                   with st.sidebar:
-                      st.error("**Error**: complete selection.")
+                      #st.error("**Error**: complete selection.")
                       st.session_state.submit_confirm2 = False
                   
 col1, col2, col3 = st.columns([1, 2, 1])
