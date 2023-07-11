@@ -327,16 +327,14 @@ if open_modal:
     modal.open()
 
 if modal.is_open():
-    gr = st.columns(7)
-    with gr[3]:
-        with modal.container():
-            st.write("Text goes here")
-    
+    with modal.container():
+        st.write("Text goes here")
 
-    
-            st.write("Some fancy text")
-            value = st.checkbox("Check me")
-            st.write(f"Checkbox checked: {value}")
+
+
+        st.write("Some fancy text")
+        value = st.checkbox("Check me")
+        st.write(f"Checkbox checked: {value}")
 
     
 
