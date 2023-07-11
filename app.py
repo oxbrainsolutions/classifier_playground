@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_modal import Modal
+import streamlit.components.v1 as components
 import pandas as pd
 import numpy as np
 import pathlib
@@ -294,14 +295,6 @@ with st.sidebar:
     st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
     st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
-import streamlit.components.v1 as components
-
-
-
-    
-
-
-
 dataset_container = st.sidebar.expander("", expanded = True)
 with dataset_container:
   text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Data Type</span></p>'
@@ -367,9 +360,7 @@ if submit_button1:
             #st.error("**Error**: select data type.")
 
             modal = Modal("", key="Modal1", padding=20, max_width=200)
-            open_modal = st.button("Open")
-            if open_modal:
-                modal.open()
+            modal.open()
             
             if modal.is_open():
                 with modal.container():
