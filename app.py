@@ -46,10 +46,13 @@ st.markdown("""
     }
     div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
     background-color: rgb(203, 175, 175) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100hv !important;
     }
     div[data-modal-container='true'][key='Modal1'] > div > div:nth-child(2) > div {
         max-width: 2em !important;
-        max-height: 2em! important;
     }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
