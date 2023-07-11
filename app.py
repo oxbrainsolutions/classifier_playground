@@ -54,15 +54,7 @@ st.markdown("""
 st.markdown("""
   <style>
 div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
-    width: unset !important;
-    background-color: #008080;
-    padding: 20px;
-    margin-top: 40px;
-    margin-left: -20px;
-    margin-right: -20px;
-    margin-bottom: -40px;
-    z-index: 1001;
-    border-radius: 5px;
+    background-color: pink !important;
 }
   </style>
 """, unsafe_allow_html=True)
