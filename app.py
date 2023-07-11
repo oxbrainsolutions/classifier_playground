@@ -328,7 +328,7 @@ if st.button("Show Popup"):
     st.markdown(close_button_script + popup_html, unsafe_allow_html=True)
 
 import streamlit.components.v1 as components
-modal = Modal("Demo Modal", key="Modal1", padding=10, max_width=100)
+modal = Modal("Error", key="Modal1", padding=10, max_width=100)
 open_modal = st.button("Open")
 if open_modal:
     modal.open()
@@ -346,7 +346,6 @@ if modal.is_open():
         </style>
         '''
         st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
-        st.write("Hello")
 
 
     
