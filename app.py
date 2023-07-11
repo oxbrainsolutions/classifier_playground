@@ -296,7 +296,7 @@ if st.button("Show Popup"):
 
     # Create JavaScript code for closing the popup
     close_button_script = """
-    <script>
+    <script language="javascript">
     function closePopup() {
         var window.parent.document.getElementById("popup").style.display = "none";
     }
@@ -308,7 +308,7 @@ if st.button("Show Popup"):
     <div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: green; border: 1px solid black; padding: 20px;">
             <p>{warning_message}</p>
-            <button onclick="window.parent.document.getElementById("popup").style.display = "none">Close</button>
+            <button onclick=closePopup()>Close</button>
         </div>
     </div>
     """
