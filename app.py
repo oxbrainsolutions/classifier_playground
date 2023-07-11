@@ -408,6 +408,7 @@ if st.session_state.submit_confirm1 == True:
       model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
       st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6", on_change=change_callback2)
       if st.session_state.user_model == "Logistic Regression":
+          st.write("hello")
           model = lr_param_selector()
       elif st.session_state.user_model == "Naive Bayes":
         model = nb_param_selector()
