@@ -26,9 +26,11 @@ if "x_train_out" not in st.session_state or "y_train_out" not in st.session_stat
     st.session_state["x_train_out_update"] = []
     st.session_state["x_test_out_update"] = []
 
-if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state:
+if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state or "submit_error1" not in st.session_state or "submit_error2" not in st.session_state:
     st.session_state["submit_confirm1"] = False
     st.session_state["submit_confirm2"] = False
+    st.session_state["submit_error1"] = False
+    st.session_state["submit_error2"] = False
 
 hide_st_style = """
                 <style>
@@ -367,10 +369,14 @@ if submit_button1:
     if st.session_state.user_data_type == "":
         #with st.sidebar:
             #st.error("**Error**: select data type.")
-        modal1.open()        
         st.session_state.submit_confirm1 = False
+        st.session_state.submit_error1 = True
     else:
       st.session_state.submit_confirm1 = True
+      st.session_state.submit_error1 = False
+
+if st.session_state.submit_error1 == True:
+    modal1.open()
 
 if modal1.is_open():
     with modal1.container():
