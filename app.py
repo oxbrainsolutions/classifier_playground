@@ -43,12 +43,11 @@ st.markdown("""
     div.block-container.css-ysnqb2.e1g8pov64 {
         margin-top: -3em;
     }
-  <style>
     div[data-modal-container='true'] > div:first-child {
         background-color: pink;
     }
 
-    
+
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
             margin-top: -15em;
