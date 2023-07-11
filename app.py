@@ -60,6 +60,16 @@ st.markdown("""
   </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+  <style>
+    .css-hyxdo6.e1ewe7hr10 {
+        background-color: #FCBC24;
+    }
+    }
+  </style>
+""", unsafe_allow_html=True)
+
+
 line1 = '<hr class="line1" style="height:0.1em; border:0em; background-color: #FCBC24; margin-top: 0em; margin-bottom: -2em;">'
 line_media_query1 = '''
     <style>
@@ -328,36 +338,6 @@ if open_modal:
 
 if modal.is_open():
     with modal.container():
-        st.markdown(
-        """
-        <style>
-         div.stButton > button:first-child {
-            background-color: #008080;
-            color: #FAFAFA;
-            border-color: #FAFAFA;
-            border-width: 0.15em;
-            width: 20%;
-            height: 0.2em !important;
-            margin-top: 0em;
-            font-family: sans-serif;
-        }
-        div.stButton > button:hover {
-            background-color: #76787A;
-            color: #FAFAFA;
-            border-color: #002147;
-        }
-        @media (max-width: 1024px) {
-        div.stButton > button:first-child {
-            width: 100% !important;
-            height: 0.8em !important;
-            margin-top: 0em;
-            border-width: 0.15em; !important;
-            }
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-        )
         subheader_text1 = '''<p class="subheader_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>'''
         subheader_media_query = '''
         <style>
