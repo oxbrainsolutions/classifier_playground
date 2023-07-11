@@ -374,7 +374,7 @@ if submit_button1:
 
 if modal.is_open():
     with modal.container():
-        error_text1 = '''<p class="error_text1" style="margin-top: 3em; margin-bottom: 1em; text-align: justify;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error blah blah blah</span></p>'''
+        error_text1 = '''<p class="error_text1" style="margin-top: 3em; margin-bottom: 0em; text-align: justify;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error</span></p>'''
         error_media_query1 = '''
         <style>
         @media (max-width: 1024px) {
@@ -385,7 +385,7 @@ if modal.is_open():
         </style>
         '''
         st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
-        error_text2 = '''<p class="error_text2" style="margin-top: 1em; margin-bottom: 1em; text-align: justify;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error blah blah blah</span></p>'''
+        error_text2 = '''<p class="error_text2" style="margin-top: 1em; margin-bottom: 1em; text-align: justify;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Select data type</span></p>'''
         error_media_query2 = '''
         <style>
         @media (max-width: 1024px) {
