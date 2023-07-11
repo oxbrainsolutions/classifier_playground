@@ -319,7 +319,7 @@ if st.button("Show Popup"):
     st.markdown(popup_html, unsafe_allow_html=True)
 
 import streamlit.components.v1 as components
-modal = Modal("Demo Modal")
+modal = Modal("Demo Modal", key="Modal1")
 open_modal = st.button("Open")
 if open_modal:
     modal.open()
