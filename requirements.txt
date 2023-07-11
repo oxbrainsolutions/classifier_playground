@@ -1,6 +1,7 @@
 streamlit
 streamlit-echarts
 streamlit-javascript
+js
 scikit_learn
 plotly
 matplotlib
