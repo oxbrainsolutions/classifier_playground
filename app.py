@@ -328,14 +328,14 @@ if st.button("Show Popup"):
     st.markdown(close_button_script + popup_html, unsafe_allow_html=True)
 
 import streamlit.components.v1 as components
-modal = Modal("", key="Modal1", padding=10, max_width=100)
+modal = Modal("", key="Modal1", padding=20, max_width=200)
 open_modal = st.button("Open")
 if open_modal:
     modal.open()
 
 if modal.is_open():
     with modal.container():
-        subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 0em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
+        subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
         subheader_media_query = '''
         <style>
         @media (max-width: 1024px) {
