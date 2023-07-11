@@ -368,7 +368,7 @@ if submit_button1:
 
 if modal.is_open():
     with modal.container():
-        error_text1 = '''<p class="error_text1" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: rgba(255, 0, 0, 0.6); font-family: sans-serif; font-size: 1em; font-weight: bold;">Error</span></p>'''
+        error_text1 = '''<p class="error_text1" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: rgba(255, 0, 0, 0.8); font-family: sans-serif; font-size: 1em; font-weight: bold;">Error</span></p>'''
         error_media_query1 = '''
         <style>
         @media (max-width: 1024px) {
