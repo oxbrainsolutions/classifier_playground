@@ -370,12 +370,9 @@ if submit_button1:
         #with st.sidebar:
             #st.error("**Error**: select data type.")
         st.session_state.submit_confirm1 = False
-        st.session_state.submit_error1 = True
+        modal1.open()
     else:
-      st.session_state.submit_confirm1 = True
-
-if st.session_state.submit_error1 == True:
-    modal1.open()
+      st.session_state.submit_confirm1 = True    
 
 if modal1.is_open():
     with modal1.container():
