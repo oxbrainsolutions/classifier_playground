@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_modal import Modal
 import pandas as pd
 import numpy as np
 import pathlib
@@ -304,7 +305,7 @@ if st.button("Show Popup"):
 
     # Create HTML code for the popup window
     popup_html = f"""
-    <div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 0;">
+    <div id="popup" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999;">
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: green; border: 1px solid black; padding: 20px;">
             <p>{warning_message}</p>
             <button onclick="window.parent.document.getElementById("popup").style.display = "none">Close</button>
@@ -317,7 +318,8 @@ if st.button("Show Popup"):
     #st.components.v1.html(popup_html)
     st.markdown(popup_html, unsafe_allow_html=True)
 
-
+model = Modal("Demo Modal", "TryModela")
+moel.open()
 
     
 
