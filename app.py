@@ -455,17 +455,17 @@ if st.session_state.submit_confirm1 == True:
           info_text_poly3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Increases the dimensionality of the feature space, which can lead to overfitting if not properly controlled.</li></ul></p>'
           st.markdown(text_media_query1 + info_text_poly3, unsafe_allow_html=True)
 
-          modal2 = Modal("", key="Modal1", padding=20, max_width=240)
-          if submit_button2:
-              st.session_state.x_train_out_update, st.session_state.x_test_out_update = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
-              try:
-                  model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
-                  st.session_state.submit_confirm2 = True
-              except:
-                  modal2.open()
-                  st.session_state.submit_confirm2 = False
-                  #with st.sidebar:
-                      #st.error("**Error**: complete selection.")
+modal2 = Modal("", key="Modal1", padding=20, max_width=240)
+if submit_button2:
+  st.session_state.x_train_out_update, st.session_state.x_test_out_update = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
+  try:
+      model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
+      st.session_state.submit_confirm2 = True
+  except:
+      modal2.open()
+      st.session_state.submit_confirm2 = False
+      #with st.sidebar:
+          #st.error("**Error**: complete selection.")
                   
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
