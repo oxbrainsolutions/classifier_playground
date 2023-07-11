@@ -1,5 +1,4 @@
 import streamlit as st
-import html
 import pandas as pd
 import numpy as np
 import pathlib
@@ -289,7 +288,6 @@ with st.sidebar:
     st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
     st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
-from js import document
 # Create a button to show the popup
 if st.button("Show Popup"):
     # Define the warning message
@@ -316,36 +314,11 @@ if st.button("Show Popup"):
 
     # Display the popup HTML and JavaScript
     st.markdown(close_button_script, unsafe_allow_html=True)
-    #components.html(close_button_script)
+    st.components.v1.html(close_button_script)
     st.markdown(popup_html, unsafe_allow_html=True)
 
 
-if st.button("Show Popup2"):
-    
-    title = "WARNING"
-    subtitle = "Please complete selection"
-    error = rf'''
-            <div class="container loader-block" id="loader-block">
-                <h1>
-                    {title}
-                </h1>
-                <h2>
-                    {subtitle}
-                </h2>
-                <button id="close_error" type="button" class="close-error-btn">
-                    X
-                </button>
-            </div>
-            '''
-    st.markdown(error,unsafe_allow_html=True)
-    js = '''<script>
-    close_btn = window.parent.document.getElementById("close_error").addEventListener("click", () => {
-        error_box = window.parent.document.getElementById("loader-block"); 
-        error_box.style.display = "none";
-        });
-    </script>
-    '''
-    html(js)
+
     
 
 
