@@ -289,6 +289,7 @@ with st.sidebar:
     st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
     st.markdown(line_media_query1 + line1, unsafe_allow_html=True)
 
+import streamlit.components.v1 as components
 # Create a button to show the popup
 if st.button("Show Popup"):
     # Define the warning message
@@ -313,9 +314,10 @@ if st.button("Show Popup"):
     </div>
     """
 
+    
     # Display the popup HTML and JavaScript
-    st.markdown(close_button_script, unsafe_allow_html=True)
-    #st.components.v1.html(popup_html)
+    #st.markdown(close_button_script, unsafe_allow_html=True)
+    components.html(close_button_script)
     st.markdown(popup_html, unsafe_allow_html=True)
 
 import streamlit.components.v1 as components
