@@ -215,9 +215,9 @@ st.markdown(
 st.markdown(
     """
     <style>
-    div[data-modal-container='true'][key='{self.key}'] > div:first-child > div:first-child {{
+    div[data-modal-container='true'][key='{self.key}'] > div:first-child > div:first-child {
     background-color: #002147;
-    }}
+    }
     </style>
     """,
     unsafe_allow_html=True
