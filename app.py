@@ -366,11 +366,11 @@ if submit_button1:
 
 if modal.is_open():
     with modal.container():
-        subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
-        subheader_media_query = '''
+        error_text1 = '''<p class="error_text1" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: rgba(128, 13, 13, 1); font-family: sans-serif; font-size: 1.6em; font-weight: bold;">Error</span></p>'''
+        error_media_query1 = '''
         <style>
         @media (max-width: 1024px) {
-            p.subheader_text {
+            p.error_text1 {
               font-size: 4em;
             }
         }
