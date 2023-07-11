@@ -463,9 +463,9 @@ if st.session_state.submit_confirm1 == True:
                   st.session_state.submit_confirm2 = True
               except:
                   modal2.open()
+                  st.session_state.submit_confirm2 = False
                   #with st.sidebar:
                       #st.error("**Error**: complete selection.")
-                      st.session_state.submit_confirm2 = False
                   
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
