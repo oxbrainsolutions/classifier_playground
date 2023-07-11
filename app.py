@@ -356,27 +356,27 @@ with col2:
  
 if submit_button1:
     if st.session_state.user_data_type == "":
-        with st.sidebar:
+        #with st.sidebar:
             #st.error("**Error**: select data type.")
 
-            modal = Modal("", key="Modal1", padding=20, max_width=200)
-            modal.open()
-            
-            if modal.is_open():
-                with modal.container():
-                    subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
-                    subheader_media_query = '''
-                    <style>
-                    @media (max-width: 1024px) {
-                        p.subheader_text {
-                          font-size: 4em;
-                        }
+        modal = Modal("", key="Modal1", padding=20, max_width=200)
+        modal.open()
+        
+        if modal.is_open():
+            with modal.container():
+                subheader_text1 = '''<p class="subheader_text" style="margin-top: 3em; margin-bottom: 5em; text-align: justify;"><span style="color: #008080; font-family: sans-serif; font-size: 1em; ">Error</span></p>'''
+                subheader_media_query = '''
+                <style>
+                @media (max-width: 1024px) {
+                    p.subheader_text {
+                      font-size: 4em;
                     }
-                    </style>
-                    '''
-                    st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
-            
-            st.session_state.submit_confirm1 = False
+                }
+                </style>
+                '''
+                st.markdown(subheader_media_query + subheader_text1, unsafe_allow_html=True)
+        
+        st.session_state.submit_confirm1 = False
     else:
       st.session_state.submit_confirm1 = True
 
