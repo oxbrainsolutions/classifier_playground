@@ -43,7 +43,7 @@ st.markdown("""
     div.block-container.css-ysnqb2.e1g8pov64 {
         margin-top: -3em;
     }
-    div[data-modal-container='true'] > div:first-child > div:first-child{
+    div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child{
         background-color: pink;
     }
 
