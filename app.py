@@ -469,7 +469,7 @@ if st.session_state.submit_confirm1 == True:
                   #st.error("**Error**: complete selection.")
 
 st.write(st.session_state.submit_confirm2)
-st.write(st.session_state.error)
+st.write(st.session_state.submit_error)
 
 if st.session_state.submit_error == True:
     modal2.open()
