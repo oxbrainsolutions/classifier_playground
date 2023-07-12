@@ -52,7 +52,7 @@ styles2 = """
         vertical-align: middle;
         padding-right: 0.875em;
         margin-top: -0.5em;
-        margin-bottom: 1em;
+        margin-bottom: 0em;
     }
     .left2 {
         text-align: center;
