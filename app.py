@@ -99,9 +99,15 @@ line_media_query2 = '''
 def change_callback1():
     st.session_state.submit_confirm1 = False
     st.session_state.submit_confirm2 = False
+    if modal1.is_open():
+        modal1.close() 
+    if modal2.is_open():
+        modal2.close() 
 
 def change_callback2():
     st.session_state.submit_confirm2 = False
+    if modal2.is_open():
+        modal2.close() 
 
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
