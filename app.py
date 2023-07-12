@@ -602,7 +602,35 @@ if st.session_state.submit_confirm1 == True:
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Naive assumption of feature independence may not hold in some cases. Sensitive to irrelevant or correlated features.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
+          elif st.session_state.user_model == "Linear Discriminant Analysis":
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Linear Discriminant Analysis (LDA) aims to find a linear combination of features that maximizes the separation between classes.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Provides low-dimensional representations of data. Handles multicollinearity well.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+              info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Assumes linearity and normality of data distributions. May not perform well when classes overlap.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)          
+          elif st.session_state.user_model == "Quadratic Discriminant Analysis":
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Quadratic Discriminant Analysis (QDA) is similar to LDA but allows for quadratic decision boundaries making it more flexible.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Handles nonlinear relationships between features and class labels. Works well with small-to-moderate sized datasets.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+              info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Requires more training data compared to LDA. Sensitive to overfitting when the number of features is large.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)     
+          elif st.session_state.user_model == "K Nearest Neighbors":
+              
+          elif st.session_state.user_model == "Neural Network":
+              
+          elif st.session_state.user_model == "Support Vector Machine":
+              
+          elif st.session_state.user_model == "Classification Tree":
+              
+          elif st.session_state.user_model == "Random Forest":
+              
+          elif st.session_state.user_model == "Adaptive Boosting Machine":
+              
+          elif st.session_state.user_model == "Gradient Boosting Machine":
 
+          
 
           st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
           info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Polynomial feature terms: ML models can incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
