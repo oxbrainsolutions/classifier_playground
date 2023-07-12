@@ -26,10 +26,13 @@ if "x_train_out" not in st.session_state or "y_train_out" not in st.session_stat
     st.session_state["x_train_out_update"] = []
     st.session_state["x_test_out_update"] = []
 
-if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state or "submit_error" not in st.session_state:
+if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state:
     st.session_state["submit_confirm1"] = False
     st.session_state["submit_confirm2"] = False
-    st.session_state["submit_error"] = False
+
+if "modal1" not in st.session_state or "modal2" not in st.session_state:
+    st.session_state["modal1"] = False
+    st.session_state["modal2"] = False
 
 hide_st_style = """
                 <style>
@@ -99,15 +102,15 @@ line_media_query2 = '''
 def change_callback1():
     st.session_state.submit_confirm1 = False
     st.session_state.submit_confirm2 = False
-    if modal1.is_open():
-        modal1.close() 
-    if modal2.is_open():
-        modal2.close() 
+    if st.session_state.modal1.is_open():
+        st.session_state.modal1.close() 
+    if st.session_state.modal2.is_open():
+        st.session_state.modal2.close() 
 
 def change_callback2():
     st.session_state.submit_confirm2 = False
-    if modal2.is_open():
-        modal2.close() 
+    if st.session_state.modal2.is_open():
+        st.session_state.modal2.close() 
 
 def img_to_bytes(img_path):
     img_bytes = pathlib.Path(img_path).read_bytes()
@@ -375,20 +378,20 @@ with col2:
   subheader_text_field2 = st.empty()
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
 
-modal1 = Modal("", key="Modal1", padding=20, max_width=240)
-modal2 = Modal("", key="Modal2", padding=20, max_width=250)
+st.session_state.modal1 = Modal("", key="Modal1", padding=20, max_width=240)
+st.session_state.modal2 = Modal("", key="Modal2", padding=20, max_width=250)
 
 if submit_button1:
     if st.session_state.user_data_type == "":
         #with st.sidebar:
             #st.error("**Error**: select data type.")
         st.session_state.submit_confirm1 = False
-        modal1.open()
+        st.session_state.modal1.open()
     else:
       st.session_state.submit_confirm1 = True    
 
-if modal1.is_open():
-    with modal1.container():
+if st.session_state.modal1.is_open():
+    with st.session_state.modal1.container():
         error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
         error_media_query1 = '''
         <style>
@@ -402,8 +405,8 @@ if modal1.is_open():
         st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
 
 if st.session_state.submit_confirm1 == True:
-    if modal1.is_open():
-        modal1.close()
+    if st.session_state.modal1.is_open():
+        st.session_state.modal1.close()
     
     with st.sidebar:
       subheader_text_field1 = st.empty()
@@ -476,12 +479,12 @@ if st.session_state.submit_confirm1 == True:
                   st.write(train_accuracy)
               except:
                   st.session_state.submit_confirm2 = False
-                  modal2.open()
+                  st.session_state.modal2.open()
                   #with st.sidebar:
                       #st.error("**Error**: complete selection.")
   
-if modal2.is_open():
-    with modal2.container():
+if st.session_state.modal2.is_open():
+    with st.session_state.modal2.container():
         error_text2 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: complete selection</span></p>'''
         error_media_query2 = '''
         <style>
@@ -497,8 +500,8 @@ if modal2.is_open():
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
-        if modal2.is_open():
-            modal2.close()      
+        if st.session_state.modal2.is_open():
+            st.session_state.modal2.close()      
         create_gauge(num_value='{:.2f}'.format(np.round(train_accuracy, 2)), label="Train\nAccuracy", key="key_gauge1")
         text_rating1 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_accuracy))
         text_media_query2 = '''
