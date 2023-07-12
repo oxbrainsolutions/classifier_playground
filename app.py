@@ -428,7 +428,7 @@ if st.session_state.submit_confirm1 == True:
       model_text_field = st.empty()
       user_model_field = st.empty()
       text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">ML Model</span></p>'
-      model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbor", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
+      model_options = ["", "Logistic Regression", "Naive Bayes", "Linear Discriminant Analysis", "Quadratic Discriminant Analysis", "K Nearest Neighbors", "Neural Network", "Support Vector Machine", "Classification Tree", "Random Forest", "Adaptive Boosting Machine", "Gradient Boosting Machine"]
       model_text_field.markdown(text_media_query1 + text, unsafe_allow_html=True)
       st.session_state.user_model = user_model_field.selectbox(label="", label_visibility="collapsed", options=model_options, format_func=lambda x: "Select Model" if x == "" else x, key="key6", on_change=change_callback2)
       if st.session_state.user_model == "Logistic Regression":
@@ -439,7 +439,7 @@ if st.session_state.submit_confirm1 == True:
         model = lda_param_selector()
       elif st.session_state.user_model == "Quadratic Discriminant Analysis":
         model = qda_param_selector()
-      elif st.session_state.user_model == "K Nearest Neighbor":
+      elif st.session_state.user_model == "K Nearest Neighbors":
           model = knn_param_selector()
       elif st.session_state.user_model == "Neural Network":
           model = nn_param_selector()
@@ -484,7 +484,6 @@ if st.session_state.submit_confirm1 == True:
               try:
                   model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
                   st.session_state.submit_confirm2 = True
-                  st.write(train_accuracy)
               except:
                   st.session_state.submit_confirm2 = False
                   st.session_state.modal2.open()
