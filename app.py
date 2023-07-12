@@ -79,8 +79,8 @@ styles2 = """
     .tooltip2 .tooltiptext2 {
         visibility: hidden;
         width: 80em;
-        background-color: #b8d9e8;
-        color: #25476A;
+        background-color: #5007E3;
+        color: #FAFAFA;
         text-align: justify;
         font-family: sans-serif;
         display: block; 
@@ -90,7 +90,7 @@ styles2 = """
         padding-right: 0.75em;
         padding-top: 0.5em;
         padding-bottom: 0em;
-        border: 0.1875em solid #25476A;
+        border: 0.1875em solid #5007E3;
 
         /* Position the tooltip text */
         position: absolute;
@@ -111,7 +111,7 @@ styles2 = """
         left: 95.6%;
         border-width: 0.625em;
         border-style: solid;
-        border-color: #25476A transparent transparent transparent;
+        border-color: #5007E3 transparent transparent transparent;
     }
 
     /* Show the tooltip text when you mouse over the tooltip container */
@@ -121,11 +121,11 @@ styles2 = """
     }
     /* Change icon color on hover */
     .tooltip2:hover i {
-        color: rgba(111, 114, 222, 0.8);
+        color: #03A9F4;
     }   
     /* Set initial icon color */
     .tooltip2 i {
-        color: #25476A;
+        color: #FAFAFA;
     }
     ul.responsive-ul2 {
         font-size: 0.8em;
