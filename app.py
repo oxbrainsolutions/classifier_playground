@@ -467,13 +467,7 @@ if st.session_state.submit_confirm1 == True:
                   modal2.open()
                   #with st.sidebar:
                       #st.error("**Error**: complete selection.")
-
-st.write(st.session_state.submit_confirm2)
-st.write(st.session_state.submit_error)
-
-#if st.session_state.submit_error == True:
-    
-
+  
 if modal2.is_open():
     with modal2.container():
         error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
@@ -488,9 +482,9 @@ if modal2.is_open():
         '''
         st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
 
-#if st.session_state.submit_confirm2 == True:
-#    if modal2.is_open():
-#        modal2.close()      
+if st.session_state.submit_confirm2 == True:
+    if modal2.is_open():
+        modal2.close()      
 
 
 col1, col2, col3 = st.columns([1, 2, 1])
