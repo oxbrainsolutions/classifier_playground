@@ -499,6 +499,7 @@ if st.session_state.modal2.is_open():
 
 st.text("")
 subheader_text_field3 = st.empty()
+st.text("")
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
