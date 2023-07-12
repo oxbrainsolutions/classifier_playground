@@ -383,7 +383,7 @@ with col2:
       </style>
   '''
   subheader_text_field2 = st.empty()
-  if if st.session_state.submit_confirm1 == False:
+  if st.session_state.submit_confirm1 == False:
       subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
 
 st.session_state.modal1 = Modal("", key="Modal1", padding=20, max_width=240)
@@ -505,7 +505,6 @@ if st.session_state.modal2.is_open():
         '''
         st.markdown(error_media_query2 + error_text2 , unsafe_allow_html=True)
 
-st.text("")
 subheader_text_field3 = st.empty()
 st.text("")
 
