@@ -34,17 +34,11 @@ if "modal1" not in st.session_state or "modal2" not in st.session_state:
     st.session_state["modal1"] = False
     st.session_state["modal2"] = False
 
-hide_st_style = """
-                <style>
-                footer {visibility: hidden;}
-                header {visibility: hidden;}
-                .viewerBadge_link__1S137 {display: none !important;}
-                </style>
-                """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-
 styles2 = """
 <style>
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .viewerBadge_link__1S137 {display: none !important;}
     .col2 {
         margin: 0em;
         display: flex;
