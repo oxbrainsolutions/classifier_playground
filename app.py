@@ -595,6 +595,13 @@ if st.session_state.submit_confirm1 == True:
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
               info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Assumes a linear relationship. May not perform well with complex data patterns.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
+          elif st.session_state.user_model == "Naive Bayes":
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Naive Bayes is a probabilistic model based on Bayes\' theorem. It assumes that features are conditionally independent given the class label.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Fast and efficient making it suitable for large datasets. Performs well with high-dimensional data.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+              info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Naive assumption of feature independence may not hold in some cases. Sensitive to irrelevant or correlated features.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
 
 
           st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
