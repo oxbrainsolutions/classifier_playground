@@ -619,23 +619,13 @@ if st.session_state.submit_confirm1 == True:
           elif st.session_state.user_model == "K Nearest Neighbors":
               info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">K Nearest Neighbors (KNN) classifies instances by finding the K closest neighbors based on feature similarity and assigns the majority class label among them.</li></ul></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
-              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Regularization and complexity constraints: Logistic regression can use regularization techniques to prevent overfitting and control model complexity.</li></ul></p>'
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of neighbors: KNN requires the number of neighbors to consider for classification.</li></ul></p>'
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Simple and easy to understand. Non-parametric model that can handle complex decision boundaries.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
               info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Requires a large amount of memory for storing the entire training dataset. Sensitive to the choice of distance metric and the value of K.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)    
-          elif st.session_state.user_model == "Neural Network":
-              
-          elif st.session_state.user_model == "Support Vector Machine":
-              
-          elif st.session_state.user_model == "Classification Tree":
-              
-          elif st.session_state.user_model == "Random Forest":
-              
-          elif st.session_state.user_model == "Adaptive Boosting Machine":
-              
-          elif st.session_state.user_model == "Gradient Boosting Machine":
+       
 
           
 
