@@ -467,7 +467,7 @@ if st.session_state.submit_confirm1 == True:
               #with st.sidebar:
                   #st.error("**Error**: complete selection.")
 
-modal2 = Modal("", key="Modal1", padding=20, max_width=240)
+modal2 = Modal("", key="Modal2", padding=20, max_width=240)
 if st.session_state.submit_error == True:
     modal2.open()
 
