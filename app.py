@@ -542,7 +542,7 @@ with col2:
     scatter_fig_field = st.empty()
     scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
     if st.session_state.submit_confirm2 == True:
-        subheader_text3 = '<p class="subheader_text2" style="margin-top: 0em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(st.session_state.user_model)
+        subheader_text3 = '<p class="subheader_text2" style="margin-top: 0em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FCBC24; font-size: 2em; ">{}</span></p>'.format(st.session_state.user_model)
         subheader_media_query2 = '''
               <style>
               @media (max-width: 1024px) {
