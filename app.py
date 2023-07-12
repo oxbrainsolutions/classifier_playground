@@ -60,16 +60,6 @@ st.markdown("""
     div[data-modal-container='true'][key='Modal2'] > div > div:nth-child(2) > div {
         max-width: 3em !important;
     }
-    @media (max-width: 1024px) {
-        div.block-container.css-ysnqb2.e1g8pov64 {
-            margin-top: -15em;
-        }
-    }
-  </style>
-""", unsafe_allow_html=True)
-
-st.markdown("""
-  <style>
     .css-1l7fe1m {
         background-color: #FCBC24;
     }
@@ -105,6 +95,11 @@ st.markdown("""
     }
     .css-1s3wgy2 {
         z-index: 1000 !important;
+    }
+    @media (max-width: 1024px) {
+        div.block-container.css-ysnqb2.e1g8pov64 {
+            margin-top: -15em;
+        }
     }
   </style>
 """, unsafe_allow_html=True)
