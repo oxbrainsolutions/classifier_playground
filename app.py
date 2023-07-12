@@ -498,6 +498,7 @@ if st.session_state.modal2.is_open():
         st.markdown(error_media_query2 + error_text2 , unsafe_allow_html=True)
 
 st.text("")
+subheader_text_field3 = st.empty()
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
