@@ -73,7 +73,7 @@ styles2 = """
     .tooltip2 .tooltiptext2 {
         visibility: hidden;
         width: 70em;
-        background-color: rgba(3, 169, 244, 0.6);
+        background-color: #b8d9e8;
         color: #FAFAFA;
         text-align: justify;
         font-family: sans-serif;
