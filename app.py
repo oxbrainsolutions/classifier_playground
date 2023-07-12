@@ -513,7 +513,7 @@ with col1:
     if st.session_state.submit_confirm2 == True:
         if st.session_state.modal2.is_open():
             st.session_state.modal2.close()
-        duration_text = '<p class="information_text" style="margin-top: -0.5em; margin-bottom: 2em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
+        duration_text = '<p class="information_text" style="margin-top: -3em; margin-bottom: 2em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
         st.markdown(information_media_query + duration_text, unsafe_allow_html=True)
         create_gauge(num_value='{:.2f}'.format(np.round(train_accuracy, 2)), label="Train\nAccuracy", key="key_gauge1")
         text_rating1 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_accuracy))
