@@ -642,7 +642,17 @@ if st.session_state.submit_confirm1 == True:
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Effective in high-dimensional spaces and with complex data patterns. Robust to outliers.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
               info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Computationally intensive, especially with large datasets. Requires careful selection of cost hyperparameter and kernel function.</li></ul></p>'
-              st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)          
+              st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
+          elif st.session_state.user_model == "Classification Tree":
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Classification trees recursively split the data based on feature thresholds to create decision rules.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cost value and kernel function: SVM uses a cost regularization hyperpatameter to prevent overfitting and control model complexity. SVM requires the kernel function (to transform the data into a higher-dimensional space) to be specified for model training.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+              info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Easy to interpret and visualize. Can handle both numerical and categorical features.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
+              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Prone to overfitting and instability with small changes in data. Can create complex and deep trees, leading to over-complex models.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
+          
 
           st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
           info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Polynomial feature terms: ML models can incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
