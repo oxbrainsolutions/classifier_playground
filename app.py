@@ -73,7 +73,7 @@ styles2 = """
     .tooltip2 .tooltiptext2 {
         visibility: hidden;
         width: 70em;
-        background-color: #03A9F4;
+        background-color: rgba(3, 169, 244, 0.6);
         color: #FAFAFA;
         text-align: justify;
         font-family: sans-serif;
@@ -115,7 +115,7 @@ styles2 = """
     }
     /* Change icon color on hover */
     .tooltip2:hover i {
-        color: #5007E3;
+        color: #FAFAFA;
     }   
     /* Set initial icon color */
     .tooltip2 i {
