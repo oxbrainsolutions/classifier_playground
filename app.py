@@ -516,6 +516,7 @@ st.session_state.modal1 = Modal("", key="Modal1", padding=20, max_width=240)
 st.session_state.modal2 = Modal("", key="Modal2", padding=20, max_width=250)
 
 if submit_button1:
+    st.session_state.submit_confirm2 = False
     if st.session_state.user_data_type == "":
         #with st.sidebar:
             #st.error("**Error**: select data type.")
