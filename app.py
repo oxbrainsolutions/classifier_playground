@@ -498,6 +498,8 @@ if st.session_state.modal2.is_open():
         st.markdown(error_media_query2 + error_text2 , unsafe_allow_html=True)
 
 st.text("")
+subheader_text_field3 = st.empty()
+
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
@@ -537,7 +539,6 @@ with col2:
     information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(st.session_state.user_n_samples)
      
     subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
-    subheader_text_field3 = st.empty()
     scatter_fig = plot_scatter(st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
     scatter_fig_field = st.empty()
     scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
