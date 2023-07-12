@@ -56,13 +56,13 @@ styles2 = """
     }
     .left2 {
         text-align: left;
-        width: 95%;
+        width: 50%;
         padding-top: 0em;
         padding-bottom: 0em;
     }
     .right2 {
         text-align: right;
-        width: 5%;
+        width: 50%;
         padding-top: 0em;
         padding-bottom: 0em;
     }
