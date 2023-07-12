@@ -539,20 +539,22 @@ with col2:
     information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(st.session_state.user_n_samples)
      
     subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
+    subheader_text3 = '<p class="subheader_text2" style="margin-top: 0em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FCBC24; font-size: 2em; "></span></p>'
+    subheader_media_query2 = '''
+          <style>
+          @media (max-width: 1024px) {
+              p.subheader_text2 {
+                font-size: 3.2em;
+              }
+          }
+          </style>
+      '''
+    subheader_text_field3.markdown(subheader_media_query2 + subheader_text3, unsafe_allow_html=True)
     scatter_fig = plot_scatter(st.session_state.x_train_out, st.session_state.y_train_out, st.session_state.x_test_out, st.session_state.y_test_out)
     scatter_fig_field = st.empty()
     scatter_fig_field.plotly_chart(scatter_fig, config={'displayModeBar': False}, use_container_width=True)
     if st.session_state.submit_confirm2 == True:
         subheader_text3 = '<p class="subheader_text2" style="margin-top: 0em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FCBC24; font-size: 2em; ">{}</span></p>'.format(st.session_state.user_model)
-        subheader_media_query2 = '''
-              <style>
-              @media (max-width: 1024px) {
-                  p.subheader_text2 {
-                    font-size: 3.2em;
-                  }
-              }
-              </style>
-          '''
         subheader_text_field3.markdown(subheader_media_query2 + subheader_text3, unsafe_allow_html=True)
         duration_text = '<p class="information_text" style="margin-top: -0.5em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
         st.markdown(information_media_query + duration_text, unsafe_allow_html=True)
