@@ -471,8 +471,8 @@ if st.session_state.submit_confirm1 == True:
 st.write(st.session_state.submit_confirm2)
 st.write(st.session_state.submit_error)
 
-if st.session_state.submit_error == True:
-    modal2.open()
+#if st.session_state.submit_error == True:
+#    modal2.open()
 
 if modal2.is_open():
     with modal2.container():
