@@ -619,7 +619,7 @@ if st.session_state.submit_confirm1 == True:
           elif st.session_state.user_model == "K Nearest Neighbors":
               info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">K Nearest Neighbors (KNN) classifies instances by finding the K closest neighbors based on feature similarity and assigns the majority class label among them.</li></ul></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
-              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of neighbors: KNN requires the number of neighbors to consider for classification.</li></ul></p>'
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of neighbors: KNN requires the number of neighbors to be specified for model training.</li></ul></p>'
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Simple and easy to understand. Non-parametric model that can handle complex decision boundaries.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
@@ -628,7 +628,7 @@ if st.session_state.submit_confirm1 == True:
           elif st.session_state.user_model == "Neural Network":
               info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Neural networks are a set of interconnected nodes (neurons) that learn from data to perform complex tasks. They consist of input, hidden, and output layers.</li></ul></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
-              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of neighbors: KNN requires the number of neighbors to consider for classification.</li></ul></p>'
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of hidden layers and neurons: Neural networks require the number of hidden layers and neurons to be specified for model training.</li></ul></p>'
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Highly flexible and capable of learning intricate patterns. Can handle high-dimensional and unstructured data.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
