@@ -96,11 +96,92 @@ st.markdown("""
     .css-1s3wgy2 {
         z-index: 1000 !important;
     }
+            div.css-1inwz65.ektn3o0 {
+            font-size: 0.8em;
+            font-family: sans-serif;
+        }
+        div.StyledThumbValue.css-12gsf70.ektn3o2{
+            font-size: 0.8em;
+            font-family: sans-serif;
+            color: #FAFAFA;
+        }
+        @media (max-width: 1024px) {
+          div.css-1inwz65.ektn3o0 {
+            font-size: 0.8em;
+          }
+          div.StyledThumbValue.css-12gsf70.ektn3o2{
+            font-size: 0.8em;
+        }
+      }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
             margin-top: -15em;
         }
     }
+    div.stButton {
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+     div.stButton > button:first-child {
+        background-color: #002147;
+        color: #FAFAFA;
+        border-color: #FAFAFA;
+        border-width: 0.15em;
+        width: 100%;
+        height: 0.2em !important;
+        margin-top: 0em;
+        font-family: sans-serif;
+    }
+    div.stButton > button:hover {
+        background-color: #76787A;
+        color: #FAFAFA;
+        border-color: #002147;
+    }
+    @media (max-width: 1024px) {
+    div.stButton > button:first-child {
+        width: 100% !important;
+        height: 0.8em !important;
+        margin-top: 0em;
+        border-width: 0.15em; !important;
+        }
+    }
+    /* The input itself */
+  div[data-baseweb="select"] > div,
+  input[type=number] {
+  color: #FAFAFA;
+  background-color: #4F5254;
+  border: 0.25em solid #002147;
+  font-size: 0.8em;
+  font-family: sans-serif;
+  height: 3em;
+  }
+  /* Hover effect */
+  div[data-baseweb="select"] > div:hover,
+  input[type=number]:hover {
+  background-color: #76787A;
+  }
+  span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
+  font-size: 0.6em;
+  }
+  @media (max-width: 1024px) {
+    span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
+    font-size: 0.8em;
+    }
+  }
+  
+  /* Media query for small screens */
+  @media (max-width: 1024px) {
+  div[data-baseweb="select"] > div,
+  input[type=number] {
+    font-size: 0.8em;
+    height: 3em;
+  }
+  .stMultiSelect [data-baseweb="select"] > div,
+  .stMultiSelect [data-baseweb="tag"] {
+    height: auto !important;
+  }
+  }
   </style>
 """, unsafe_allow_html=True)
 
@@ -230,107 +311,6 @@ with open(image_file_path, "rb") as image_file:
 
 st.markdown(header.format(encoded_string, img_to_bytes("images/oxbrain_logo_trans.png")),
             unsafe_allow_html=True)
-
-st.markdown(
-    """
-    <style>
-    div.stButton {
-        display: flex !important;
-        justify-content: center !important;
-    }
-    
-     div.stButton > button:first-child {
-        background-color: #002147;
-        color: #FAFAFA;
-        border-color: #FAFAFA;
-        border-width: 0.15em;
-        width: 100%;
-        height: 0.2em !important;
-        margin-top: 0em;
-        font-family: sans-serif;
-    }
-    div.stButton > button:hover {
-        background-color: #76787A;
-        color: #FAFAFA;
-        border-color: #002147;
-    }
-    @media (max-width: 1024px) {
-    div.stButton > button:first-child {
-        width: 100% !important;
-        height: 0.8em !important;
-        margin-top: 0em;
-        border-width: 0.15em; !important;
-        }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-  )
-    
-
-
-st.markdown("""
-  <style>
-  /* The input itself */
-  div[data-baseweb="select"] > div,
-  input[type=number] {
-  color: #FAFAFA;
-  background-color: #4F5254;
-  border: 0.25em solid #002147;
-  font-size: 0.8em;
-  font-family: sans-serif;
-  height: 3em;
-  }
-  /* Hover effect */
-  div[data-baseweb="select"] > div:hover,
-  input[type=number]:hover {
-  background-color: #76787A;
-  }
-  span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
-  font-size: 0.6em;
-  }
-  @media (max-width: 1024px) {
-    span.st-bj.st-cf.st-ce.st-f3.st-f4.st-af {
-    font-size: 0.8em;
-    }
-  }
-  
-  /* Media query for small screens */
-  @media (max-width: 1024px) {
-  div[data-baseweb="select"] > div,
-  input[type=number] {
-    font-size: 0.8em;
-    height: 3em;
-  }
-  .stMultiSelect [data-baseweb="select"] > div,
-  .stMultiSelect [data-baseweb="tag"] {
-    height: auto !important;
-  }
-  }
-  </style>
-  """, unsafe_allow_html=True)
-
-st.markdown("""
-    <style>
-        div.css-1inwz65.ektn3o0 {
-            font-size: 0.8em;
-            font-family: sans-serif;
-        }
-        div.StyledThumbValue.css-12gsf70.ektn3o2{
-            font-size: 0.8em;
-            font-family: sans-serif;
-            color: #FAFAFA;
-        }
-        @media (max-width: 1024px) {
-          div.css-1inwz65.ektn3o0 {
-            font-size: 0.8em;
-          }
-          div.StyledThumbValue.css-12gsf70.ektn3o2{
-            font-size: 0.8em;
-        }
-      }
-    </style>
-    """, unsafe_allow_html=True)
 
 with st.sidebar:
     subheader_text1 = '''<p class="subheader_text" style="margin-top: 0em; margin-bottom: 0em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">Create a Dataset</span></p>'''
