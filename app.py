@@ -76,6 +76,9 @@ st.markdown("""
     .css-5qhjmn {
         z-index: 1000 !important;
     }
+    .css-15d9ls5{
+        z-index: 1000 !important;
+    }
   </style>
 """, unsafe_allow_html=True)
 
