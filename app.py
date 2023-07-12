@@ -50,19 +50,15 @@ st.markdown("""
     }
     div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
         background-color: rgb(203, 175, 175) !important;
-        z-index:99999 !important;
     }
     div[data-modal-container='true'][key='Modal1'] > div > div:nth-child(2) > div {
         max-width: 3em !important;
-        z-index:999991 !important;
     }
     div[data-modal-container='true'][key='Modal2'] > div:first-child > div:first-child {
         background-color: rgb(203, 175, 175) !important;
-        z-index:99999 !important;
     }
     div[data-modal-container='true'][key='Modal2'] > div > div:nth-child(2) > div {
         max-width: 3em !important;
-        z-index:999991 !important;
     }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
