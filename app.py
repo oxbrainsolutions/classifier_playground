@@ -486,36 +486,6 @@ with dataset_container:
   submit_button1 = st.button("Generate Dataset", key="key5")
 
 
-html = """
-        <div class="col2">
-            <div class="left2">
-                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Input Fields</span></p>
-            </div>
-            <div class="right2">
-                <div class="tooltip2">
-                    <i class="fas fa-info-circle fa-2x"></i>
-                    <span class="tooltiptext2">
-                        <ul class="responsive-ul2">
-                            Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.</br></br>                              
-                            <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
-                            <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
-                            <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
-                            <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
-                            <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
-                            <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
-                            <li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
-                            <li>Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
-                            <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
-                            </br>These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
-                        </ul>    
-                    </span>
-                </div>
-            </div>
-        </div>
-        """
-
-st.markdown(html, unsafe_allow_html=True)
-
 col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
   header_text = '''
@@ -693,6 +663,35 @@ with col1:
         rating2 = st.empty()
 with col3:
     if st.session_state.submit_confirm2 == True:
+        html = """
+        <div class="col2">
+            <div class="left2">
+                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Input Fields</span></p>
+            </div>
+            <div class="right2">
+                <div class="tooltip2">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                    <span class="tooltiptext2">
+                        <ul class="responsive-ul2">
+                            Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.</br></br>                              
+                            <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
+                            <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
+                            <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
+                            <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
+                            <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
+                            <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
+                            <li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
+                            <li>Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
+                            <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
+                            </br>These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
+                        </ul>    
+                    </span>
+                </div>
+            </div>
+        </div>
+        """
+
+        st.markdown(html, unsafe_allow_html=True)
         create_gauge(num_value='{:.2f}'.format(np.round(test_accuracy, 2)), label="Test\nAccuracy", key="key_gauge3")
         text_rating3 = '<p class="text2" style="margin-top: -5em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(test_accuracy))
         rating3 = st.empty()
