@@ -79,7 +79,33 @@ st.markdown("""
     .css-15d9ls5{
         z-index: 1000 !important;
     }
-
+    .css-g6xpsg {
+        z-index: 1000 !important;
+    }
+    .css-2542xv {
+        z-index: 1000 !important;
+    }
+    .css-1h5vz9d {
+        z-index: 1000 !important;
+    }
+    .css-1s3wgy2 {
+        z-index: 1000 !important;
+    }
+    .css-1s3wgy2 {
+        z-index: 1000 !important;
+    }
+    .css-1s3wgy2 {
+        z-index: 1000 !important;
+    }
+    .css-1vb7lhv {
+        z-index: 1000 !important;
+    }
+    .css-mx6j8v {
+        z-index: 1000 !important;
+    }
+    .css-1s3wgy2 {
+        z-index: 1000 !important;
+    }
   </style>
 """, unsafe_allow_html=True)
 
