@@ -50,12 +50,14 @@ st.markdown("""
     }
     div[data-modal-container='true'][key='Modal1'] > div:first-child > div:first-child {
         background-color: rgb(203, 175, 175) !important;
+        z-index:999999 !important;
     }
     div[data-modal-container='true'][key='Modal1'] > div > div:nth-child(2) > div {
         max-width: 3em !important;
     }
     div[data-modal-container='true'][key='Modal2'] > div:first-child > div:first-child {
         background-color: rgb(203, 175, 175) !important;
+        z-index:999999 !important;
     }
     div[data-modal-container='true'][key='Modal2'] > div > div:nth-child(2) > div {
         max-width: 3em !important;
