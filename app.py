@@ -73,9 +73,13 @@ st.markdown("""
     .css-1l7fe1m {
         background-color: #FCBC24;
     }
-    .sidebar-content {
+    .css-5qhjmn {
         z-index: 1000 !important;
     }
+    .css-15d9ls5{
+        z-index: 1000 !important;
+    }
+
   </style>
 """, unsafe_allow_html=True)
 
