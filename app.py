@@ -539,7 +539,7 @@ with col2:
     information_text2 = '''<p class="information_text" style="margin-top: 2em; margin-bottom: 1em; text-align: justify;"><span style="color: #FAFAFA; font-family: sans-serif; font-size: 1em; ">The figure below shows a generated dataset based on your selected specifications composed of {} data points categorized into two distinct classes. Select between the training and testing datasets to compare the underlying structural patterns.</span></p>'''.format(st.session_state.user_n_samples)
      
     subheader_text_field2.markdown(information_media_query + information_text2, unsafe_allow_html=True)
-    subheader_text3 = '<p class="subheader_text2" style="margin-top: 0em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FCBC24; font-size: 2em; "> </span></p>'
+    subheader_text3 = '<p class="subheader_text2" style="margin-top: 0em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FCBC24; font-size: 2em; ">Filler</span></p>'
     subheader_media_query2 = '''
           <style>
           @media (max-width: 1024px) {
