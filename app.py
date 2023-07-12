@@ -364,6 +364,7 @@ with col2:
   subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
 
 modal1 = Modal("", key="Modal1", padding=20, max_width=240)
+modal2 = Modal("", key="Modal2", padding=20, max_width=240)
 
 if submit_button1:
     if st.session_state.user_data_type == "":
@@ -467,7 +468,7 @@ if st.session_state.submit_confirm1 == True:
               #with st.sidebar:
                   #st.error("**Error**: complete selection.")
 
-modal2 = Modal("", key="Modal2", padding=20, max_width=240)
+
 if st.session_state.submit_error == True:
     modal2.open()
 
