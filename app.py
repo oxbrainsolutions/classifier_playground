@@ -661,6 +661,15 @@ if st.session_state.submit_confirm1 == True:
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
               info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Lack of interpretability compared to a single decision tree. Requires careful selection of hyperparameters.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
+          elif st.session_state.user_model == "Adaptive Boosting Machine":
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Adaptive Boosting (AdaBoost) creates an ensemble of weak learners, where subsequent models focus on instances misclassified by previous models.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of estimator, maximum depth and minimum sample split: Random Forests require the number of decision trees in the forest, the maximum depth or level of the tree and the minimum number of samples required to split an internal node to be specified for model training.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+              info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Improves model performance through sequential learning. Handles both numerical and categorical data.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
+              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Sensitive to noisy data and outliers. May be prone to overfitting if the weak learners are too complex.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
 
           st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
           info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Polynomial feature terms: ML models can incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
