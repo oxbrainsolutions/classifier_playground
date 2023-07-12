@@ -637,11 +637,11 @@ if st.session_state.submit_confirm1 == True:
           elif st.session_state.user_model == "Support Vector Machine":
               info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Support Vector Machine (SVM) constructs a hyperplane or set of hyperplanes that maximize the margin between classes, aiming to find the best decision boundary.</li></ul></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
-              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of hidden layers and neurons: Neural networks require the number of hidden layers and neurons to be specified for model training.</li></ul></p>'
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cost value and kernel function: SVM uses a cost regularization hyperpatameter to prevent overfitting and control model complexity. SVM requires the kernel function (to transform the data into a higher-dimensional space) to be specified for model training.</li></ul></p>'
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: Effective in high-dimensional spaces and with complex data patterns. Robust to outliers.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
-              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Computationally intensive, especially with large datasets. Requires careful selection of hyperparameters and choice of kernel function.</li></ul></p>'
+              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Computationally intensive, especially with large datasets. Requires careful selection of cost hyperparameter and kernel function.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)          
 
           st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
