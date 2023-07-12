@@ -51,6 +51,12 @@ st.markdown("""
     div[data-modal-container='true'][key='Modal1'] > div > div:nth-child(2) > div {
         max-width: 3em !important;
     }
+    div[data-modal-container='true'][key='Modal2'] > div:first-child > div:first-child {
+        background-color: rgb(203, 175, 175) !important;
+    }
+    div[data-modal-container='true'][key='Modal2'] > div > div:nth-child(2) > div {
+        max-width: 3em !important;
+    }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
             margin-top: -15em;
@@ -470,8 +476,8 @@ if st.session_state.submit_confirm1 == True:
   
 if modal2.is_open():
     with modal2.container():
-        error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
-        error_media_query1 = '''
+        error_text2 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: complete selection</span></p>'''
+        error_media_query2 = '''
         <style>
         @media (max-width: 1024px) {
             p.error_text1 {
@@ -480,7 +486,7 @@ if modal2.is_open():
         }
         </style>
         '''
-        st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
+        st.markdown(error_media_query2 + error_text2 , unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
