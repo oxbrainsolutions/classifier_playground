@@ -392,6 +392,8 @@ def svm_param_selector():
     user_C = st.number_input(label="", label_visibility="collapsed", min_value=0.01, max_value=2.00, step=1.0, value=0.01, key="key_svm1", on_change=change_callback3)
 
     kernel_options = ["", "Linear", "Polynomial", "Radial", "Sigmoid"]
+    text = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; ">Kernel Function</span></p>'
+    st.markdown(text_media_query_functions1 + text, unsafe_allow_html=True)
     user_kernel = st.selectbox(label="", label_visibility="collapsed", options=kernel_options, format_func=lambda x: "Select Kernel" if x == "" else x, key="key_svm2", on_change=change_callback3)
     kernel_options_update = ["", "linear", "poly", "rbf", "sigmoid"][kernel_options.index(user_kernel)]
 
