@@ -512,7 +512,9 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
         if st.session_state.modal2.is_open():
-            st.session_state.modal2.close()      
+            st.session_state.modal2.close()
+        duration_text = '<p class="information_text" style="margin-top: -0.5em; margin-bottom: 2em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
+        st.markdown(information_media_query + duration_text, unsafe_allow_html=True)
         create_gauge(num_value='{:.2f}'.format(np.round(train_accuracy, 2)), label="Train\nAccuracy", key="key_gauge1")
         text_rating1 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_accuracy))
         text_media_query2 = '''
@@ -564,8 +566,6 @@ with col2:
     if st.session_state.submit_confirm2 == True:
         subheader_text3 = '<p class="subheader_text2" style="margin-top: 0em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FCBC24; font-size: 2em; ">{}</span></p>'.format(st.session_state.user_model)
         subheader_text_field3.markdown(subheader_media_query2 + subheader_text3, unsafe_allow_html=True)
-        duration_text = '<p class="information_text" style="margin-top: -0.5em; margin-bottom: 2em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
-        st.markdown(information_media_query + duration_text, unsafe_allow_html=True)
         scatter_boundary_fig = plot_scatter_decision_boundary(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
         scatter_fig_field.plotly_chart(scatter_boundary_fig, config={'displayModeBar': False}, use_container_width=True)
 
