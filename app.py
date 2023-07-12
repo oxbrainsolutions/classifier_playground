@@ -626,7 +626,7 @@ if st.session_state.submit_confirm1 == True:
               info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Requires a large amount of memory for storing the entire training dataset. Sensitive to the choice of distance metric and the value of K.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
           elif st.session_state.user_model == "Neural Network":
-               info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Neural networks are a set of interconnected nodes (neurons) that learn from data to perform complex tasks. They consist of input, hidden, and output layers.</li></ul></p>'
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Neural networks are a set of interconnected nodes (neurons) that learn from data to perform complex tasks. They consist of input, hidden, and output layers.</li></ul></p>'
               st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
               info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Number of neighbors: KNN requires the number of neighbors to consider for classification.</li></ul></p>'
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
