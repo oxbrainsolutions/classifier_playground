@@ -141,7 +141,7 @@ styles2 = """
             margin-top: 0em;
         }
         p.subtext_manual2 {
-            font-size: 2.5em;
+            font-size: 3.6em;
         }
     .tooltip2 .tooltiptext2 {
         border-width: 0.6em;
