@@ -461,7 +461,6 @@ if st.session_state.submit_confirm1 == True:
               try:
                   model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
                   st.session_state.submit_confirm2 = True
-                  st.session_state.submit_error = False
               except:
                   st.session_state.submit_confirm2 = False
                   modal2.open()
@@ -482,14 +481,11 @@ if modal2.is_open():
         '''
         st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
 
-if st.session_state.submit_confirm2 == True:
-    if modal2.is_open():
-        modal2.close()      
-
-
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
+        if modal2.is_open():
+            modal2.close()      
         create_gauge(num_value='{:.2f}'.format(np.round(train_accuracy, 2)), label="Train\nAccuracy", key="key_gauge1")
         text_rating1 = '<p class="text2" style="margin-top: -4em; margin-bottom: 0em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 2em; ">{}</span></p>'.format(convert_rating(train_accuracy))
         text_media_query2 = '''
