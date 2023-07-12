@@ -663,10 +663,12 @@ with col1:
         rating2 = st.empty()
 with col3:
     if st.session_state.submit_confirm2 == True:
+        duration_text = '<p class="information_text" style="margin-top: -0.5em; margin-bottom: 1em; text-align: center;"><span style="font-family:sans-serif; color:#FAFAFA; font-size: 1em; ">Model training completed in {} seconds</span></p>'.format('{:,.3f}'.format(duration))
+       
         html = """
         <div class="col2">
             <div class="left2">
-                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Input Fields</span></p>
+                <p class="subtext_manual2" style="tyle="margin-top: -0.5em; margin-bottom: 1em; text-align: center;"><span style="font-family: sans-serif; color:#FAFAFA; font-size: 1em;">More information</span></p>
             </div>
             <div class="right2">
                 <div class="tooltip2">
