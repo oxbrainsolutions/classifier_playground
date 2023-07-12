@@ -43,6 +43,137 @@ hide_st_style = """
                 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+styles2 = """
+<style>
+    .col2 {
+        margin: 0em;
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        padding-right: 0.875em;
+        margin-top: 0em;
+        margin-bottom: 0em;
+    }
+    .left2 {
+        text-align: left;
+        width: 95%;
+        padding-top: 0em;
+        padding-bottom: 0em;
+    }
+    .right2 {
+        text-align: right;
+        width: 5%;
+        padding-top: 0em;
+        padding-bottom: 0em;
+    }
+
+    /* Tooltip container */
+    .tooltip2 {
+        position: relative;
+        margin-bottom: 0em;
+        display: inline-block;
+        margin-top: 0em;
+    }
+
+    /* Tooltip text */
+    .tooltip2 .tooltiptext2 {
+        visibility: hidden;
+        width: 80em;
+        background-color: #b8d9e8;
+        color: #25476A;
+        text-align: justify;
+        font-family: sans-serif;
+        display: block; 
+        border-radius: 0.375em;
+        white-space: normal;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        padding-top: 0.5em;
+        padding-bottom: 0em;
+        border: 0.1875em solid #25476A;
+
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        transform: translateX(-95%);
+
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    /* Tooltip arrow */
+    .tooltip2 .tooltiptext2::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 95.6%;
+        border-width: 0.625em;
+        border-style: solid;
+        border-color: #25476A transparent transparent transparent;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip2:hover .tooltiptext2 {
+        visibility: visible;
+        opacity: 1;
+    }
+    /* Change icon color on hover */
+    .tooltip2:hover i {
+        color: rgba(111, 114, 222, 0.8);
+    }   
+    /* Set initial icon color */
+    .tooltip2 i {
+        color: #25476A;
+    }
+    ul.responsive-ul2 {
+        font-size: 0.8em;
+    }
+    ul.responsive-ul2 li {
+        font-size: 1em;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 1024px) {
+       .col2 {
+            padding-right: 1em;
+            margin-top: 0em;
+        }
+        p.subtext_manual2 {
+            font-size: 2.5em;
+        }
+    .tooltip2 .tooltiptext2 {
+        border-width: 0.6em;
+        border-radius: 1.6em;
+        width: 98em;
+        left: 50%;
+    }
+    .tooltip2 .tooltiptext2::after {
+        border-width: 2em;
+        left: 93.5%;
+    }
+    .tooltip2 {
+        
+    }
+    .tooltip2 i {
+        font-size: 8em;
+        margin-bottom: 0.2em;
+    }
+    ul.responsive-ul2 {
+        font-size: 3.2em;
+    }
+    ul.responsive-ul2 li {
+        font-size: 1em;
+    }
+    }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+"""
+
+st.markdown(styles2, unsafe_allow_html=True)
+
 st.markdown("""
   <style>
     div.block-container.css-ysnqb2.e1g8pov64 {
@@ -353,6 +484,37 @@ with dataset_container:
   st.markdown(text_media_query1 + text, unsafe_allow_html=True)
   st.session_state.user_test_noise = st.slider(label="", label_visibility="collapsed", min_value=0.01, max_value=1.0, step=0.005, value=st.session_state.user_train_noise, key="key4", on_change=change_callback1)
   submit_button1 = st.button("Generate Dataset", key="key5")
+
+
+html = """
+        <div class="col2">
+            <div class="left2">
+                <p class="subtext_manual2" style="margin-bottom: 0em;"><span style="font-family: sans-serif; color: #25476A; font-size: 2em;">Income Statement Input Fields</span></p>
+            </div>
+            <div class="right2">
+                <div class="tooltip2">
+                    <i class="fas fa-info-circle fa-2x"></i>
+                    <span class="tooltiptext2">
+                        <ul class="responsive-ul2">
+                            Understanding financial metrics and ratios is essential for assessing a company's financial health and making informed investment decisions.</br></br>                              
+                            <li>Sales Growth: A measure of the percentage increase or decrease in revenue over a period of time.</li>
+                            <li>COGS Margin: The percentage of revenue that is consumed by the cost of goods sold. It indicates how efficiently a company is using its resources to produce goods.</li>
+                            <li>SG&A Expenses: The total operating expenses of a company that are not directly related to production, such as salaries, rent, utilities, and marketing costs.</li>
+                            <li>R&D Expenses: The amount of money a company spends on research and development activities. It indicates a company's commitment to innovation and growth.</li>
+                            <li>D&A Expenses / Sales: Depreciation and amortization expenses as a percentage of revenue. It indicates how much a company is investing in its long-term assets and how much it is expensing in the current period.</li>
+                            <li>D&A Split: The breakdown of depreciation and amortization expenses between tangible assets (D) and intangible assets (A). It indicates how much a company is investing in different types of assets.</li>
+                            <li>Interest Rate: The cost of borrowing money. It indicates how much a company is paying to finance its operations and how much debt it has.</li>
+                            <li>Tax Rate: The percentage of a company's income that is paid in taxes. It indicates how much income a company is able to retain.</li>
+                            <li>Dividend Payout Ratio: The percentage of earnings paid out as dividends to shareholders. It indicates how much a company is returning to its shareholders in the form of dividends and how much it is retaining for reinvestment.</li>                                    
+                            </br>These financial metrics and ratios can help provide valuable insight into a company's financial position and performance.
+                        </ul>    
+                    </span>
+                </div>
+            </div>
+        </div>
+        """
+
+st.markdown(html, unsafe_allow_html=True)
 
 col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
