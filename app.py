@@ -467,28 +467,28 @@ if st.session_state.submit_confirm1 == True:
               #with st.sidebar:
                   #st.error("**Error**: complete selection.")
           
-          modal2 = Modal("", key="Modal1", padding=20, max_width=240)
-          if st.session_state.submit_error == True:
-              
-              modal2.open()
-        
-          if modal2.is_open():
-              with modal2.container():
-                  error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
-                  error_media_query1 = '''
-                  <style>
-                  @media (max-width: 1024px) {
-                      p.error_text1 {
-                        font-size: 4em;
-                      }
+      modal2 = Modal("", key="Modal1", padding=20, max_width=240)
+      if st.session_state.submit_error == True:
+          
+          modal2.open()
+    
+      if modal2.is_open():
+          with modal2.container():
+              error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
+              error_media_query1 = '''
+              <style>
+              @media (max-width: 1024px) {
+                  p.error_text1 {
+                    font-size: 4em;
                   }
-                  </style>
-                  '''
-                  st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
-        
-          if st.session_state.submit_confirm2 == True:
-              if modal2.is_open():
-                  modal2.close()
+              }
+              </style>
+              '''
+              st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
+    
+      if st.session_state.submit_confirm2 == True:
+          if modal2.is_open():
+              modal2.close()
 
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
