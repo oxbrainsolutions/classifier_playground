@@ -56,13 +56,13 @@ styles2 = """
     }
     .left2 {
         text-align: center;
-        width: 50%;
+        width: 80%;
         padding-top: 0em;
         padding-bottom: 0em;
     }
     .right2 {
         text-align: center;
-        width: 50%;
+        width: 20%;
         padding-top: 0em;
         padding-bottom: 0em;
     }
@@ -79,8 +79,8 @@ styles2 = """
     .tooltip2 .tooltiptext2 {
         visibility: hidden;
         width: 80em;
-        background-color: #5007E3;
-        color: #5007E3;
+        background-color: #03A9F4;
+        color: #FAFAFA;
         text-align: justify;
         font-family: sans-serif;
         display: block; 
@@ -90,7 +90,7 @@ styles2 = """
         padding-right: 0.75em;
         padding-top: 0.5em;
         padding-bottom: 0em;
-        border: 0.1875em solid #5007E3;
+        border: 0.1875em solid #FAFAFA;
 
         /* Position the tooltip text */
         position: absolute;
@@ -111,7 +111,7 @@ styles2 = """
         left: 95.6%;
         border-width: 0.625em;
         border-style: solid;
-        border-color: #5007E3 transparent transparent transparent;
+        border-color: #FAFAFA transparent transparent transparent;
     }
 
     /* Show the tooltip text when you mouse over the tooltip container */
@@ -121,11 +121,11 @@ styles2 = """
     }
     /* Change icon color on hover */
     .tooltip2:hover i {
-        color: #03A9F4;
+        color: #5007E3;
     }   
     /* Set initial icon color */
     .tooltip2 i {
-        color: #FAFAFA;
+        color: #03A9F4;
     }
     ul.responsive-ul2 {
         font-size: 0.8em;
