@@ -73,7 +73,7 @@ st.markdown("""
     .css-1l7fe1m {
         background-color: #FCBC24;
     }
-    div.stSidebar {
+    .sidebar-content {
         z-index: 1000 !important;
     }
   </style>
