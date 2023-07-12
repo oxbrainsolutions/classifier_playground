@@ -140,7 +140,7 @@ styles2 = """
     .tooltip2 .tooltiptext2 {
         border-width: 0.6em;
         border-radius: 1.6em;
-        width: 90em;
+        width: 80em;
         left: 50%;
     }
     .tooltip2 .tooltiptext2::after {
