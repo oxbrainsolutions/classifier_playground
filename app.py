@@ -458,21 +458,21 @@ if st.session_state.submit_confirm1 == True:
 
           if submit_button2:
               st.session_state.x_train_out_update, st.session_state.x_test_out_update = add_polynomial_features(st.session_state.x_train_out, st.session_state.x_test_out, user_poly_degree)
-          try:
-              model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
-              st.session_state.submit_confirm2 = True
-              st.session_state.submit_error = False
-          except:
-              st.session_state.submit_confirm2 = False
-              st.session_state.submit_error = True
-              #with st.sidebar:
-                  #st.error("**Error**: complete selection.")
+              try:
+                  model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
+                  st.session_state.submit_confirm2 = True
+                  st.session_state.submit_error = False
+              except:
+                  st.session_state.submit_confirm2 = False
+                  st.session_state.submit_error = True
+                  #with st.sidebar:
+                      #st.error("**Error**: complete selection.")
 
 st.write(st.session_state.submit_confirm2)
 st.write(st.session_state.submit_error)
 
-#if st.session_state.submit_error == True:
-#    modal2.open()
+if st.session_state.submit_error == True:
+    modal2.open()
 
 if modal2.is_open():
     with modal2.container():
