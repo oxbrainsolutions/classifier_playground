@@ -488,9 +488,9 @@ if modal2.is_open():
         '''
         st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
 
-if st.session_state.submit_confirm2 == True:
-    if modal2.is_open():
-        modal2.close()      
+#if st.session_state.submit_confirm2 == True:
+#    if modal2.is_open():
+#        modal2.close()      
 
 
 col1, col2, col3 = st.columns([1, 2, 1])
