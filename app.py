@@ -383,7 +383,8 @@ with col2:
       </style>
   '''
   subheader_text_field2 = st.empty()
-  subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
+  if if st.session_state.submit_confirm1 == False:
+      subheader_text_field2.markdown(information_media_query + information_text1, unsafe_allow_html=True)
 
 st.session_state.modal1 = Modal("", key="Modal1", padding=20, max_width=240)
 st.session_state.modal2 = Modal("", key="Modal2", padding=20, max_width=250)
