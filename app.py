@@ -668,7 +668,7 @@ with col3:
         html = """
         <div class="col2">
             <div class="left2">
-                <p class="subtext_manual2" style="tyle="margin-top: -0.5em; margin-bottom: 1em; text-align: center;"><span style="font-family: sans-serif; color:#FAFAFA; font-size: 1em;">More information</span></p>
+                <p class="subtext_manual2" style="tyle="text-align: center;"><span style="font-family: sans-serif; color:#FAFAFA; font-size: 1em;">Click here for more information</span></p>
             </div>
             <div class="right2">
                 <div class="tooltip2">
