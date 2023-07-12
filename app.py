@@ -51,17 +51,17 @@ styles2 = """
         align-items: center;
         vertical-align: middle;
         padding-right: 0.875em;
-        margin-top: 0em;
-        margin-bottom: 0em;
+        margin-top: -0.5em;
+        margin-bottom: 1em;
     }
     .left2 {
-        text-align: left;
+        text-align: center;
         width: 50%;
         padding-top: 0em;
         padding-bottom: 0em;
     }
     .right2 {
-        text-align: right;
+        text-align: center;
         width: 50%;
         padding-top: 0em;
         padding-bottom: 0em;
@@ -80,7 +80,7 @@ styles2 = """
         visibility: hidden;
         width: 80em;
         background-color: #5007E3;
-        color: #FAFAFA;
+        color: #5007E3;
         text-align: justify;
         font-family: sans-serif;
         display: block; 
