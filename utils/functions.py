@@ -32,6 +32,8 @@ text_media_query_functions1 = '''
 
 def change_callback3():
     st.session_state.submit_confirm2 = False
+    if modal2.is_open():
+      modal2.close() 
 
 
 @st.cache(suppress_st_warning=True, allow_output_mutation=True, show_spinner=False)
