@@ -670,6 +670,15 @@ if st.session_state.submit_confirm1 == True:
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
               info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Sensitive to noisy data and outliers. May be prone to overfitting if the weak learners are too complex.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
+          elif st.session_state.user_model == "Gradient Boosting Machine":
+              info_text1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Gradient Boosting Machine (GBM) builds an ensemble of models in a stage-wise manner, where each new model focuses on reducing the errors made by the previous models.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text1, unsafe_allow_html=True)
+              info_text2 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Learning rate, number of estimators and maximum depth: GBM requires the rate at which each weak classifier contributes to the final prediction, the number of weak classifiers to be combined in the boosting process and the maximum depth or level of each weak learner to be specified for model training.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
+              info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: High predictive accuracy and robustness. Handles various types of data and can handle missing values.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
+              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons:Requires careful selection of hyperparameters. Computationally expensive and time-consuming.</li></ul></p>'
+              st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
 
           st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
           info_text_poly1 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Polynomial feature terms: ML models can incorporate polynomial feature terms to capture nonlinear relationships between features and improve model performance.</li></ul></p>'
