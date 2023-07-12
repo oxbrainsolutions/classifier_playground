@@ -26,9 +26,10 @@ if "x_train_out" not in st.session_state or "y_train_out" not in st.session_stat
     st.session_state["x_train_out_update"] = []
     st.session_state["x_test_out_update"] = []
 
-if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state:
+if "submit_confirm1" not in st.session_state or "submit_confirm2" not in st.session_state or "submit_error" not in st.session_state:
     st.session_state["submit_confirm1"] = False
     st.session_state["submit_confirm2"] = False
+    st.session_state["submit_error"] = False
 
 hide_st_style = """
                 <style>
@@ -459,13 +460,35 @@ if st.session_state.submit_confirm1 == True:
           try:
               model, train_accuracy, train_f1, test_accuracy, test_f1, duration = train_model(model, st.session_state.x_train_out_update, st.session_state.y_train_out, st.session_state.x_test_out_update, st.session_state.y_test_out)
               st.session_state.submit_confirm2 = True
+              st.session_state.submit_error = False
           except:
-#              modal1.open()
               st.session_state.submit_confirm2 = False
-              modal1.open()
+              st.session_state.submit_error = True
               #with st.sidebar:
                   #st.error("**Error**: complete selection.")
-                  
+
+if st.session_state.submit_error == True:
+    modal2 = Modal("", key="Modal1", padding=20, max_width=240)
+    modal2.open()
+
+if modal2.is_open():
+    with modal2.container():
+        error_text1 = '''<p class="error_text1" style="margin-top: 0em; margin-bottom: 1em; text-align: right;"><span style="color: #850101; font-family: sans-serif; font-size: 1em; font-weight: bold;">Error: select data type</span></p>'''
+        error_media_query1 = '''
+        <style>
+        @media (max-width: 1024px) {
+            p.error_text1 {
+              font-size: 4em;
+            }
+        }
+        </style>
+        '''
+        st.markdown(error_media_query1 + error_text1 , unsafe_allow_html=True)
+
+if st.session_state.submit_confirm2 == True:
+    if modal2.is_open():
+        modal2.close()
+
 col1, col2, col3 = st.columns([1, 2, 1])
 with col1:
     if st.session_state.submit_confirm2 == True:
