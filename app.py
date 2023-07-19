@@ -678,7 +678,7 @@ if st.session_state.submit_confirm1 == True:
               st.markdown(text_media_query1 + info_text2, unsafe_allow_html=True)
               info_text3 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Pros: High predictive accuracy and robustness. Handles various types of data and can handle missing values.</li></ul></p>'
               st.markdown(text_media_query1 + info_text3, unsafe_allow_html=True)
-              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons:Requires careful selection of hyperparameters. Computationally expensive and time-consuming.</li></ul></p>'
+              info_text4 = '<p class="text" style="margin-top: 0em; margin-bottom: 0em;"><ul><li style="font-family:sans-serif; color:#FAFAFA; font-size: 0.8em; text-align: justify;">Cons: Requires careful selection of hyperparameters. Computationally expensive and time-consuming.</li></ul></p>'
               st.markdown(text_media_query1 + info_text4, unsafe_allow_html=True)
 
           st.markdown(line_media_query2 + line2, unsafe_allow_html=True)
