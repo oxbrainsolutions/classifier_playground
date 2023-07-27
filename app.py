@@ -6,13 +6,9 @@ import numpy as np
 import pathlib
 import base64
 import time
-import warnings
 from utils.functions import generate_data, plot_scatter, plot_scatter_decision_boundary, create_gauge, convert_rating, add_polynomial_features, train_model, lr_param_selector, nb_param_selector, lda_param_selector, qda_param_selector, knn_param_selector, nn_param_selector, svm_param_selector, ct_param_selector, rf_param_selector, ad_param_selector, gb_param_selector
 
-
 st.set_page_config(page_title="Classifier Playground", page_icon="", layout="wide")
-
-warnings.filterwarnings("ignore")
 
 if "user_data_type" not in st.session_state or "user_n_samples" not in st.session_state or "user_train_noise" not in st.session_state or "user_test_noise" not in st.session_state or "user_model" not in st.session_state:
     st.session_state["user_data_type"] = ""
