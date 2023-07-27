@@ -186,7 +186,7 @@ st.markdown("""
         max-width: 3em !important;
     }
     .css-1inah7x {
-        background-color: #FCBC24;
+        background-color: #FCBC24 !important;
     }
     .css-5qhjmn {
         z-index: 1000 !important;
