@@ -188,7 +188,7 @@ st.markdown("""
     .css-fpzaie {
         background-color: #FCBC24 !important;
     }
-    .css-gesnqs {
+    .css-gesnqs.ef3psqc4 {
         background-color: #FCBC24 !important;
     }
     .css-5qhjmn {
