@@ -185,7 +185,7 @@ st.markdown("""
     div[data-modal-container='true'][key='Modal2'] > div > div:nth-child(2) > div {
         max-width: 3em !important;
     }
-    .css-1l7fe1m {
+    .css-1inah7x {
         background-color: #FCBC24;
     }
     .css-5qhjmn {
