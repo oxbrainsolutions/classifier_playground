@@ -36,7 +36,6 @@ def change_callback3():
       st.session_state.modal2.close() 
 
 
-#@st.cache_data(suppress_st_warning=True, allow_output_mutation=True, show_spinner=False)
 def generate_data(dataset, n_samples, train_noise, test_noise, n_classes):
     if dataset == "Spirals":
         x_train, y_train = make_moons(n_samples=n_samples, noise=train_noise)
