@@ -37,7 +37,6 @@ def change_callback3():
 
 @st.cache_data(show_spinner=False)
 def generate_data(dataset, n_samples, train_noise, test_noise, n_classes):
-    st.write("hello2")
     if dataset == "Spirals":
         x_train, y_train = make_moons(n_samples=n_samples, noise=train_noise)
         x_test, y_test = make_moons(n_samples=n_samples, noise=test_noise)
