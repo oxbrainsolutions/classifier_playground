@@ -228,16 +228,16 @@ st.markdown("""
             font-family: sans-serif;
         }
         div.StyledThumbValue.css-12gsf70.ew7r33m2{
-            font-size: 0.8em;
-            font-family: sans-serif;
-            color: #FAFAFA;
+            font-size: 0.8em !important;
+            font-family: sans-serif !important;
+            color: #FAFAFA !important;
         }
         @media (max-width: 1024px) {
           div.css-1inwz65.ektn3o0 {
             font-size: 0.8em;
           }
           div.StyledThumbValue.css-12gsf70.ew7r33m2{
-            font-size: 0.8em;
+            font-size: 0.8em !important;
         }
       }
     @media (max-width: 1024px) {
