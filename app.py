@@ -224,8 +224,8 @@ st.markdown("""
         z-index: 1000 !important;
     }
             div.css-1inwz65.ektn3o0 {
-            font-size: 0.8em;
-            font-family: sans-serif;
+            font-size: 0.8em !important;;
+            font-family: sans-serif !important;;
         }
         div.StyledThumbValue.css-12gsf70.ew7r33m2{
             font-size: 0.8em !important;
@@ -234,7 +234,7 @@ st.markdown("""
         }
         @media (max-width: 1024px) {
           div.css-1inwz65.ektn3o0 {
-            font-size: 0.8em;
+            font-size: 0.8em !important;;
           }
           div.StyledThumbValue.css-12gsf70.ew7r33m2{
             font-size: 0.8em !important;
@@ -242,7 +242,7 @@ st.markdown("""
       }
     @media (max-width: 1024px) {
         div.block-container.css-ysnqb2.e1g8pov64 {
-            margin-top: -15em;
+            margin-top: -15em !important;;
         }
     }
     div.stButton {
