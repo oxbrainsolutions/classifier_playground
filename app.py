@@ -309,6 +309,9 @@ st.markdown("""
     height: auto !important;
   }
   }
+  button[title="View fullscreen"]{
+    visibility: hidden;
+    }
   </style>
 """, unsafe_allow_html=True)
 
