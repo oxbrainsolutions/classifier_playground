@@ -260,7 +260,7 @@ def create_gauge(num_value, label, key):
                 "width": 10,
                 "itemStyle": {"color": "#FCBC24", "borderColor": '#FAFAFA', "borderWidth": 2},
                 "offsetCenter": [0, '-84%'],
-                "length": '14%',
+                "length": '12%',
             },
             "data": [
               {
