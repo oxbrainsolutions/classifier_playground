@@ -256,7 +256,7 @@ def create_gauge(num_value, label, key):
               "fontFamily": 'sans-serif',
               },
             "pointer": {
-                "icon": 'path://M12.8,0.7l12,40.1H0.7L12.8,0.7z',
+                "icon": ('path://M12.8,0.7l12,40.1H0.7L12.8,0.7z').rotate(1),
                 "width": 20,
                 "itemStyle": {"color": "#FCBC24", "borderColor": '#FAFAFA', "borderWidth": 2},
                 "offsetCenter": [0, '-84%'],
