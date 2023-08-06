@@ -225,8 +225,8 @@ def create_gauge(num_value, label, key):
               },
             "axisTick": {
                 "splitNumber": 1,
-                "length": 25,
-                "distance": -20,
+                "length": 5,
+                "distance": 0,
                 "lineStyle": {
                 "color": 'auto', "width": 3
                 }
