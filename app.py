@@ -227,7 +227,7 @@ st.markdown("""
             font-size: 0.8em !important;;
             font-family: sans-serif !important;;
         }
-        div.StyledThumbValue.css-1inwz65.ew7r33m0{
+        div.StyledThumbValue.css-12gsf70.ew7r33m2{
             font-size: 0.8em !important;
             font-family: sans-serif !important;
             color: #FAFAFA !important;
