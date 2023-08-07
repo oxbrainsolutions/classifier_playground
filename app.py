@@ -238,6 +238,8 @@ st.markdown("""
           }
           div.StyledThumbValue.css-12gsf70.ew7r33m2{
             font-size: 0.8em !important;
+            font-family: sans-serif !important;
+            color: #FAFAFA !important;
         }
       }
     @media (max-width: 1024px) {
