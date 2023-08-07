@@ -223,7 +223,7 @@ st.markdown("""
     .css-1s3wgy2 {
         z-index: 1000 !important;
     }
-            div.css-1inwz65.ektn3o0 {
+            div.css-1inwz65.ew7r33m0 {
             font-size: 0.8em !important;;
             font-family: sans-serif !important;;
         }
@@ -233,7 +233,7 @@ st.markdown("""
             color: #FAFAFA !important;
         }
         @media (max-width: 1024px) {
-          div.css-1inwz65.ektn3o0 {
+          div.css-1inwz65.ew7r33m0 {
             font-size: 0.8em !important;;
           }
           div.StyledThumbValue.css-12gsf70.ew7r33m2{
