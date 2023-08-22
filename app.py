@@ -811,7 +811,89 @@ with col2:
         scatter_fig_field.plotly_chart(scatter_boundary_fig, config={'displayModeBar': False}, use_container_width=True)
 
 
+footer = """
+<style>
+    .footer {
+        font-family:sans-serif;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: #FAFAFA;
+        text-align: justify;
+        padding: 0em;
+        padding-left: 1.875em;
+        padding-right: 1.875em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-column-footer {
+        font-size: 0.65em;
+        width: 17.5%;
+        padding: 0.625em;
+    }
+    .middle-column-footer {
+        font-size: 0.65em;
+        width: 65%;
+        padding: 0.625em;
+        text-align: justify;
+    }
+    .right-column-footer {
+        font-size: 0.65em;
+        width: 17.5%;
+        padding: 0.625em;
+    }
+    .clear {
+        clear: both;
+    }
 
+    .content-container {
+        /*padding-bottom: 100px;*/
+    }
+     @media screen and (max-width: 1024px) {
+        .footer {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.8em;  /* Adjust padding for smaller screens */
+       }
+        .left-column-footer {
+            width: 0%;
+            justify-content: center;
+            text-align: left;
+            display: flex;
+            align-items: left;
+            display: flex;
+            font-size: 2.2em;
+            padding: 0.625em;
+            margin-bottom: 0em;
+        }
+
+        .middle-column-footer {
+            width: 100%;
+            font-size: 2.2em;
+            padding: 0.625em;
+            margin-bottom: 0em;
+            text-align: justify;
+        }
+        .right-column-footer {
+            width: 100%;
+        }
+    }
+    </style>
+
+<div class="content-container">
+    <div class="footer">
+        <div class="middle-column-footer">
+            <b>DISCLAIMER: The image synthesis and generation capabilities provided in the playground are facilitated through advanced machine learning technology provided by OpenAI. This model may exhibit inherent limitations associated with the accuracy of generated images and is intended for educational purposes only.</b>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+"""
+
+st.markdown(footer, unsafe_allow_html=True)
 
 
 
