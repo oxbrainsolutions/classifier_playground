@@ -886,7 +886,7 @@ footer = """
 <div class="content-container">
     <div class="footer">
         <div class="middle-column-footer">
-            <b>DISCLAIMER: The image synthesis and generation capabilities provided in the playground are facilitated through advanced machine learning technology provided by OpenAI. This model may exhibit inherent limitations associated with the accuracy of generated images and is intended for educational purposes only.</b>
+            <b>DISCLAIMER: This playground may exhibit inherent limitations associated with the accuracy of predictions and is intended for educational purposes only.</b>
         </div>
         <div class="clear"></div>
     </div>
