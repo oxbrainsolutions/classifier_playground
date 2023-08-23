@@ -820,6 +820,7 @@ footer = """
         bottom: 0;
         width: 100%;
         color: #FAFAFA;
+        background-color: #222222;
         text-align: justify;
         padding: 0em;
         padding-left: 1.875em;
