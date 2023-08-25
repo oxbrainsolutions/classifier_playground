@@ -894,8 +894,96 @@ footer = """
 </div>
 """
 
-st.markdown(footer, unsafe_allow_html=True)
+footer = """
+<style>
+    .footer {
+        font-family:sans-serif;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: #FAFAFA;
+        background-color: #222222;
+        text-align: left;
+        padding: 0em;
+        padding-left: 1.875em;
+        padding-right: 1.875em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        vertical-align: middle;
+    }
+    .left-column-footer {
+        float: left;
+        font-size: 0.65em;
+        width: 17.5%;
+        padding: 0.625em;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .middle-column-footer {
+        font-size: 0.65em;
+        width: 65%;
+        padding: 0.625em;
+        text-align: justify;
+    }
+    .right-column-footer {
+        font-size: 0.65em;
+        width: 17.5%;
+        padding: 0.625em;
+    }
+    .clear {
+        clear: both;
+    }
 
+    .content-container {
+        /*padding-bottom: 100px;*/
+    }
+     @media screen and (max-width: 1024px) {
+        .footer {
+            flex-direction: column;
+            justify-content: left;
+            align-items: flex-start;
+            padding: 0.8em;  /* Adjust padding for smaller screens */
+       }
+        .left-column-footer {
+            width: 30%;
+            justify-content: justify;
+            display: flex;
+            font-size: 2.2em;
+            padding: 0.625em;
+            margin-bottom: 0em;
+            text-align: left;
+            display: flex;
+        }
+
+        .middle-column-footer {
+            width: 100%;
+            font-size: 2.2em;
+            padding: 0.625em;
+            margin-bottom: 0em;
+            text-align: justify;
+        }
+        .right-column-footer {
+            width: 0%;
+        }
+    }
+    </style>
+
+<div class="content-container">
+    <div class="footer">
+        <div class="left-column-footer">
+            <b><span style="color: #FAFAFA;">Contents &copy; oxbr</span><span style="color: #FCBC24;">AI</span><span style="color: #FAFAFA;">n 2023</span></b>
+        </div>
+        <div class="middle-column-footer">
+            <b>DISCLAIMER: This playground may exhibit inherent limitations associated with the accuracy of predictions and is intended for educational purposes only.</b>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+"""
+
+st.markdown(footer, unsafe_allow_html=True)
 
 
   
